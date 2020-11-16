@@ -58,5 +58,6 @@ namespace WPF_GUI_Demo
             BtnGoTop.Visibility = Visibility.Hidden;
             BtnGoDown.Visibility = Visibility.Visible;
         }
+       
     }
 }

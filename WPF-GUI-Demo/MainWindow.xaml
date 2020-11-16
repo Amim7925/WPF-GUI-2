@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_GUI_Demo" xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:ribbon="http://schemas.actiprosoftware.com/winfx/xaml/ribbon" x:Class="WPF_GUI_Demo.MainWindow"
+        xmlns:ribbon="http://schemas.actiprosoftware.com/winfx/xaml/ribbon" xmlns:ribbon1="http://schemas.microsoft.com/netfx/2009/xaml/presentation" x:Class="WPF_GUI_Demo.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowState="Maximized"  >
     <Window.Resources>
@@ -229,11 +229,11 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
         <Grid Grid.Row="1" Grid.Column="4"/>
 
-        <ribbon:Button Grid.Column="3" HorizontalAlignment="Left" Label="New Button" Margin="136.2,89.6,0,0" Grid.Row="1" VerticalAlignment="Top">
-            <ribbon:Button.ImageSourceSmall>
+        <!--<ribbon1:Button Grid.Column="3" HorizontalAlignment="Left" Label="New Button" Margin="136.2,89.6,0,0" Grid.Row="1" VerticalAlignment="Top">
+            <ribbon1:Button.ImageSourceSmall>
                 <BitmapImage UriSource="pack://application:,,,/ActiproSoftware.Ribbon.Wpf;component/Products/Ribbon/Images/ButtonDefault32.png" UriCachePolicy="{x:Null}"/>
-            </ribbon:Button.ImageSourceSmall>
-        </ribbon:Button>
+            </ribbon1:Button.ImageSourceSmall>
+        </ribbon1:Button>-->
 
     </Grid>
 </Window>
