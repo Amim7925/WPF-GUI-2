@@ -1,11 +1,12 @@
-﻿<UserControl x:Class="WPF_GUI_Demo.Forms.CreateDrivingCycle"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_GUI_Demo.Forms"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="WPF_GUI_Demo.Forms.CreateDrivingCycle"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="400" Background="#fff">
+             d:DesignHeight="450" d:DesignWidth="450" Background="#fff">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -17,29 +18,27 @@
         </Grid.RowDefinitions>
         <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="15" Fill="#265B5B5B"/>
         <StackPanel Margin="20 40" Grid.Column="0">
-            <Label Content="Torque :"></Label>
-            <TextBox x:Name="txtTorque" Height="30" Margin="5 0 0 0" ></TextBox>
-            <Label  Margin="0 15 0 0 " Content="Rpm :"></Label>
-            <TextBox x:Name="txtPassword" Height="30" Margin="5 0 0 0" ></TextBox>
-            <Label Margin="0 15 0 0 " Content="Load  :"></Label>
-            <TextBox x:Name="txtLoad" Height="30" Margin="5 0 0 0"></TextBox>
-            <Label Margin="0 15 0 0 " Content="Gradiant  :"></Label>
-            <TextBox x:Name="txtGradiant" Height="30" Margin="5 0 0 0"></TextBox>
+            <Label Content="Torque :"/>
+            <TextBox x:Name="txtTorque" Height="30" Margin="5 0 0 0" />
+            <Label  Margin="0 15 0 0 " Content="Rpm :"/>
+            <TextBox x:Name="txtPassword" Height="30" Margin="5 0 0 0" />
+            <Label Margin="0 15 0 0 " Content="Load  :"/>
+            <TextBox x:Name="txtLoad" Height="30" Margin="5 0 0 0"/>
+            <Label Margin="0 15 0 0 " Content="Gradiant  :"/>
+            <TextBox x:Name="txtGradiant" Height="30" Margin="5 0 0 0"/>
 
 
 
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="20 40">
-            <Label  Content="Hour :"></Label>
-            <TextBox x:Name="txtMail" Height="30" Margin="5 0 0 0"></TextBox>
-            <Label Margin="0 15 0 0 "  Content="Minute :"></Label>
-            <TextBox x:Name="txtRole" Height="30" Margin="5 0 0 0"></TextBox>
-            <Label Margin="0 15 0 0 " Content="Second :"></Label>
-            <TextBox x:Name="txtSecond" Height="30" Margin="5 0 0 0"></TextBox>
-
-            
-
+            <Label  Content="Hour :"/>
+            <TextBox x:Name="txtMail" Height="30" Margin="5 0 0 0"/>
+            <Label Margin="0 15 0 0 "  Content="Minute :"/>
+            <TextBox x:Name="txtRole" Height="30" Margin="5 0 0 0"/>
+            <Label Margin="0 15 0 0 " Content="Second :"/>
+            <TextBox x:Name="txtSecond" Height="30" Margin="5 0 0 0"/>
+            <materialDesign:TimePicker Height="30" Margin="5 40 0 0" />
         </StackPanel>
-        <Button Height="40"  Width="140" Content="Submit" Grid.Row="1" Grid.ColumnSpan="2"></Button>
+        <Button Height="40"  Width="140" Content="Submit" Grid.Row="1" Grid.ColumnSpan="2"/>
     </Grid>
 </UserControl>

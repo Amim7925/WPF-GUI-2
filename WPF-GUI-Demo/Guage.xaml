@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_GUI_Demo"
              mc:Ignorable="d" 
-            d:DesignHeight="350" d:DesignWidth="350" Foreground="Black">
+           d:DesignHeight="350" d:DesignWidth="350" Foreground="Black">
 
     <UserControl.Resources>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0"
@@ -50,8 +50,8 @@
                                 <TranslateTransform/>
                             </TransformGroup>
                         </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#FF212A3F" Offset="0"/>
-                        <GradientStop Color="#FFC4EEFA" Offset="1"/>
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Color="#FFCBCBCB"/>
                     </LinearGradientBrush>
                 </Ellipse.Fill>
             </Ellipse>
@@ -61,7 +61,7 @@
 
                 <Path StrokeThickness="1"
                     Data="M160,160 L160,320 A160,160,0,1,1,320,160 L160,160"
-                    Fill="#FFA6B1D0"/>
+                    Fill="White" Stroke="#FF1A39DD"/>
 
                 <Path StrokeThickness="1" Fill="{Binding GaugeColor}">
                     <Path.Data>
@@ -213,17 +213,7 @@
 
                 <Ellipse Height="273"
                     VerticalAlignment="Top"
-                    Margin="29,47,53,0">
-                    <Ellipse.Fill>
-                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                            <GradientStop Color="#FFC8C5C5" Offset="1"/>
-                            <GradientStop Color="#FF5F81E4"/>
-                            <GradientStop Color="#FF7A91D8" Offset="0.148"/>
-                            <GradientStop Color="#FF91A0D2" Offset="0.393"/>
-                            <GradientStop Color="#FFAEB3CB" Offset="0.756"/>
-                        </LinearGradientBrush>
-                    </Ellipse.Fill>
-                </Ellipse>
+                    Margin="29,47,53,0" Fill="#FF4F4F4F"/>
 
                 <TextBlock Text="{Binding GaugeTitle}"
                     FontSize="24"

@@ -47,17 +47,5 @@ namespace WPF_GUI_Demo
 
         }
 
-        private void BtnGoDown_Click(object sender, RoutedEventArgs e)
-        {
-            BtnGoDown.Visibility = Visibility.Hidden;
-            BtnGoTop.Visibility = Visibility.Visible;
-        }
-
-        private void BtnGoTop_Click(object sender, RoutedEventArgs e)
-        {
-            BtnGoTop.Visibility = Visibility.Hidden;
-            BtnGoDown.Visibility = Visibility.Visible;
-        }
-       
     }
 }

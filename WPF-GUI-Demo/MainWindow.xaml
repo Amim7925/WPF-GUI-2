@@ -4,52 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_GUI_Demo" xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:ribbon="http://schemas.actiprosoftware.com/winfx/xaml/ribbon" xmlns:ribbon1="http://schemas.microsoft.com/netfx/2009/xaml/presentation" x:Class="WPF_GUI_Demo.MainWindow"
+        xmlns:ribbon="http://schemas.actiprosoftware.com/winfx/xaml/ribbon" xmlns:ribbon1="http://schemas.microsoft.com/netfx/2009/xaml/presentation" xmlns:local1="clr-namespace:WPF_GUI_Demo.Guages" x:Class="WPF_GUI_Demo.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowState="Maximized"  >
+      Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
     <Window.Resources>
         <Storyboard x:Key="Leftdashboardgoesright">
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="stackPanel">
-                <EasingThicknessKeyFrame KeyTime="0" Value="-155,0,155,0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="0"/>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="MainGrid">
+                <EasingThicknessKeyFrame KeyTime="0" Value="0,0,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="155 0 -155 0"/>
             </ThicknessAnimationUsingKeyFrames>
 
-            <Int32AnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="stackPanel">
+            <Int32AnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="MainGrid">
                 <EasingInt32KeyFrame KeyTime="0" Value="2"/>
                 <EasingInt32KeyFrame KeyTime="0:0:0.3" Value="2"/>
             </Int32AnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="leftdahboargetsback">
-            <Int32AnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="stackPanel">
+            <Int32AnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="MainGrid">
                 <EasingInt32KeyFrame KeyTime="0" Value="2"/>
             </Int32AnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="stackPanel">
-                <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="-150,0,150,0"/>
-            </ThicknessAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="downItemscomup">
-
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle">
-                <EasingThicknessKeyFrame KeyTime="0" Value="10,200,0,-200"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="0"/>
-            </ThicknessAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="DownGrid">
-                <EasingThicknessKeyFrame KeyTime="0" Value="10,200,0,-200"/>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="MainGrid">
+                <EasingThicknessKeyFrame KeyTime="0" Value="155,0,-155,0"/>
                 <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="0"/>
             </ThicknessAnimationUsingKeyFrames>
         </Storyboard>
-        <Storyboard x:Key="downItemscomdown">
 
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle">
-                <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="10,200,0,-200"/>
-            </ThicknessAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="DownGrid">
-                <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="10,200,0,-200"/>
-            </ThicknessAnimationUsingKeyFrames>
-        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BtnGoright">
@@ -58,30 +37,228 @@
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BtnGoleft">
             <BeginStoryboard Storyboard="{StaticResource leftdahboargetsback}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BtnGoTop">
 
-            <BeginStoryboard Storyboard="{StaticResource downItemscomup}"/>
-        </EventTrigger>
-        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BtnGoDown">
-
-            <BeginStoryboard Storyboard="{StaticResource downItemscomdown}"/>
-        </EventTrigger>
     </Window.Triggers>
-    <Grid Background="White" x:Name="MainGrid">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="44"/>
-            <ColumnDefinition Width="156"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="323"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="38"/>
-            <RowDefinition Height="188*"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
-        </Grid.RowDefinitions>
+    <Grid >
+        <Grid Background="#FFD6D6D6" x:Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="156"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="38"/>
+                <RowDefinition Height="188*"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
 
-        <Grid x:Name="TiltleBar" Grid.ColumnSpan="4" Grid.Row="0" Margin="0,0,0,0.4">
+
+
+
+
+            <Grid x:Name="MainItemsGrid" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,0,0" Background="#FFC8C8C8">
+                <TextBlock Text="Line Chart :" FontSize="18" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" />
+
+                <local:LineChart Margin="50" />
+
+            </Grid>
+
+            <Grid x:Name="DownGrid" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="2" >
+                <TextBlock Text="Gauges :" FontSize="18" HorizontalAlignment="Left" Margin="40,15,0,0" VerticalAlignment="Top" />
+                <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 20" Height="110"  >
+
+
+                        <local1:RpmGauge  Margin="40 0 0 0" />
+                        <local1:RpmGauge  />
+                        <local1:RpmGauge  />
+                        <local1:TemperatureGauge  Margin="40 0 0 0"/>
+                        <local1:TemperatureGauge />
+                        <local1:TemperatureGauge />
+
+                        <local1:TorqueGauge Margin="40 0 0 0" />
+                        <local1:TorqueGauge  />
+                        <local1:TorqueGauge  />
+
+                    </StackPanel>
+
+                </ScrollViewer>
+
+
+            </Grid>
+            <Grid Grid.Column="0" Grid.RowSpan="4"  x:Name="leftGrid" Grid.ColumnSpan="2" >
+                <Grid x:Name="stackPanel" Margin="-155 0 155 0">
+                    <StackPanel  Background="#FF3D3B3D"  >
+                        <TextBlock Text="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,27,0,0" FontSize="20" Foreground="White"/>
+                        <Button  d:LayoutOverrides="Height" Margin="0,30,0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal" >
+
+                                <TextBlock Text="TCP Connection" Foreground="White" Margin="0,0,-40,0" />
+                                <md:PackIcon Kind="Plus" Margin="92,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+
+                            </StackPanel>
+
+
+                        </Button>
+
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal" >
+
+                                <TextBlock Text="Creat User" Foreground="White" Margin="-1,0,-20,0" />
+                                <md:PackIcon Kind="Edit" Margin="109,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+
+                            </StackPanel>
+
+
+                        </Button>
+
+
+
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal" >
+
+                                <TextBlock Text="Canvas Connection" Foreground="White" Margin="0,0,-50,0" />
+                                <md:PackIcon Kind="Settings" Margin="82,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+
+                            </StackPanel>
+
+
+                        </Button>
+
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal" >
+
+                                <TextBlock Text="Search Cycle" Foreground="White" Margin="0,0,-40,0" />
+                                <md:PackIcon Kind="Search" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+
+                            </StackPanel>
+
+
+                        </Button>
+
+
+                    </StackPanel>
+
+
+                    <Grid   Width="90" Height="90" Margin="45,0,-45,0" HorizontalAlignment="Right">
+                        <Button  x:Name="BtnGoleft" Width="46"  Height="46"
+Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" 
+                  Click="BtnGoleft_Click"  FontWeight="Bold" Visibility="Hidden"
+                 Background="#FF3D3B3D" BorderBrush="#FF3D3B3D"   >
+                            <md:PackIcon Kind="ArrowLeftBox" HorizontalAlignment="Center" Width="30" Height="30"   VerticalAlignment="Center" />
+                        </Button>
+
+
+                        <Button  x:Name="BtnGoright" Width="46"  Height="46"   
+Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" 
+                  Click="BtnGoright_Click"  FontWeight="Bold" 
+                 Background="#FF3D3B3D" BorderBrush="{x:Null}"   >
+                            <md:PackIcon Kind="ArrowRightBox" HorizontalAlignment="Center" Width="30" Height="30"  VerticalAlignment="Center" />
+                        </Button>
+                    </Grid>
+
+
+
+                    <StackPanel VerticalAlignment="Bottom">
+
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal" >
+
+                                <TextBlock Text="About us" Foreground="White" Margin="0,0,0,0" />
+                                <md:PackIcon Kind="About" Margin="95,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+
+                            </StackPanel>
+
+
+                        </Button>
+
+
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                            <StackPanel Orientation="Horizontal" >
+
+                                <TextBlock Text="LogOut" Foreground="White" Margin="0,0,5,0" />
+                                <md:PackIcon Kind="Logout" Margin="102,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+
+                            </StackPanel>
+
+
+                        </Button>
+
+
+                    </StackPanel>
+
+
+
+                </Grid>
+
+
+
+
+            </Grid>
+
+            <Grid x:Name="LeftGrid" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Background="#FFEEEEEE">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" VerticalAlignment="Top" >
+                    <Image Source="Pic/aaa.jpg" Height="100" StretchDirection="UpOnly" Stretch="Fill"   />
+
+
+                    <TextBlock x:Name="txt_UserName" Text="John" Width="60"  Foreground="#FF0E0E0E" VerticalAlignment="Bottom" Margin="10,0,0,6" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold"/>
+
+                </Grid>
+
+                <StackPanel  Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Top" Margin="15">
+
+                    <TextBox x:Name="txtSearch" Text="Search" Style="{x:Null}"  Background="#FFE0E0E0"  Height="25" Width="180" BorderBrush="{x:Null}" Margin="12,0,0,0">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="8"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Height="28" Width="28" Background="#FF3D3B3D" Margin="-20 0 0 0" ToolTip="Search" BorderBrush="{x:Null}">
+                        <md:PackIcon Kind="Search" Foreground="#FFFFFDFD"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Width="187">
+
+                    <Button Margin="0,15" Background="#FF3D3B3D" BorderBrush="{x:Null}" Height="36" Width="173">
+                        <StackPanel Orientation="Horizontal" >
+
+                            <TextBlock Text="Upload Log File" Foreground="White" Margin="0,0,4,0"  />
+                            <md:PackIcon Kind="Upload" Margin="20,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+
+                        </StackPanel>
+
+
+                    </Button>
+
+                    <Button Margin="0,15,0,52" Background="#FF3D3B3D" BorderBrush="{x:Null}" Height="36" Width="173">
+                        <StackPanel Orientation="Horizontal" >
+
+                            <TextBlock Text="Creat Driving Cycle" Foreground="White" Margin="0,0,0,0" />
+                            <md:PackIcon Kind="Create" Margin="5,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+
+                        </StackPanel>
+
+
+                    </Button>
+
+
+
+                </StackPanel>
+            </Grid>
+
+
+
+        </Grid>
+        <Grid x:Name="TiltleBar" Grid.Column="4" Grid.Row="0" Margin="0,0,0,0.4">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
                 <Button  x:Name="btnMinimize"  
 Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="Black" Height="20"
@@ -98,142 +275,12 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
             </StackPanel>
 
-        </Grid>
-
-
-
-
-        <Grid x:Name="MainItemsGrid" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,0,0" Background="#FFC8C8C8">
-
-            <local:LineChart Margin="10 0 0 0" />
-
-        </Grid>
-
-        <Rectangle x:Name="rectangle" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" Fill="#7FFFFFFF" Margin="10 200 0 -200"/>
-        <Grid x:Name="DownGrid" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="10 200 0 -200">
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0"/>
-
-            <Viewbox Width="90" Height="90" Margin="0,-60,0,50" VerticalAlignment="Top" >
-                <Grid  >
-                    <Button  x:Name="BtnGoTop" Width="15" Height="15"  
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" 
-                  Click="BtnGoTop_Click"  FontWeight="Bold" 
-                 Background="#07000459" BorderBrush="#08C5C5C5"   >
-                        <md:PackIcon Kind="ArrowTopBoldBox" HorizontalAlignment="Center" Width="6" Height="6"  VerticalAlignment="Center" />
-                    </Button>
-
-
-                    <Button  x:Name="BtnGoDown" Width="15"  Height="15"  Visibility="Hidden"
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" 
-                  Click="BtnGoDown_Click"  FontWeight="Bold" 
-                 Background="#07000459" BorderBrush="#08C5C5C5"   >
-                        <md:PackIcon Kind="ArrowDownBoldBox" HorizontalAlignment="Center" Width="6" Height="6"  VerticalAlignment="Center" />
-                    </Button>
-                </Grid>
-            </Viewbox>
-
-
-        </Grid>
-        <Grid Grid.Column="0" Grid.RowSpan="4"  x:Name="leftGrid" Grid.ColumnSpan="2" >
-            <Grid x:Name="stackPanel" Margin="-155 0 155 0">
-                <StackPanel  Background="#FF3D3B3D"  >
-                    <TextBlock Text="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,7,0,0" FontSize="16" FontWeight="Bold" Foreground="White"/>
-                    <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
-                        <StackPanel Orientation="Horizontal" >
-
-                            <TextBlock Text="Flowers" Foreground="White" Margin="30,0,-40,0" />
-                            <md:PackIcon Kind="Plus" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
-
-                        </StackPanel>
-
-
-                    </Button>
-
-                    <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
-                        <StackPanel Orientation="Horizontal" >
-
-                            <TextBlock Text="Flowers" Foreground="White" Margin="30,0,-40,0" />
-                            <md:PackIcon Kind="Edit" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
-
-                        </StackPanel>
-
-
-                    </Button>
-
-
-
-                    <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
-                        <StackPanel Orientation="Horizontal" >
-
-                            <TextBlock Text="Flowers" Foreground="White" Margin="30,0,-40,0" />
-                            <md:PackIcon Kind="Settings" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
-
-                        </StackPanel>
-
-
-                    </Button>
-
-                    <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
-                        <StackPanel Orientation="Horizontal" >
-
-                            <TextBlock Text="Flowers" Foreground="White" Margin="30,0,-40,0" />
-                            <md:PackIcon Kind="Search" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
-
-                        </StackPanel>
-
-
-                    </Button>
-
-                    <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
-                        <StackPanel Orientation="Horizontal" >
-
-                            <TextBlock Text="Flowers" Foreground="White" Margin="30,0,-40,0" />
-                            <md:PackIcon Kind="Account" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
-
-                        </StackPanel>
-
-
-                    </Button>
-                </StackPanel>
-
-                <Viewbox Width="90" Height="90" Margin="45,0,-45,0" HorizontalAlignment="Right" >
-                    <Grid  >
-                        <Button  x:Name="BtnGoleft" Width="15" Height="15"  Visibility="Hidden"
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" 
-                  Click="BtnGoleft_Click"  FontWeight="Bold" 
-                 Background="#FF3D3B3D" BorderBrush="#FF3D3B3D"   >
-                            <md:PackIcon Kind="ArrowLeftBox" HorizontalAlignment="Center" Width="6" Height="6"  VerticalAlignment="Center" />
-                        </Button>
-
-
-                        <Button  x:Name="BtnGoright" Width="15"  Height="15"  
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" 
-                  Click="BtnGoright_Click"  FontWeight="Bold" 
-                 Background="#FF3D3B3D" BorderBrush="#FF3D3B3D"   >
-                            <md:PackIcon Kind="ArrowRightBox" HorizontalAlignment="Center" Width="6" Height="6"  VerticalAlignment="Center" />
-                        </Button>
-                    </Grid>
-                </Viewbox>
-
-            </Grid>
-
 
 
 
         </Grid>
 
-        <Grid Grid.Row="1" Grid.Column="4"/>
-
-        <!--<ribbon1:Button Grid.Column="3" HorizontalAlignment="Left" Label="New Button" Margin="136.2,89.6,0,0" Grid.Row="1" VerticalAlignment="Top">
-            <ribbon1:Button.ImageSourceSmall>
-                <BitmapImage UriSource="pack://application:,,,/ActiproSoftware.Ribbon.Wpf;component/Products/Ribbon/Images/ButtonDefault32.png" UriCachePolicy="{x:Null}"/>
-            </ribbon1:Button.ImageSourceSmall>
-        </ribbon1:Button>-->
 
     </Grid>
+
 </Window>

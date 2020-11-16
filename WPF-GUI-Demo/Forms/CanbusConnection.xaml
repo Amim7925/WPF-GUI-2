@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_GUI_Demo.Forms"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="500" Background="#fff">
+             d:DesignHeight="650" d:DesignWidth="550" Background="#fff">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -18,15 +18,65 @@
             </ListView>
         </StackPanel>
         <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <StackPanel>
-                <Label Content="User Name :"></Label>
-                <TextBox x:Name="txtUserName" Height="30" Margin="5 0 0 0" ></TextBox>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <CheckBox Margin="15 0 15 0"  Content="CAN FD" Grid.Row="0" ></CheckBox>
+            <Grid  Margin="0 10 0 0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Margin="15 0 15 0">
+                    <Label Content="Clock Frequency :"></Label>
+                    <ComboBox x:Name="txtUserName"   Margin="5 0 0 0" ></ComboBox>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="15 0 15 0">
+                    <Label Content="Bit rate :"></Label>
+                    <ComboBox x:Name="txtBitrate" Margin="5 0 0 0" ></ComboBox>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Margin="15 0 15 0">
+
+                    <Label Content="Bus Timing Register :"></Label>
+                    <ComboBox x:Name="txtBusTiming"   Margin="5 0 0 0" ></ComboBox>
+                </StackPanel>
+            </Grid>
+            <Grid Margin="5 20" Grid.Row="2">
+                <GroupBox  Header="Filter Settings" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <RadioButton Content="Standard" Margin="5 15"></RadioButton>
+                            <RadioButton Content="Extended"  Margin="5 5"></RadioButton>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.ColumnSpan="2">
+                            <Label Content="From :" VerticalAlignment="Center"></Label>
+                            <TextBox Width="80" VerticalAlignment="Center"></TextBox>
+                            <Label Content="(Hex)" Margin="5 0 5 0" VerticalAlignment="Center"></Label>
+                            <Label Content="To :" VerticalAlignment="Center"></Label>
+                            <TextBox Width="80" VerticalAlignment="Center"></TextBox>
+                            <Label Content="(Hex)" Margin="5 0 5 0" VerticalAlignment="Center"></Label>
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+               
+            </Grid>
+            <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <CheckBox Margin="15 0 15 0"  Content="Listen-Only mode" Grid.Row="0" ></CheckBox>
+                <Button Content="OK" Width="100" Margin="20 0 10 0"></Button>
+                <Button Content="Cancel" Width="100" Margin="20 0 10 0"></Button>
+                <Button Content="Help" Width="100" Margin="20 0 10 0"></Button>
             </StackPanel>
+
+
         </Grid>
     </Grid>
 </UserControl>
