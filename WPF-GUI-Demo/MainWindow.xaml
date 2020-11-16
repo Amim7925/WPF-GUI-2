@@ -12,6 +12,7 @@
                 <EasingThicknessKeyFrame KeyTime="0" Value="-155,0,155,0"/>
                 <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="0"/>
             </ThicknessAnimationUsingKeyFrames>
+            
             <Int32AnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="stackPanel">
                 <EasingInt32KeyFrame KeyTime="0" Value="2"/>
                 <EasingInt32KeyFrame KeyTime="0:0:0.3" Value="2"/>
