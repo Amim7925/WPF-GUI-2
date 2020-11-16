@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="WPF_GUI_Demo.Forms.CreateDrivingCycle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_GUI_Demo.Forms"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400" Background="#fff">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="15" Fill="#265B5B5B"/>
+        <StackPanel Margin="20 40" Grid.Column="0">
+            <Label Content="Torque :"></Label>
+            <TextBox x:Name="txtTorque" Height="30" Margin="5 0 0 0" ></TextBox>
+            <Label  Margin="0 15 0 0 " Content="Rpm :"></Label>
+            <TextBox x:Name="txtPassword" Height="30" Margin="5 0 0 0" ></TextBox>
+            <Label Margin="0 15 0 0 " Content="Load  :"></Label>
+            <TextBox x:Name="txtLoad" Height="30" Margin="5 0 0 0"></TextBox>
+            <Label Margin="0 15 0 0 " Content="Gradiant  :"></Label>
+            <TextBox x:Name="txtGradiant" Height="30" Margin="5 0 0 0"></TextBox>
+
+
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="20 40">
+            <Label  Content="Hour :"></Label>
+            <TextBox x:Name="txtMail" Height="30" Margin="5 0 0 0"></TextBox>
+            <Label Margin="0 15 0 0 "  Content="Minute :"></Label>
+            <TextBox x:Name="txtRole" Height="30" Margin="5 0 0 0"></TextBox>
+            <Label Margin="0 15 0 0 " Content="Second :"></Label>
+            <TextBox x:Name="txtSecond" Height="30" Margin="5 0 0 0"></TextBox>
+
+            
+
+        </StackPanel>
+        <Button Height="40"  Width="140" Content="Submit" Grid.Row="1" Grid.ColumnSpan="2"></Button>
+    </Grid>
+</UserControl>

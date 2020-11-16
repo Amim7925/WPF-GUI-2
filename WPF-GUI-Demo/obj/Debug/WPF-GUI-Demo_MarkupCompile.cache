@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml
-41071061682
+10201901184
 
-9569960885
+15505787917
 19770460390
-Guage.xaml;LineChart.xaml;MainWindow.xaml;SolidGauge.xaml;
+Forms\AboutUs.xaml;Forms\CanbusConnection.xaml;Forms\CreateUser.xaml;Forms\SearchByCycle.xaml;Forms\TCPConnection.xaml;Guage.xaml;LineChart.xaml;MainWindow.xaml;SolidGauge.xaml;WindowLogin.xaml;
 
 False
 

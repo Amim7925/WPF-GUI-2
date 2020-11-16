@@ -73,9 +73,61 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Forms\AboutUs.xaml.cs">
+      <DependentUpon>AboutUs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CanbusConnection.xaml.cs">
+      <DependentUpon>CanbusConnection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateDrivingCycle.xaml.cs">
+      <DependentUpon>CreateDrivingCycle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateUser.xaml.cs">
+      <DependentUpon>CreateUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchByCycle.xaml.cs">
+      <DependentUpon>SearchByCycle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TCPConnection.xaml.cs">
+      <DependentUpon>TCPConnection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UploadCSV.xaml.cs">
+      <DependentUpon>UploadCSV.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SolidGauge.xaml.cs">
       <DependentUpon>SolidGauge.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowLogin.xaml.cs">
+      <DependentUpon>WindowLogin.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Forms\AboutUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\CanbusConnection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\CreateDrivingCycle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\CreateUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\SearchByCycle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\TCPConnection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\UploadCSV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Guage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +156,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SolidGauge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
