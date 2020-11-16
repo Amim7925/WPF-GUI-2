@@ -9,6 +9,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using ActiproSoftware.Products.Ribbon;
+using ActiproSoftware.Windows.Controls.Ribbon;
+using ActiproSoftware.Windows.Controls.Ribbon.Controls;
+using ActiproSoftware.Windows.Controls.Ribbon.Controls.Primitives;
+using ActiproSoftware.Windows.Controls.Ribbon.Input;
+using ActiproSoftware.Windows.Controls.Ribbon.UI;
 using MaterialDesignThemes.Wpf;
 using MaterialDesignThemes.Wpf.Converters;
 using MaterialDesignThemes.Wpf.Transitions;
