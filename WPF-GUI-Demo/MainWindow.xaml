@@ -59,7 +59,44 @@
 
     </Window.Triggers>
     <Grid >
-        <Grid Background="#FFECECEC" x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid x:Name="TiltleBar" Grid.Column="4" Grid.Row="0" Margin="0,0,0,0" MouseDown="TiltleBar_MouseDown" Background="#FF3D3B3D">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+               
+                <Button  x:Name="btnMinimize"  
+Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" Height="20"
+                  Click="btnMinimize_Click" Margin="0,10,16,10" FontWeight="Bold" Width="20"
+                 Background="{x:Null}" BorderBrush="{x:Null}"   >
+                    <md:PackIcon Kind="WindowMinimize"  FontSize="20"  />
+                </Button>
+                <Button  x:Name="btnMaximize"  
+Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" Height="20"
+                  Click="btnMaximize_Click" Margin="0,10,16,10" FontWeight="Bold" Width="20"
+                 Background="{x:Null}" BorderBrush="{x:Null}"   >
+                    <md:PackIcon Kind="WindowMaximize"  FontSize="20"  />
+                </Button>
+                <Button  x:Name="btnpower"  
+Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" Height="20"
+                  Click="btnpower_Click" Margin="0,10,17,10" FontWeight="Bold" Width="20"
+                 Background="{x:Null}" BorderBrush="{x:Null}"   >
+                    <md:PackIcon Kind="Power"  FontSize="20"  />
+                </Button>
+
+
+
+
+
+            </StackPanel>
+
+
+
+
+        </Grid>
+        <Grid Background="#FFECECEC" x:Name="MainGrid" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="44"/>
                 <ColumnDefinition Width="156"/>
@@ -73,6 +110,20 @@
                 <RowDefinition Height="200"/>
             </Grid.RowDefinitions>
 
+            <Grid Grid.Column="4" HorizontalAlignment="Right">
+                <Button  x:Name="btnOpenMenu"  
+Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="Black" Height="20"
+                  Click="btnOpenMenu_Click" Margin="0,10,17,10" FontWeight="Bold" Width="20"
+                 Background="{x:Null}" BorderBrush="{x:Null}"   >
+                    <md:PackIcon Kind="Menu"  FontSize="20"  />
+                </Button>
+                <Button  x:Name="btnCloseMenu"  Visibility="Hidden"
+Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="Black" Height="20"
+                  Click="btnCloseMenu_Click" Margin="0,10,17,10" FontWeight="Bold" Width="20"
+                 Background="{x:Null}" BorderBrush="{x:Null}"   >
+                    <md:PackIcon Kind="Menu"  FontSize="20"  />
+                </Button>
+            </Grid>
 
             <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Background="#FFD6D6D6">
                 <TextBlock Text="Temperature :" FontSize="18" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" />
@@ -88,7 +139,7 @@
             </Grid>
 
 
-            <Grid x:Name="MainItemsGrid" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="1" Margin="0,0,0,0" Background="#FFE2E2E2">
+            <Grid x:Name="MainItemsGrid" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="1" Margin="0,0,0,0" MouseDown="MainItemsGrid_MouseDown_1" Background="#FFE2E2E2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="4*"/>
@@ -295,45 +346,6 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                 </StackPanel>
             </Grid>
-
-
-
-        </Grid>
-        <Grid x:Name="TiltleBar" Grid.Column="4" Grid.Row="0" Margin="0,0,0,0.4">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
-                <Grid>
-                    <Button  x:Name="btnOpenMenu"  
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="Black" Height="20"
-                  Click="btnOpenMenu_Click" Margin="0,10,17,10" FontWeight="Bold" Width="20"
-                 Background="{x:Null}" BorderBrush="{x:Null}"   >
-                        <md:PackIcon Kind="Menu"  FontSize="20"  />
-                    </Button>
-                    <Button  x:Name="btnCloseMenu"  Visibility="Hidden"
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="Black" Height="20"
-                  Click="btnCloseMenu_Click" Margin="0,10,17,10" FontWeight="Bold" Width="20"
-                 Background="{x:Null}" BorderBrush="{x:Null}"   >
-                        <md:PackIcon Kind="Menu"  FontSize="20"  />
-                    </Button>
-                </Grid>
-                <Button  x:Name="btnMinimize"  
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="Black" Height="20"
-                  Click="btnMinimize_Click" Margin="0,10,16,10" FontWeight="Bold" Width="20"
-                 Background="{x:Null}" BorderBrush="{x:Null}"   >
-                    <md:PackIcon Kind="WindowMinimize"  FontSize="20"  />
-                </Button>
-                <Button  x:Name="btnpower"  
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="Black" Height="20"
-                  Click="btnpower_Click" Margin="0,10,17,10" FontWeight="Bold" Width="20"
-                 Background="{x:Null}" BorderBrush="{x:Null}"   >
-                    <md:PackIcon Kind="Power"  FontSize="20"  />
-                </Button>
-
-
-
-
-
-            </StackPanel>
-
 
 
 

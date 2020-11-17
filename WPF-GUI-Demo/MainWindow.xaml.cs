@@ -43,7 +43,7 @@ namespace WPF_GUI_Demo
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
-
+            this.WindowState = System.Windows.WindowState.Minimized;
         }
 
         private void btnOpenMenu_Click(object sender, RoutedEventArgs e)
@@ -96,6 +96,31 @@ namespace WPF_GUI_Demo
         private void MainItemsGrid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             
+        }
+
+        private void MainItemsGrid_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void TiltleBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void btnMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState ==  System.Windows.WindowState.Maximized)
+            {
+                
+                this.WindowState = System.Windows.WindowState.Normal;
+               
+            }
+            else
+            {
+                this.WindowState = System.Windows.WindowState.Maximized;
+
+            }
         }
     }
 }
