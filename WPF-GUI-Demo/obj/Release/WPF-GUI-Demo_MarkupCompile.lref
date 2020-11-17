@@ -1,7 +1,19 @@
 ﻿C:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Release\GeneratedInternalTypeHelper.g.cs
 FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\AboutUs.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\CanbusConnection.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\CreateDrivingCycle.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\CreateUser.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\SearchByCycle.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\TCPConnection.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\UploadCSV.xaml;;
 FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Guage.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Guages\RpmGauge.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Guages\TemperatureGauge.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Guages\TorqueGauge.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Guages\UserControl1.xaml;;
 FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\LineChart.xaml;;
 FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\MainWindow.xaml;;
 FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\SolidGauge.xaml;;
+FC:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\WindowLogin.xaml;;
 

@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\RizRayaneh\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml
-41071061682
+161698522388
 
-9569960885
-17972211154
-Guage.xaml;LineChart.xaml;MainWindow.xaml;SolidGauge.xaml;
+221928363513
+20-1175676716
+Forms\AboutUs.xaml;Forms\CanbusConnection.xaml;Forms\CreateDrivingCycle.xaml;Forms\CreateUser.xaml;Forms\SearchByCycle.xaml;Forms\TCPConnection.xaml;Forms\UploadCSV.xaml;Guage.xaml;Guages\RpmGauge.xaml;Guages\TemperatureGauge.xaml;Guages\TorqueGauge.xaml;Guages\UserControl1.xaml;LineChart.xaml;MainWindow.xaml;SolidGauge.xaml;WindowLogin.xaml;
 
 True
 
