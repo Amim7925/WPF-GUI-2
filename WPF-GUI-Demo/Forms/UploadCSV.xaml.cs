@@ -1,5 +1,4 @@
-﻿using ClosedXML.Excel;
-using LumenWorks.Framework.IO.Csv;
+﻿using LumenWorks.Framework.IO.Csv;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
