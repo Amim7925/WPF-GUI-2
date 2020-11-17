@@ -26,7 +26,10 @@ namespace WPF_GUI_Demo
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            new MainWindow().Show();
+            this.Close();
+            
+            
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)

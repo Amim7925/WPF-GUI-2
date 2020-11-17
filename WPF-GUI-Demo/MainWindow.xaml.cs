@@ -91,6 +91,8 @@ namespace WPF_GUI_Demo
         private void btnAboutUs_Click(object sender, RoutedEventArgs e)
         {
             new PopupWindow(6).ShowDialog();
+
+            
         }
 
         private void MainItemsGrid_MouseDown(object sender, MouseButtonEventArgs e)

@@ -32,7 +32,7 @@
                 <RowDefinition Height="40"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid x:Name="gridTitleBar" Grid.Row="0" MouseDown="gridTitleBar_MouseDown">
+            <Grid x:Name="gridTitleBar" Grid.Row="0" MouseDown="gridTitleBar_MouseDown" Background="White">
                 <Button  x:Name="btnpower" VerticalAlignment="Top" HorizontalAlignment="Right" 
 Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="Transparent" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="32" Margin="3"   FontWeight="Bold" Width="32"  Click="btnpower_Click"  >
                     <materialDesign:PackIcon Kind="Close"  Foreground="Black" Width="25" Height="25"/>

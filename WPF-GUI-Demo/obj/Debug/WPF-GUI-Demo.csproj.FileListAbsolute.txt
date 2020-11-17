@@ -307,3 +307,5 @@ C:\Users\mohamad\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.cspr
 C:\Users\mohamad\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.csproj.CopyComplete
 C:\Users\mohamad\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.exe
 C:\Users\mohamad\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.pdb
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.g.cs
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.baml

@@ -247,7 +247,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                     <StackPanel VerticalAlignment="Bottom">
 
-                        <Button  d:LayoutOverrides="Height" Margin="0,15" Click="btnAboutUs_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <Button  d:LayoutOverrides="Height" Margin="0,15"  Click="btnAboutUs_Click" Background="{x:Null}" BorderBrush="{x:Null}">
                             <StackPanel Orientation="Horizontal" >
 
                                 <TextBlock Text="About us" Foreground="White" Margin="0,0,0,0" />
@@ -282,11 +282,13 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
             </Grid>
 
-            <Grid x:Name="RightGrid" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Margin="250 0 -250 0" Background="#FFC9C9C9">
+            <Grid x:Name="RightGrid" Grid.Row="1" Grid.RowSpan="3" Grid.Column="3" Margin="250 0 -250 0" Background="#FFC9C9C9">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
+                    <RowDefinition Height="60"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="170"/>
 
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" VerticalAlignment="Top" >
@@ -296,8 +298,10 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                     <TextBlock x:Name="txt_UserName" Text="John" Width="60"  Foreground="#FF0E0E0E" VerticalAlignment="Bottom" Margin="10,0,0,6" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold"/>
 
                 </Grid>
-                <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="15">
-                    <StackPanel   Orientation="Horizontal" >
+                
+                    
+                    
+                    <StackPanel   Orientation="Horizontal" Grid.Row="1" >
 
                         <TextBox x:Name="txtSearch" Text="Search" Style="{x:Null}"  Background="#FFE0E0E0"  Height="25" Width="180" BorderBrush="{x:Null}" Margin="12,0,0,0">
                             <TextBox.Resources>
@@ -313,38 +317,39 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
 
                     </StackPanel>
-                    <ListView>
+                    <ListView Grid.Row="2">
 
 
                     </ListView>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Width="187">
+                    <StackPanel HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="187">
 
-                    <Button Margin="0,15" Background="#FF3D3B3D" BorderBrush="{x:Null}" Click="btnUploadCSVFile_Click" Height="36" Width="173">
-                        <StackPanel Orientation="Horizontal" >
+                        <Button Margin="0,15" Background="#FF3D3B3D" BorderBrush="{x:Null}" Click="btnUploadCSVFile_Click" Height="36" Width="173">
+                            <StackPanel Orientation="Horizontal" >
 
-                            <TextBlock Text="Upload Log File" Foreground="White" Margin="0,0,4,0"  />
-                            <md:PackIcon Kind="Upload" Margin="20,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+                                <TextBlock Text="Upload Log File" Foreground="White" Margin="0,0,4,0"  />
+                                <md:PackIcon Kind="Upload" Margin="20,0,0,0" HorizontalAlignment="Left" Foreground="White" />
 
-                        </StackPanel>
-
-
-                    </Button>
-
-                    <Button Margin="0,15,0,52" Background="#FF3D3B3D" Click="btnDrivingCycle_Click" BorderBrush="{x:Null}" Height="36" Width="173">
-                        <StackPanel Orientation="Horizontal" >
-
-                            <TextBlock Text="Creat Driving Cycle" Foreground="White" Margin="0,0,0,0" />
-                            <md:PackIcon Kind="Create" Margin="5,0,0,0" HorizontalAlignment="Left" Foreground="White" />
-
-                        </StackPanel>
+                            </StackPanel>
 
 
-                    </Button>
+                        </Button>
+
+                        <Button Margin="0,15,0,22" Background="#FF3D3B3D" Click="btnDrivingCycle_Click" BorderBrush="{x:Null}" Height="36" Width="173">
+                            <StackPanel Orientation="Horizontal" >
+
+                                <TextBlock Text="Creat Driving Cycle" Foreground="White" Margin="0,0,0,0" />
+                                <md:PackIcon Kind="Create" Margin="5,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+
+                            </StackPanel>
+
+
+                        </Button>
 
 
 
-                </StackPanel>
+                    </StackPanel>
+              
+                
             </Grid>
 
 
