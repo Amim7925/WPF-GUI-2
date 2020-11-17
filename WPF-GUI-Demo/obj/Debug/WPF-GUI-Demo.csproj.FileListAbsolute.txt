@@ -47,7 +47,6 @@ C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LiveCharts.Wpf
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MaterialDesignColors.pdb
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.csprojAssemblyReference.cache
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guage.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\LineChart.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\MainWindow.g.cs
@@ -317,3 +316,7 @@ C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\DocumentFormat
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ExcelNumberFormat.xml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.baml
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.dll
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.pdb
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.xml
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.csprojAssemblyReference.cache

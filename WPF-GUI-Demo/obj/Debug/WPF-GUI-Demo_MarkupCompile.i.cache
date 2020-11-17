@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml
 171936060350
 
-24121652268
-251570595633
+25552970300
+26-1382695513
 Forms\AboutUs.xaml;Forms\CanbusConnection.xaml;Forms\CreateDrivingCycle.xaml;Forms\CreateUser.xaml;Forms\SearchByCycle.xaml;Forms\TCPConnection.xaml;Forms\UploadCSV.xaml;Guage.xaml;Guages\RpmGauge.xaml;Guages\TemperatureGauge.xaml;Guages\TorqueGauge.xaml;Guages\UserControl1.xaml;LineChart.xaml;MainWindow.xaml;PopupWindow.xaml;SolidGauge.xaml;WindowLogin.xaml;
 
-True
+False
 

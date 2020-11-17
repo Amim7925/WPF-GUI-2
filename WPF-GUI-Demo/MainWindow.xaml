@@ -130,7 +130,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <local1:TemperatureGauge Margin="5" />
-                    <local1:TemperatureGauge Margin="5"/>
+                    <local1:TemperatureGauge x:Name="BlackGuage2" Margin="5"/>
                     <local1:TemperatureGauge Margin="5" />
 
                 </StackPanel>
@@ -303,7 +303,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                     
                     <StackPanel   Orientation="Horizontal" Grid.Row="1" >
 
-                        <TextBox x:Name="txtSearch" Text="Search" Style="{x:Null}"  Background="#FFE0E0E0"  Height="25" Width="180" BorderBrush="{x:Null}" Margin="12,0,0,0">
+                        <TextBox x:Name="txtSearch" Style="{x:Null}"  Background="#FFE0E0E0"  Height="25" Width="180" BorderBrush="{x:Null}" Margin="12,0,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="8"/>

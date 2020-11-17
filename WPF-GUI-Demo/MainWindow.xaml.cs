@@ -91,7 +91,7 @@ namespace WPF_GUI_Demo
         private void btnAboutUs_Click(object sender, RoutedEventArgs e)
         {
             new PopupWindow(6).ShowDialog();
-
+            BlackGuage2.value
             
         }
 
