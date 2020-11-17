@@ -11,9 +11,12 @@
 
         <materialDesign:Card Padding="5"  Background="White" UniformCornerRadius="5"    >
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Torque" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,2,0"/>
+                <Grid>
+                    <TextBlock Text="Torque" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,2,0"/>
+                    <TextBlock x:Name="txtValue" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,2,0"/>
 
-                <lvc:Gauge Grid.Row="0" Grid.Column="1" Margin="5"
+                </Grid>
+                <lvc:Gauge Grid.Row="0" Grid.Column="1" Margin="5" Name="Torq"
                    Uses360Mode="True" Width="100"
                    From="0" To="100" Value="50" >
                     <lvc:Gauge.GaugeRenderTransform>

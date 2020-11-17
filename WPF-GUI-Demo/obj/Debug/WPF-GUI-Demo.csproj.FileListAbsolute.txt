@@ -317,3 +317,8 @@ C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\DocumentFormat
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ExcelNumberFormat.xml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.baml
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.g.cs
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ClosedXML.dll
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ClosedXML.pdb
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ClosedXML.xml
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.baml

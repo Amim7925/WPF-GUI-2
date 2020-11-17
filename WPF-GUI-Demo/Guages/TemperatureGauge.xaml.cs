@@ -24,5 +24,6 @@ namespace WPF_GUI_Demo.Guages
         {
             InitializeComponent();
         }
+
     }
 }

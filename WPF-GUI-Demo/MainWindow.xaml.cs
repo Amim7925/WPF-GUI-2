@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WPF_GUI_Demo
 {
@@ -20,10 +22,12 @@ namespace WPF_GUI_Demo
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainWindow model;
         public MainWindow()
         {
             InitializeComponent();
         }
+        Timer t = new Timer();
         private void BtnGoleft_Click(object sender, RoutedEventArgs e)
         {
             BtnGoleft.Visibility = Visibility.Hidden;
@@ -123,6 +127,27 @@ namespace WPF_GUI_Demo
                 this.WindowState = System.Windows.WindowState.Maximized;
 
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            Rpm1.Value = 1040;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //Temp1.Max = 100;
+            //model.Min = -100;
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 1);
+            //timer.Tick += Timer_Tick;
+            timer.Start();
         }
     }
 }

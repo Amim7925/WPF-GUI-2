@@ -20,7 +20,7 @@
 
                 <lvc:Gauge Grid.Row="0" Grid.Column="0"  Name="Rpm" 
                    Uses360Mode="True"  Width="90" Height="90"
-                   From="0" To="100" Value="3006" GaugeActiveFill="#FF753FB6" >
+                   From="0" To="100" Value="30" GaugeActiveFill="#FF753FB6" >
                     <lvc:Gauge.GaugeBackground>
                         <SolidColorBrush Color="#FF2973C5" Opacity="0.1"/>
                     </lvc:Gauge.GaugeBackground>
