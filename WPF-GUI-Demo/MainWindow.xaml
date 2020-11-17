@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_GUI_Demo" xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:ribbon="http://schemas.actiprosoftware.com/winfx/xaml/ribbon" xmlns:ribbon1="http://schemas.microsoft.com/netfx/2009/xaml/presentation" xmlns:local1="clr-namespace:WPF_GUI_Demo.Guages" x:Class="WPF_GUI_Demo.MainWindow"
         mc:Ignorable="d"
-      Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
+      Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Normal" >
     <Window.Resources>
         <Storyboard x:Key="Leftdashboardgoesright">
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="MainGrid">
@@ -59,7 +59,7 @@
 
     </Window.Triggers>
     <Grid >
-        <Grid Background="#FFD6D6D6" x:Name="MainGrid" DragOver="MainGrid_DragOver">
+        <Grid Background="#FFECECEC" x:Name="MainGrid">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="44"/>
                 <ColumnDefinition Width="156"/>
@@ -74,7 +74,7 @@
             </Grid.RowDefinitions>
 
 
-            <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Background="#FFFF3A3A">
+            <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Background="#FFD6D6D6">
                 <TextBlock Text="Temperature :" FontSize="18" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" />
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -88,7 +88,7 @@
             </Grid>
 
 
-            <Grid x:Name="MainItemsGrid" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="1" Margin="0,0,0,0" Background="#FFA4B9FF">
+            <Grid x:Name="MainItemsGrid" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="1" Margin="0,0,0,0" Background="#FFE2E2E2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="4*"/>
@@ -125,7 +125,7 @@
                 <Grid x:Name="stackPanel" Margin="-155 0 155 0">
                     <StackPanel  Background="#FF3D3B3D"  >
                         <TextBlock Text="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,27,0,0" FontSize="20" Foreground="White"/>
-                        <Button  d:LayoutOverrides="Height" Margin="0,30,0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <Button  d:LayoutOverrides="Height" Margin="0,30,0,15" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnTCPConnection_Click">
                             <StackPanel Orientation="Horizontal" >
 
                                 <TextBlock Text="TCP Connection" Foreground="White" Margin="0,0,-40,0" />
@@ -136,7 +136,7 @@
 
                         </Button>
 
-                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" Click="btnUser_Click" BorderBrush="{x:Null}">
                             <StackPanel Orientation="Horizontal" >
 
                                 <TextBlock Text="Creat User" Foreground="White" Margin="-1,0,-20,0" />
@@ -149,7 +149,7 @@
 
 
 
-                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" Click="btnCanbusConnection_Click" BorderBrush="{x:Null}">
                             <StackPanel Orientation="Horizontal" >
 
                                 <TextBlock Text="Canvas Connection" Foreground="White" Margin="0,0,-50,0" />
@@ -196,7 +196,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                     <StackPanel VerticalAlignment="Bottom">
 
-                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Click="btnAboutUs_Click" Background="{x:Null}" BorderBrush="{x:Null}">
                             <StackPanel Orientation="Horizontal" >
 
                                 <TextBlock Text="About us" Foreground="White" Margin="0,0,0,0" />
@@ -269,7 +269,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Width="187">
 
-                    <Button Margin="0,15" Background="#FF3D3B3D" BorderBrush="{x:Null}" Height="36" Width="173">
+                    <Button Margin="0,15" Background="#FF3D3B3D" BorderBrush="{x:Null}" Click="btnUploadCSVFile_Click" Height="36" Width="173">
                         <StackPanel Orientation="Horizontal" >
 
                             <TextBlock Text="Upload Log File" Foreground="White" Margin="0,0,4,0"  />
@@ -280,7 +280,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                     </Button>
 
-                    <Button Margin="0,15,0,52" Background="#FF3D3B3D" BorderBrush="{x:Null}" Height="36" Width="173">
+                    <Button Margin="0,15,0,52" Background="#FF3D3B3D" Click="btnDrivingCycle_Click" BorderBrush="{x:Null}" Height="36" Width="173">
                         <StackPanel Orientation="Horizontal" >
 
                             <TextBlock Text="Creat Driving Cycle" Foreground="White" Margin="0,0,0,0" />
