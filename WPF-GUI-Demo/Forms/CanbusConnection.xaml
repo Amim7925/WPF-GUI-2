@@ -69,12 +69,18 @@
                 </GroupBox>
                
             </Grid>
-            <StackPanel Orientation="Horizontal" Grid.Row="3">
-                <CheckBox Margin="15 0 15 0"  Content="Listen-Only mode" Grid.Row="0" ></CheckBox>
-                <Button Content="OK" Width="100" Margin="20 0 10 0"></Button>
-                <Button Content="Cancel" Width="100" Margin="20 0 10 0"></Button>
-                <Button Content="Help" Width="100" Margin="20 0 10 0"></Button>
-            </StackPanel>
+            <Grid  Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="0" Margin="15 0 15 0"  Content="Listen-Only mode" Grid.Row="0" ></CheckBox>
+                <Button   Grid.Column="1" Content="OK" Width="100" ></Button>
+                <Button   Grid.Column="2" Content="Cancel" Width="100" ></Button>
+                <Button   Grid.Column="3" Content="Help" Width="100"></Button>
+            </Grid>
 
 
         </Grid>

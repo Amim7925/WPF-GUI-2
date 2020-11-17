@@ -231,7 +231,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
             </Grid>
 
-            <Grid x:Name="RightGrid" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Margin="250 0 -250 0" Background="#FFABABAB">
+            <Grid x:Name="RightGrid" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Margin="250 0 -250 0" Background="#FFC9C9C9">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
