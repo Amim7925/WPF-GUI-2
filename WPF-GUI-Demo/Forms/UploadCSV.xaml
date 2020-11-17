@@ -12,7 +12,7 @@
             <RowDefinition Height="4*"/>
             
         </Grid.RowDefinitions>
-        <Button  d:LayoutOverrides="Height" Margin="0,15" Width="180">
+        <Button  d:LayoutOverrides="Height" Margin="0,15" Width="180" Click="Button_Click">
             <StackPanel Orientation="Horizontal" >
 
                 <TextBlock Text="Upload New File" Foreground="White" Margin="0,0,-40,0" />
@@ -28,5 +28,8 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
         </Grid>
+        <DataGrid x:Name="datagrid_CsvFile" Grid.Row="1" Grid.RowSpan="4" AutoGenerateColumns="True">
+            
+        </DataGrid>
     </Grid>
 </UserControl>
