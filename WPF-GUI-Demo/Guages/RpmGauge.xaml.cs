@@ -30,12 +30,23 @@ namespace WPF_GUI_Demo.Guages
             get => _value;
             set
             {
-                if ((value >= 0) && (value <= 3000))
+                if ((value >= 0) && (value <= 6000))
                 {
                     _value = value;
-                    Rpm.Value = _value / 30;
+                    Rpm.Value = _value / 60;
+                    txtValue.Text = _value.ToString() ;
                 }
             }
+        }
+        public void SetMinValue()
+        {
+            Value = 0;
+
+        }
+        public void SetMaxValue()
+        {
+            Value = 6000;
+
         }
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
@@ -44,16 +55,7 @@ namespace WPF_GUI_Demo.Guages
 
         }
 
-        public void SetMinValue()
-        {
-            Value = 0;
-
-        }
-        public void SetMaxValue()
-        {
-            Value = 3000;
-
-        }
+       
 
 
 

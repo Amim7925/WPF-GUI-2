@@ -24,5 +24,29 @@ namespace WPF_GUI_Demo.Guages
         {
             InitializeComponent();
         }
+        private long _value;
+        public long Value
+        {
+            get => _value;
+            set
+            {
+                if ((value >= 0) && (value <= 3000))
+                {
+                    _value = value;
+                    Torq.Value = _value / 30 ;
+                    txtValue.Text = _value.ToString();
+                }
+            }
+        }
+        public void SetMinValue()
+        {
+            Value = 0;
+
+        }
+        public void SetMaxValue()
+        {
+            Value = 3000;
+
+        }
     }
 }
