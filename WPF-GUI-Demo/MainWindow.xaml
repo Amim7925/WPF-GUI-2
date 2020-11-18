@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_GUI_Demo" xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:ribbon="http://schemas.actiprosoftware.com/winfx/xaml/ribbon" xmlns:ribbon1="http://schemas.microsoft.com/netfx/2009/xaml/presentation" xmlns:local1="clr-namespace:WPF_GUI_Demo.Guages" x:Class="WPF_GUI_Demo.MainWindow"
-        mc:Ignorable="d"
+        xmlns:TempGauge="clr-namespace:BlackGauges;assembly=BlackGauges"   
+    mc:Ignorable="d"
       Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Normal" Loaded="Window_Loaded" >
     <Window.Resources>
         <Storyboard x:Key="Leftdashboardgoesright">
@@ -30,14 +31,14 @@
         </Storyboard>
         <Storyboard x:Key="RightGrid">
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="RightGrid">
-                <EasingThicknessKeyFrame KeyTime="0" Value="250,0,-250,0"/>
+                <EasingThicknessKeyFrame KeyTime="0" Value="300,0,-300,0"/>
                 <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="0"/>
             </ThicknessAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="RightGridBack">
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="RightGrid">
                 <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="250,0,-250,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="300,0,-300,0"/>
             </ThicknessAnimationUsingKeyFrames>
         </Storyboard>
 
@@ -64,7 +65,7 @@
             <RowDefinition Height="*"/>
 
         </Grid.RowDefinitions>
-        <Grid x:Name="TiltleBar" Grid.Column="4" Grid.Row="0" Margin="0,0,0,0" MouseDown="TiltleBar_MouseDown" Background="#FF3D3B3D">
+        <Grid x:Name="TiltleBar" Grid.Column="4" Grid.Row="0" Margin="0,0,0,0" MouseDown="TiltleBar_MouseDown" Background="#FF1C7BC7">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
 
                 <Button  x:Name="btnMinimize"  
@@ -129,9 +130,6 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 <TextBlock Text="Temperature :" FontSize="18" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" />
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <local1:TemperatureGauge x:Name="Temp1" Margin="5" />
-                    <local1:TemperatureGauge x:Name="Temp2" Margin="5"/>
-                    <local1:TemperatureGauge x:Name="Temp3" Margin="5" />
 
                 </StackPanel>
 
@@ -147,7 +145,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Line Chart :" FontSize="18" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" Height="24" Width="89" />
 
-                <local:LineChart Margin="135,36,4.4,10" Grid.ColumnSpan="2"  />
+                <local:LineChart Margin="35,36,4.4,20" Grid.ColumnSpan="2"  />
 
             </Grid>
 
@@ -174,7 +172,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
             </Grid>
             <Grid Grid.Column="0" Grid.RowSpan="4"  x:Name="leftGrid" Grid.ColumnSpan="2" >
                 <Grid x:Name="stackPanel" Margin="-155 0 155 0">
-                    <StackPanel  Background="#FF3D3B3D"  >
+                    <StackPanel  Background="#FF1C7BC7"  >
                         <TextBlock Text="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,27,0,0" FontSize="20" Foreground="White"/>
                         <Button  d:LayoutOverrides="Height" Margin="0,30,0,15" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnTCPConnection_Click">
                             <StackPanel Orientation="Horizontal" >
@@ -230,7 +228,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                         <Button  x:Name="BtnGoleft" Width="46"  Height="46"
 Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" 
                   Click="BtnGoleft_Click"  FontWeight="Bold" Visibility="Hidden"
-                 Background="#FF3D3B3D" BorderBrush="#FF3D3B3D"   >
+                 Background="#FF1C7BC7" BorderBrush="#FF3D3B3D"   >
                             <md:PackIcon Kind="ArrowLeftBox" HorizontalAlignment="Center" Width="30" Height="30"   VerticalAlignment="Center" />
                         </Button>
 
@@ -238,7 +236,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                         <Button  x:Name="BtnGoright" Width="46"  Height="46"   
 Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="White" 
                   Click="BtnGoright_Click"  FontWeight="Bold" 
-                 Background="#FF3D3B3D" BorderBrush="{x:Null}"   >
+                 Background="#FF1C7BC7" BorderBrush="{x:Null}"   >
                             <md:PackIcon Kind="ArrowRightBox" HorizontalAlignment="Center" Width="30" Height="30"  VerticalAlignment="Center" />
                         </Button>
                     </Grid>

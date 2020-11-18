@@ -5,42 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_GUI_Demo" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="PopupWindow" Height="550" Width="500" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <Storyboard x:Key="Storyboard1">
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="GridMain">
-                <EasingThicknessKeyFrame KeyTime="0" Value="0,-500,0,500"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="0"/>
-            </ThicknessAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(Brush.Opacity)" Storyboard.TargetName="GridMain">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-    </Window.Resources>
-    <Window.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
-        </EventTrigger>
-    </Window.Triggers>
+        Title="PopupWindow" Height="550" Width="530" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF1C7BC7">
+    
     <Grid>
        
       
         <Grid x:Name="GridMain" Grid.Row="1" Background="#FFECECEC">
            
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="25"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid x:Name="gridTitleBar" Grid.Row="0" MouseDown="gridTitleBar_MouseDown" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition/>
+                
+                
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Width="3" Background="#FF1C7BC7"/>
+            <Grid x:Name="gridTitleBar" Grid.Row="0" Grid.ColumnSpan="2" MouseDown="gridTitleBar_MouseDown" Background="#FF1C7BC7">
                 <Button  x:Name="btnpower" VerticalAlignment="Top" HorizontalAlignment="Right" 
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="Transparent" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="32" Margin="3"   FontWeight="Bold" Width="32"  Click="btnpower_Click"  >
-                    <materialDesign:PackIcon Kind="Close"  Foreground="Black" Width="25" Height="25"/>
+Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="Transparent" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="19" Margin="3"   FontWeight="Bold" Width="32"  Click="btnpower_Click"  >
+                    <materialDesign:PackIcon Kind="Close"  Foreground="White" Width="15" Height="15"/>
                 </Button>
             </Grid>
           
   
-            <Grid x:Name="gridShow" Grid.Row="1"  >
+            <Grid x:Name="gridShow" Grid.Row="1" Grid.Column="1" Background="#FFF3F3F3"  >
                 
             </Grid>
         </Grid>
