@@ -7,7 +7,7 @@
         xmlns:ribbon="http://schemas.actiprosoftware.com/winfx/xaml/ribbon" xmlns:ribbon1="http://schemas.microsoft.com/netfx/2009/xaml/presentation" xmlns:local1="clr-namespace:WPF_GUI_Demo.Guages" xmlns:local2="clr-namespace:WPF_GUI_Demo.Black_Gauge" x:Class="WPF_GUI_Demo.MainWindow"
            
     mc:Ignorable="d"
-      Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized" Loaded="Window_Loaded" >
+      Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized"   >
     <Window.Resources>
         <Storyboard x:Key="Leftdashboardgoesright">
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="MainGrid">
