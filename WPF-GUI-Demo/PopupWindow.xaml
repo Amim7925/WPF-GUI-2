@@ -10,7 +10,7 @@
     <Grid>
        
       
-        <Grid x:Name="GridMain" Grid.Row="1" Background="#FFECECEC" Margin="10">
+        <Grid x:Name="GridMain" Grid.Row="1" Margin="10">
            
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
@@ -29,9 +29,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background
             </Grid>
           
   
-            <Grid x:Name="gridShow" Grid.Row="1" Grid.Column="1" Background="#FFF3F3F3"  >
-                
-            </Grid>
+            <Grid x:Name="gridShow" Grid.Row="1" Grid.Column="1"  />
         </Grid>
     </Grid>
 </Window>

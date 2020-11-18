@@ -10,9 +10,9 @@
         <Ellipse Height="300" Width="300" Margin="0 0 0 45">
             <Ellipse.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#4b86b4  "/>
-                    <GradientStop Color="#4b86b4  " Offset="1"/>
-                    <GradientStop Color="#63ace5  " Offset="0.5"/>
+                    <GradientStop Color="#FF6CBEFF"/>
+                    <GradientStop Color="#FF65BBFF" Offset="1"/>
+                    <GradientStop Color="#FF1C7BC7  " Offset="0.5"/>
                 </LinearGradientBrush>
             </Ellipse.Fill>
 
@@ -30,7 +30,7 @@
             </StackPanel>
             <Image  Width="90" Height="90" VerticalAlignment="Top" Margin="96,-66,94,0"/>
         </Grid>
-        <Button x:Name="btnLogin" VerticalAlignment="Bottom" Margin="100,0,95,72" Content="Login" FontSize="18" FontFamily="Calibri" Click="btnLogin_Click" Background="#FF5DA2D8"  />
+        <Button x:Name="btnLogin" VerticalAlignment="Bottom" Margin="100,0,95,72" Content="Login" FontSize="18" FontFamily="Calibri" Click="btnLogin_Click" Background="#FF3B90D4"  />
         <Button Content="Forgot password?" Foreground="#000" Height="30" Margin="100,501,95,19"  Background="{x:Null}" FontSize="12"  BorderBrush="{x:Null}"/>
 
         <Button  x:Name="btnpower"  

@@ -5,86 +5,89 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_GUI_Demo.Forms"
              mc:Ignorable="d" 
-             d:DesignHeight="650" d:DesignWidth="550" >
+             d:DesignHeight="650" d:DesignWidth="550" Background="{x:Null}" >
     <Grid>
-        
-        <Border Padding="10">
-            
-            <Grid Background="#265B5B5B" Margin="5">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" >
-            <TextBlock Margin="10 10 0 0" Text="Available Hardware"></TextBlock>
-            <ListView Height="260" Margin="10">
-                
-            </ListView>
-        </StackPanel>
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="25"/>
-                <RowDefinition/>
-                <RowDefinition Height="3*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <CheckBox Margin="15 0 15 0"  Content="CAN FD" Grid.Row="0" ></CheckBox>
-            <Grid  Margin="0 10 0 0" Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Margin="15 0 15 0">
-                    <Label Content="Clock Frequency :"></Label>
-                    <ComboBox x:Name="txtUserName"   Margin="5 0 0 0" ></ComboBox>
-                </StackPanel>
-                <StackPanel Grid.Column="1" Margin="15 0 15 0">
-                    <Label Content="Bit rate :"></Label>
-                    <ComboBox x:Name="txtBitrate" Margin="5 0 0 0" ></ComboBox>
-                </StackPanel>
-                <StackPanel Grid.Column="2" Margin="15 0 15 0">
 
-                    <Label Content="Bus Timing Register :"></Label>
-                    <ComboBox x:Name="txtBusTiming"   Margin="5 0 0 0" ></ComboBox>
+        <Border Padding="0" CornerRadius="15">
+
+            <Grid Margin="0">
+                <Grid.Background>
+                    <SolidColorBrush Color="White"/>
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" >
+                    <TextBlock Margin="10 10 0 0" Text="Available Hardware" Foreground="Black"></TextBlock>
+                    <ListView Height="260" Margin="10">
+
+                    </ListView>
                 </StackPanel>
-            </Grid>
-            <Grid Margin="5 20" Grid.Row="2">
-                <GroupBox  Header="Filter Settings" >
-                    <Grid>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <CheckBox Margin="15 0 15 0"  Content="CAN FD" Grid.Row="0" Foreground="Black" ></CheckBox>
+                    <Grid  Margin="0 10 0 0" Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel>
-                            <RadioButton Content="Standard" Margin="5 15"></RadioButton>
-                            <RadioButton Content="Extended"  Margin="5 5"></RadioButton>
+                        <StackPanel Margin="15 0 15 0">
+                            <Label Content="Clock Frequency :" Foreground="Black"></Label>
+                            <ComboBox x:Name="txtUserName" Background="#FFFDFDFD"  Margin="5 0 0 0" ></ComboBox>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.ColumnSpan="2">
-                            <Label Content="From :" VerticalAlignment="Center"></Label>
-                            <TextBox Width="80" VerticalAlignment="Center"></TextBox>
-                            <Label Content="(Hex)" Margin="5 0 5 0" VerticalAlignment="Center"></Label>
-                            <Label Content="To :" VerticalAlignment="Center"></Label>
-                            <TextBox Width="80" VerticalAlignment="Center"></TextBox>
-                            <Label Content="(Hex)" Margin="5 0 5 0" VerticalAlignment="Center"></Label>
+                        <StackPanel Grid.Column="1" Margin="15 0 15 0">
+                            <Label Content="Bit rate :" Foreground="Black"></Label>
+                            <ComboBox x:Name="txtBitrate" Margin="5 0 0 0" Background="#FFFDFDFD" ></ComboBox>
+                        </StackPanel>
+                        <StackPanel Grid.Column="2" Margin="15 0 15 0">
+
+                            <Label Content="Bus Timing Register :" Foreground="Black"></Label>
+                            <ComboBox x:Name="txtBusTiming"   Margin="5 0 0 0" Background="#FFFDFDFD" ></ComboBox>
                         </StackPanel>
                     </Grid>
-                </GroupBox>
-               
-            </Grid>
-            <Grid  Grid.Row="3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <CheckBox Grid.Column="0" Margin="15 0 15 0"  Content="Listen-Only mode" Grid.Row="0" ></CheckBox>
-                <Button   Grid.Column="1" Content="OK" Width="100" ></Button>
-                <Button   Grid.Column="2" Content="Cancel" Width="100" ></Button>
-                <Button   Grid.Column="3" Content="Help" Width="100"></Button>
-            </Grid>
+                    <Grid Margin="5 20" Grid.Row="2">
+                        <GroupBox  Header="Filter Settings" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <RadioButton Content="Standard" Margin="5 15" Foreground="Black"></RadioButton>
+                                    <RadioButton Content="Extended"  Margin="5 5" Foreground="Black"></RadioButton>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.ColumnSpan="2">
+                                    <Label Content="From :" VerticalAlignment="Center" Foreground="Black"></Label>
+                                    <TextBox Width="80" VerticalAlignment="Center"></TextBox>
+                                    <Label Content="(Hex)" Margin="5 0 5 0" VerticalAlignment="Center" Foreground="Black"></Label>
+                                    <Label Content="To :" VerticalAlignment="Center" Foreground="Black"></Label>
+                                    <TextBox Width="80" VerticalAlignment="Center"></TextBox>
+                                    <Label Content="(Hex)" Margin="5 0 5 0" VerticalAlignment="Center" Foreground="Black"></Label>
+                                </StackPanel>
+                            </Grid>
+                        </GroupBox>
+
+                    </Grid>
+                    <Grid  Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox Grid.Column="0" Margin="5 0 0 0"  Content="Listen-Only mode" Grid.Row="0" Foreground="Black" ></CheckBox>
+                        <Button   Grid.Column="1" Content="OK" Width="100" ></Button>
+                        <Button   Grid.Column="2" Content="Cancel" Width="100" ></Button>
+                        <Button   Grid.Column="3" Content="Help" Width="100"></Button>
+                    </Grid>
 
                 </Grid>
             </Grid>

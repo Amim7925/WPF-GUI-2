@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:WPF_GUI_Demo.Forms"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="WPF_GUI_Demo.Forms.CreateDrivingCycle"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="600" Background="#fff">
-    <Grid x:Name="maingrid">
+             d:DesignHeight="700" d:DesignWidth="600">
+    <Grid x:Name="maingrid" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -17,8 +17,8 @@
             <RowDefinition/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="10" Fill="#26424242"/>
-        <StackPanel Margin="20 10" Grid.Column="0" x:Name="stpTextboxes1">
+        <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="10" Fill="White"/>
+        <StackPanel Margin="20 20" Grid.Column="0" x:Name="stpTextboxes1">
             <Label Content="Torque :"/>
             <TextBox x:Name="txtTorque" Height="30" Margin="5 0 0 0" />
             <Label  Margin="0 15 0 0 " Content="Rpm :"/>
@@ -31,7 +31,7 @@
 
 
         </StackPanel>
-        <StackPanel Grid.Column="1" Margin="20 10">
+        <StackPanel Grid.Column="1" Margin="20 20">
             <Label  Content="Hour :"/>
             <TextBox x:Name="txtMail" Height="30" Margin="5 0 0 0"/>
             <Label Margin="0 15 0 0 "  Content="Minute :"/>

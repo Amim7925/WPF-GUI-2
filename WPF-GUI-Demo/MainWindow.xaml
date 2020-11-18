@@ -184,7 +184,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                     <TextBlock Text="Temperature :" FontSize="18" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" />
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-
+                        
                     </StackPanel>
 
 
