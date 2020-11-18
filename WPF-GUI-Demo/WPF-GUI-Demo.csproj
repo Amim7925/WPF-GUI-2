@@ -39,6 +39,10 @@
   <ItemGroup>
     <Reference Include="ActiproSoftware.Ribbon.Wpf, Version=20.1.0.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL" />
     <Reference Include="ActiproSoftware.Shared.Wpf, Version=20.1.0.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL" />
+    <Reference Include="BlackGauges, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Refrences\BlackGauges.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -101,18 +105,11 @@
     <Compile Include="Forms\UploadCSV.xaml.cs">
       <DependentUpon>UploadCSV.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Guages\Double2StringConverter.cs" />
     <Compile Include="Guages\RpmGauge.xaml.cs">
       <DependentUpon>RpmGauge.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Guages\TemperatureGauge.xaml.cs">
-      <DependentUpon>TemperatureGauge.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Guages\TorqueGauge.xaml.cs">
       <DependentUpon>TorqueGauge.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Guages\UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
     <Compile Include="PopupWindow.xaml.cs">
       <DependentUpon>PopupWindow.xaml</DependentUpon>
@@ -159,15 +156,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Guages\TemperatureGauge.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Guages\TorqueGauge.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Guages\UserControl1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -237,6 +226,9 @@
   <ItemGroup>
     <Resource Include="pic\aaa.jpg" />
     <Resource Include="pic\s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Refrences\BlackGauges.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
