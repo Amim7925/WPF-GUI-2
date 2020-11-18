@@ -16,5 +16,5 @@ C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml
 127-1120759563
 Black Gauge\ArcGauge.xaml;Forms\AboutUs.xaml;Forms\CanbusConnection.xaml;Forms\CreateDrivingCycle.xaml;Forms\CreateUser.xaml;Forms\SearchByCycle.xaml;Forms\TCPConnection.xaml;Forms\UploadCSV.xaml;Guage.xaml;Guages\RpmGauge.xaml;Guages\TorqueGauge.xaml;LineChart.xaml;MainWindow.xaml;PopupWindow.xaml;SolidGauge.xaml;WindowLogin.xaml;
 
-False
+True
 
