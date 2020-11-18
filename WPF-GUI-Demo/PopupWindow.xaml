@@ -5,31 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_GUI_Demo" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="PopupWindow" Height="700" Width="600" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF1C7BC7">
+        Title="PopupWindow" Height="700" Width="600" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
     
     <Grid>
-       
-      
-        <Grid x:Name="GridMain" Grid.Row="1" Margin="10">
+
+        <Border BorderBrush="#FF1C7BC7" BorderThickness="2" >
+        <Grid x:Name="GridMain" Grid.Row="1" >
            
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="20"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="3"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Width="3" Background="#FF1C7BC7"/>
             <Grid x:Name="gridTitleBar" Grid.Row="0" Grid.ColumnSpan="2" MouseDown="gridTitleBar_MouseDown" Background="#FF1C7BC7">
-                <Button  x:Name="btnpower" VerticalAlignment="Top" HorizontalAlignment="Right"
-Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="Transparent" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="25" Margin="0"   FontWeight="Bold" Width="32"  Click="btnpower_Click"  >
-                    <materialDesign:PackIcon Kind="Close"  Foreground="White" Width="20" Height="20"/>
+                <Button  x:Name="btnpower" VerticalAlignment="Top" HorizontalAlignment="Right" 
+Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="Transparent" BorderBrush="{x:Null}" Foreground="{x:Null}"  Width="18" Height="18"  FontWeight="Bold"   Click="btnpower_Click" BorderThickness="1" Margin="0,0,10,0"  >
+                    <materialDesign:PackIcon Kind="Close"  Foreground="White" Height="20" Width="20" />
                 </Button>
             </Grid>
           
   
             <Grid x:Name="gridShow" Grid.Row="1" Grid.Column="1"  />
         </Grid>
+        </Border>
     </Grid>
 </Window>
