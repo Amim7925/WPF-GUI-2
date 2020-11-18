@@ -148,15 +148,9 @@ namespace WPF_GUI_Demo
         {
             
 
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 1);
-            timer.Tick += Timer_Tick;
-            timer.Start();
+           
         }
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-
-        }
+      
         private void FillList()
         {
             list.Add("John");
@@ -167,11 +161,12 @@ namespace WPF_GUI_Demo
             list.Add("File2");
             list.Add("File3");
         }
-
+        bool found = false;
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            bool found = false;
+            
             var border = (resultStack.Parent as ScrollViewer).Parent as Border;
+           
             var data = list;
 
             string query = (sender as TextBox).Text;
@@ -189,7 +184,7 @@ namespace WPF_GUI_Demo
 
             // Clear the list
             resultStack.Children.Clear();
-
+           
             // Add the result
             foreach (var obj in data)
             {
@@ -200,7 +195,6 @@ namespace WPF_GUI_Demo
                     found = true;
                 }
             }
-
             if (!found)
             {
                 resultStack.Children.Add(new TextBlock() { Text = "No results found." });
@@ -236,9 +230,17 @@ namespace WPF_GUI_Demo
             };
             block.MouseLeftButtonDown += (sender,e) =>
             {
-              
                 txtSearch.Text = (sender as TextBlock).Text;
             };
+            txtSearch.KeyUp += (sender, e) =>
+            {
+                if(e.Key == Key.Space)
+                {
+                  
+                }
+              
+            };
+
             // Add to the panel
             resultStack.Children.Add(block);
         }
@@ -260,6 +262,11 @@ namespace WPF_GUI_Demo
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void txtSearch_PreviewKeyDown(object sender, KeyEventArgs e)
         {
 
         }
