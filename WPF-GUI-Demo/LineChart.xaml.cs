@@ -38,22 +38,30 @@ namespace WPF_GUI_Demo
             {
                 new LineSeries
                 {
-                    Title = "Series 1",
+                    Title = "Torque",
                     Values = new ChartValues<double> { 4, 6, 5, 2 ,4 },
                     Fill= Brushes.Transparent
                     
                 },
                 new LineSeries
                 {
-                    Title = "Series 2",
+                    Title = "Rpm",
                     Values = new ChartValues<double> { 6, 7, 3, 4 ,6 },
                     PointGeometry = null,
                     Fill= Brushes.Transparent
                 },
                 new LineSeries
                 {
-                    Title = "Series 3",
+                    Title = "Temp",
                     Values = new ChartValues<double> { 4,2,7,2,7 },
+                    PointGeometry = DefaultGeometries.Square,
+                    PointGeometrySize = 15,
+                    Fill= Brushes.Transparent
+                },
+                 new LineSeries
+                {
+                    Title = "Series 4",
+                    Values = new ChartValues<double> { 3,5,2,1,8 },
                     PointGeometry = DefaultGeometries.Square,
                     PointGeometrySize = 15,
                     Fill= Brushes.Transparent
