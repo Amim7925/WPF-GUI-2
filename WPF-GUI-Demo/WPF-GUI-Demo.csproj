@@ -83,7 +83,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Csv Class\CSVFile.cs" />
+    <Compile Include="Black Gauge\ArcGauge.xaml.cs">
+      <DependentUpon>ArcGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Black Gauge\Double2StringConverter.cs" />
+    <Compile Include="Black Gauge\MainWindowModel.cs" />
+    <Compile Include="Black Gauge\PCANBasic.cs" />
+    <Compile Include="Classes\CSVFile.cs" />
+    <Compile Include="Classes\DrivingCycle.cs" />
     <Compile Include="Forms\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>
@@ -120,6 +127,10 @@
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
+    <Page Include="Black Gauge\ArcGauge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\AboutUs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

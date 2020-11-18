@@ -85,14 +85,10 @@ C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\CreateDr
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\UploadCSV.baml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\RpmGauge.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\RpmGauge.baml
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TemperatureGauge.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TorqueGauge.g.cs
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\UserControl1.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TemperatureGauge.baml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TorqueGauge.baml
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\UserControl1.baml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Demo.exe.config
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Demo.exe
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Demo.pdb
@@ -315,3 +311,7 @@ C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.pdb
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.xml
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.baml
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\BlackGauges.dll
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo_Content.g.cs
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Black Gauge\ArcGauge.g.cs
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Black Gauge\ArcGauge.baml
