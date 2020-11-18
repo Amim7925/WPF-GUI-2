@@ -28,9 +28,8 @@ namespace WPF_GUI_Demo
         {
             InitializeComponent();
             model = this.Resources["model"] as MainWindowModel;
-            FillList();
+            
         }
-        List<string> list = new List<string>();
         Timer t = new Timer();
         private void BtnGoleft_Click(object sender, RoutedEventArgs e)
         {
@@ -157,91 +156,7 @@ namespace WPF_GUI_Demo
         {
 
         }
-        private void FillList()
-        {
-            list.Add("John");
-            list.Add("Jason");
-            list.Add("Amim");
-            list.Add("Bhrath");
-            list.Add("File1");
-            list.Add("File2");
-            list.Add("File3");
-        }
-
-        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
-        {
-            bool found = false;
-            var border = (resultStack.Parent as ScrollViewer).Parent as Border;
-            var data = list;
-
-            string query = (sender as TextBox).Text;
-
-            if (query.Length == 0)
-            {
-                // Clear
-                resultStack.Children.Clear();
-                border.Visibility = System.Windows.Visibility.Collapsed;
-            }
-            else
-            {
-                border.Visibility = System.Windows.Visibility.Visible;
-            }
-
-            // Clear the list
-            resultStack.Children.Clear();
-
-            // Add the result
-            foreach (var obj in data)
-            {
-                if (obj.ToLower().StartsWith(query.ToLower()))
-                {
-                    // The word starts with this... Autocomplete must work
-                    addItem(obj);
-                    found = true;
-                }
-            }
-
-            if (!found)
-            {
-                resultStack.Children.Add(new TextBlock() { Text = "No results found." });
-            }
-        }
-        private void addItem(string text)
-        {
-            TextBlock block = new TextBlock();
-
-            // Add the text
-            block.Text = text;
-
-            // A little style...
-            block.Margin = new Thickness(2, 3, 2, 3);
-            block.Cursor = Cursors.Hand;
-
-            // Mouse events
-            block.MouseLeftButtonUp += (sender, e) =>
-            {
-                ACBorder.Visibility = Visibility.Collapsed;
-            };
-
-            block.MouseEnter += (sender, e) =>
-            {
-                TextBlock b = sender as TextBlock;
-                b.Background = Brushes.SkyBlue;
-            };
-
-            block.MouseLeave += (sender, e) =>
-            {
-                TextBlock b = sender as TextBlock;
-                b.Background = Brushes.Transparent;
-            };
-            block.MouseLeftButtonDown += (sender,e) =>
-            {
-              
-                txtSearch.Text = (sender as TextBlock).Text;
-            };
-            // Add to the panel
-            resultStack.Children.Add(block);
-        }
+       
 
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
@@ -263,5 +178,7 @@ namespace WPF_GUI_Demo
         {
 
         }
+
+        
     }
 }
