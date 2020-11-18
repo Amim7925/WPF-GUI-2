@@ -111,8 +111,8 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Column="4" HorizontalAlignment="Right">
-                <Button  x:Name="btnOpenMenu"  
+            <Grid Grid.Column="1" Grid.ColumnSpan="4" Background="White" >
+                <Button  x:Name="btnOpenMenu"  HorizontalAlignment="Right"
 Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="Black" Height="20"
                   Click="btnOpenMenu_Click" Margin="0,10,17,10" FontWeight="Bold" Width="20"
                  Background="{x:Null}" BorderBrush="{x:Null}"   >
@@ -133,7 +133,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 </Grid.RowDefinitions>
 
 
-                <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="#FFD6D6D6" Name="GridTemp">
+                <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="#FFF6F6F6" Name="GridTemp">
                     <TextBlock Text="Temperature :" FontSize="18" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" />
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
@@ -169,7 +169,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                 </Grid>
 
-                <Grid x:Name="GridChart" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="1" Margin="0,0,0,0" MouseDown="MainItemsGrid_MouseDown_1" Background="#FFE2E2E2">
+                <Grid x:Name="GridChart" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="1" Margin="0,0,0,0" MouseDown="MainItemsGrid_MouseDown_1" Background="White">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="135*"/>
                         <ColumnDefinition Width="830*"/>
@@ -183,7 +183,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
             </Grid>
 
-            <Grid x:Name="DownGrid" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="2"  >
+            <Grid x:Name="DownGrid" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="#FFF6F6F6"  >
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="3*"/>
@@ -527,7 +527,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
             </Grid>
 
-            <Grid x:Name="RightGrid" Grid.Row="1" Grid.RowSpan="4" Grid.Column="3" Margin="300 0 -300 0" Background="#FFC9C9C9">
+            <Grid x:Name="RightGrid" Grid.Row="1" Grid.RowSpan="4" Grid.Column="3" Margin="300 0 -300 0" Background="#FFD1D7DF">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>

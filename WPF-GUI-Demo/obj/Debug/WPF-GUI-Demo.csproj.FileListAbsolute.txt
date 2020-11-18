@@ -312,3 +312,4 @@ C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Black Gauge\Ar
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Black Gauge\ArcGauge.baml
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Black Gauge\ArcGauge.g.cs
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Black Gauge\ArcGauge.baml
+C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.csprojAssemblyReference.cache
