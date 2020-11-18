@@ -261,16 +261,7 @@ namespace WPF_GUI_Demo
 
    
 
-        private void BtnShowoff_Click(object sender, RoutedEventArgs e)
-        {
-           
-
-            DownGrid.Children.Remove(STKItems);
-            DownGrid.Children.Remove(scrollBarGuages);
-
-            scrollBarValues.Visibility = Visibility.Visible;
-            lblGuages.Text = "Values :";
-        }
+      
 
 
     }
