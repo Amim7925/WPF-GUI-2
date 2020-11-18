@@ -139,7 +139,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,-0.2"  >
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Center"  Margin="0,0,0,-0.2"  >
                         <local2:ArcGauge  Margin="30,0,0,0"
                         GaugeTitle="TORQUE"
                         GaugeUnit="{Binding Path=GaugeUnit}"

@@ -25,9 +25,5 @@ namespace WPF_GUI_Demo.Forms
             InitializeComponent();
         }
 
-        private void btnpower_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

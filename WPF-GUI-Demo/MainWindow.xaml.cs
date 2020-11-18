@@ -64,11 +64,6 @@ namespace WPF_GUI_Demo
             btnCloseMenu.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        
         private void btnTCPConnection_Click(object sender, RoutedEventArgs e)
         {
             new PopupWindow(4).ShowDialog();
@@ -123,11 +118,6 @@ namespace WPF_GUI_Demo
                 this.WindowState = System.Windows.WindowState.Maximized;
 
             }
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
