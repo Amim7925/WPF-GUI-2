@@ -42,11 +42,11 @@
             <Ellipse Fill="{StaticResource BR1}"/>
 
             <Grid Width="320" Height="320">
-                <Ellipse Width="320" Height="320" Fill="{StaticResource BR2}"/>
+                <Ellipse Width="320" Height="320" Fill="{DynamicResource BR2}"/>
 
                 <Path StrokeThickness="1"
                     Data="M160,160 L160,320 A160,160,0,1,1,320,160 L160,160"
-                    Fill="{StaticResource BR3}"/>
+                    Fill="{DynamicResource BR6}"/>
 
                 <Path StrokeThickness="1" Fill="{Binding GaugeColor}">
                     <Path.Data>

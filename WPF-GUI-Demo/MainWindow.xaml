@@ -118,7 +118,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                  Background="{x:Null}" BorderBrush="{x:Null}"   >
                     <md:PackIcon Kind="Menu"  FontSize="20"  />
                 </Button>
-                <Button  x:Name="btnCloseMenu"  Visibility="Hidden"
+                <Button  x:Name="btnCloseMenu" HorizontalAlignment="Right"  Visibility="Hidden"
 Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foreground="Black" Height="20"
                   Click="btnCloseMenu_Click" Margin="0,10,17,10" FontWeight="Bold" Width="20"
                  Background="{x:Null}" BorderBrush="{x:Null}"   >
@@ -191,15 +191,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 <TextBlock x:Name="lblGuages" Text="Gauges :" FontSize="18" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" />
                 <StackPanel Orientation="Horizontal" Name="STKItems" VerticalAlignment="Top" HorizontalAlignment="Right">
                     <ToggleButton x:Name="tgbGuages"  Margin="10" Click="ToggleButton_Checked"></ToggleButton>
-                    
 
-                        <Button  x:Name="BtnShowOff"  HorizontalAlignment="Right"
-  Foreground="White" 
-                  Click="BtnShowoff_Click"  FontWeight="Bold"
-                 Background="#FF1C7BC7" BorderBrush="{x:Null}" Margin="0,3,20,0" VerticalAlignment="Top"   >
-                            <md:PackIcon Kind="Hide" HorizontalAlignment="Right"    VerticalAlignment="Top" />
-                        </Button>
-                    
 
 
                 </StackPanel>
@@ -527,7 +519,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
             </Grid>
 
-            <Grid x:Name="RightGrid" Grid.Row="1" Grid.RowSpan="4" Grid.Column="3" Margin="300 0 -300 0" Background="#FFD1D7DF">
+            <Grid x:Name="RightGrid" Grid.Row="1" Grid.RowSpan="4" Grid.Column="3" Margin="300 0 -300 0" Background="#FFDAE2EC">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
@@ -547,7 +539,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                 <Grid Grid.Row="1">
                     <StackPanel    Grid.Row="1" >
-                        <TextBox x:Name="txtSearch" KeyUp="txtSearch_KeyUp" Padding="2" VerticalContentAlignment="Center" Style="{x:Null}"  Background="#FFE0E0E0"  Height="25" Width="180" BorderBrush="{x:Null}" Margin="0,20,0,0">
+                        <TextBox x:Name="txtSearch" KeyUp="txtSearch_KeyUp" Padding="2" VerticalContentAlignment="Center" Style="{x:Null}"  Background="White"  Height="25" Width="180" BorderBrush="{x:Null}" Margin="0,20,0,0">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="8"/>
@@ -555,7 +547,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                             </TextBox.Resources>
                         </TextBox>
 
-                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Height="28" Width="28" Background="#FF3D3B3D" Margin="155 -28 0 0" ToolTip="Search" BorderBrush="{x:Null}">
+                        <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Height="28" Width="28" Background="#FF1C7BC7" Margin="155 -28 0 0" ToolTip="Search" BorderBrush="{x:Null}">
                             <md:PackIcon Kind="Search" Foreground="#FFFFFDFD"/>
                         </Button>
                         <Border x:Name="ACBorder" Width="170" Height="150" BorderBrush="#fff" BorderThickness="1" Visibility="Collapsed" Background="#fff">
