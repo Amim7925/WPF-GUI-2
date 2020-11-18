@@ -250,5 +250,19 @@ namespace WPF_GUI_Demo
                 scrollBarGuages.Visibility = Visibility.Visible;
             }
         }
+
+        private void BtnShowon_Click(object sender, RoutedEventArgs e)
+        {
+            BtnShowOff.Visibility = Visibility.Visible;
+            BtnShowOn.Visibility = Visibility.Hidden;
+        }
+
+        private void BtnShowoff_Click(object sender, RoutedEventArgs e)
+        {
+            BtnShowOff.Visibility = Visibility.Hidden;
+            BtnShowOn.Visibility = Visibility.Visible;
+        }
+
+        
     }
 }
