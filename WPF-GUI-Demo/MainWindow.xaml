@@ -156,10 +156,10 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                     <RowDefinition/>
                     <RowDefinition Height="3*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Text="Gauges :" FontSize="18" HorizontalAlignment="Left" Margin="40,15,0,0" VerticalAlignment="Top" />
+                <TextBlock x:Name="lblGuages" Text="Gauges :" FontSize="18" HorizontalAlignment="Left" Margin="40,15,0,0" VerticalAlignment="Top" />
                 <ToggleButton x:Name="tgbGuages" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Click="ToggleButton_Checked"></ToggleButton>
 
-                <ScrollViewer x:Name="scrollBarGuages" HorizontalScrollBarVisibility="Auto" Grid.Row="1" >
+                <ScrollViewer x:Name="scrollBarGuages" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Visibility="Hidden" >
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 20" Height="110"  >
                         <local1:RpmGauge x:Name="Rpm1" Margin="40 0 0 0" />
                         <local1:RpmGauge x:Name="Rpm2" />
@@ -169,205 +169,211 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                         <local1:TorqueGauge  />
                     </StackPanel>
                 </ScrollViewer>
-                <ScrollViewer x:Name="scrollBarValues" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Visibility="Hidden">
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 20" Height="110"  >                         
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                <ScrollViewer x:Name="scrollBarValues" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Visibility="Visible">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 20" Height="110"  >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="40 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Urms1 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.2 V" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Urms2 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.2 V" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Urms3 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.2 V" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Udc4 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="-0.2 V" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Irms1 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.01 A" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Irms2 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.41 A" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Irms3 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.25 A" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Idc4 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.07 A" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
-                                <Label FontWeight="Bold" Content="λ1 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="A1 :" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.2747" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
-                                <Label FontWeight="Bold" Content="λ2 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="A2 :" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.3127" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
-                                <Label FontWeight="Bold" Content="λ3 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="A3 :" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.1909" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="OFF :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Pm :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.00K W" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="CH A :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.08 N-w" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="CH B :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.00K r/min" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
 
 
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="f1 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0 Hz" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
 
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="S1 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K VA" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="S2 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K VA" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
 
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="S3 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K VA" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
 
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="S4 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K VA" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
 
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="OFF :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="P1 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K W" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="P2 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K W" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="P3 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K W" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                            <StackPanel>
+                                <Label FontWeight="Bold" Content="P4 :" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K W" HorizontalAlignment="Center"></Label>
+                            </StackPanel>
+                        </md:Card>
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="OFF :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="80" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Q1 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K var" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
 
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="80" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Q2 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K var" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
 
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="80" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
                                 <Label FontWeight="Bold" Content="Q3 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0.000K var" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
 
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
-                                <Label FontWeight="Bold" Content="γ1 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="Uthd1 :" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0 %" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
-                                <Label FontWeight="Bold" Content="γ2 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="Uthd2 :" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0 %" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
-                        <md:Card Padding="5" Width="60" Height="60" Margin="20 0 0 0"  Background="White" UniformCornerRadius="5" >
+                        <md:Card Padding="5" Width="75" Height="60" Margin="20 0 20 0"  Background="White" UniformCornerRadius="5" >
                             <StackPanel>
-                                <Label FontWeight="Bold" Content="γ3 :" HorizontalAlignment="Center"></Label>
-                                <Label FontWeight="Bold" Content="0.2" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="Uthd3 :" HorizontalAlignment="Center"></Label>
+                                <Label FontWeight="Bold" Content="0 %" HorizontalAlignment="Center"></Label>
                             </StackPanel>
                         </md:Card>
 
-                      
+
                     </StackPanel>
                 </ScrollViewer>
 
