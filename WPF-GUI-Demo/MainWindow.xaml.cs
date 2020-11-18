@@ -249,13 +249,13 @@ namespace WPF_GUI_Demo
             {
                 scrollBarValues.Visibility = Visibility.Visible;
                 scrollBarGuages.Visibility = Visibility.Hidden;
-                textBlock.Text = "Values :";
+                lblGuages.Text = "Values :";
             }
             if(tgbGuages.IsChecked == false)
             {
                 scrollBarValues.Visibility = Visibility.Hidden;
                 scrollBarGuages.Visibility = Visibility.Visible;
-                textBlock.Text = "Gauges :";
+                lblGuages.Text = "Gauges :";
             }
         }
 

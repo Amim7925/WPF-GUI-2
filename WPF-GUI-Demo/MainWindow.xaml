@@ -674,7 +674,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 </Grid>
                 <StackPanel HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" Width="187">
 
-                    <Button Margin="0,15" Background="#FF3D3B3D" BorderBrush="{x:Null}" Click="btnUploadCSVFile_Click" Height="36" Width="173">
+                    <Button Margin="0,15" Background="#FF1C7BC7" BorderBrush="{x:Null}" Click="btnUploadCSVFile_Click" Height="36" Width="173">
                         <StackPanel Orientation="Horizontal" >
 
                             <TextBlock Text="Upload Log File" Foreground="White" Margin="0,0,4,0"  />
@@ -685,7 +685,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                     </Button>
 
-                    <Button Margin="0,15,0,22" Background="#FF3D3B3D" Click="btnDrivingCycle_Click" BorderBrush="{x:Null}" Height="36" Width="173">
+                    <Button Margin="0,15,0,22" Background="#FF1C7BC7" Click="btnDrivingCycle_Click" BorderBrush="{x:Null}" Height="36" Width="173">
                         <StackPanel Orientation="Horizontal" >
 
                             <TextBlock Text="Creat Driving Cycle" Foreground="White" Margin="0,0,0,0" />
