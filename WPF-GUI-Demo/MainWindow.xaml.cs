@@ -259,10 +259,9 @@ namespace WPF_GUI_Demo
             }
         }
 
-   
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
 
-      
-
-
+        }
     }
 }

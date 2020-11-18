@@ -448,7 +448,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                         </Button>
 
-                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_2">
                             <StackPanel Orientation="Horizontal" >
 
                                 <TextBlock Text="Search Cycle" Foreground="White" Margin="0,0,-40,0" />
