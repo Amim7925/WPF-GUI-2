@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_GUI_Demo" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
          Title="login" Height="550" Width="350" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None">
-    <Grid Background="#FFFDFDFD">
+    <Grid Background="#FFE3E4E5">
         <Ellipse Height="300" Width="300" Margin="0 0 0 45">
             <Ellipse.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -17,7 +17,7 @@
             </Ellipse.Fill>
 
         </Ellipse>
-        <Ellipse Width="260" Height="260" Fill="White" VerticalAlignment="Bottom" Margin="30,0,30,167">
+        <Ellipse Width="260" Height="260" Fill="#FFF9F9F9" VerticalAlignment="Bottom" Margin="30,0,30,167">
             <Ellipse.Effect>
                 <DropShadowEffect Color="#FFBBBBBB" BlurRadius="15" RenderingBias="Quality" ShadowDepth="1"/>
             </Ellipse.Effect>
