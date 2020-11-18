@@ -103,9 +103,6 @@
     <Compile Include="Forms\CreateUser.xaml.cs">
       <DependentUpon>CreateUser.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SearchByCycle.xaml.cs">
-      <DependentUpon>SearchByCycle.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Forms\TCPConnection.xaml.cs">
       <DependentUpon>TCPConnection.xaml</DependentUpon>
     </Compile>
@@ -144,10 +141,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\CreateUser.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Forms\SearchByCycle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

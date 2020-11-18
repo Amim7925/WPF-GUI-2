@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\
 WPF_GUI_Demo
 none
 false
 DEBUG;TRACE
-C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml
-16-449052210
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml
+15-839807036
 1-542498763
-26-1661994213
-127-1120759563
-Black Gauge\ArcGauge.xaml;Forms\AboutUs.xaml;Forms\CanbusConnection.xaml;Forms\CreateDrivingCycle.xaml;Forms\CreateUser.xaml;Forms\SearchByCycle.xaml;Forms\TCPConnection.xaml;Forms\UploadCSV.xaml;Guage.xaml;Guages\RpmGauge.xaml;Guages\TorqueGauge.xaml;LineChart.xaml;MainWindow.xaml;PopupWindow.xaml;SolidGauge.xaml;WindowLogin.xaml;
+251031931091
+126834243649
+Black Gauge\ArcGauge.xaml;Forms\AboutUs.xaml;Forms\CanbusConnection.xaml;Forms\CreateDrivingCycle.xaml;Forms\CreateUser.xaml;Forms\TCPConnection.xaml;Forms\UploadCSV.xaml;Guage.xaml;Guages\RpmGauge.xaml;Guages\TorqueGauge.xaml;LineChart.xaml;MainWindow.xaml;PopupWindow.xaml;SolidGauge.xaml;WindowLogin.xaml;
 
 False
 
