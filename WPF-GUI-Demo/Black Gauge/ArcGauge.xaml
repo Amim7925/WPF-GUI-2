@@ -206,7 +206,7 @@
                     FontWeight="Bold"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Center"
-                    Margin="0,110,0,0"
+                    Margin="0,90,0,0"
                     Foreground="{StaticResource BR5}"/>
 
                 <TextBlock Text="{Binding GaugeUnit}"

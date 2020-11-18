@@ -118,6 +118,9 @@
     <Compile Include="PopupWindow.xaml.cs">
       <DependentUpon>PopupWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchText.xaml.cs">
+      <DependentUpon>SearchText.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SolidGauge.xaml.cs">
       <DependentUpon>SolidGauge.xaml</DependentUpon>
     </Compile>
@@ -188,6 +191,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PopupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchText.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
