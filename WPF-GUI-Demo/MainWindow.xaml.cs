@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using WPF_GUI_Demo.Black_Gauge;
 
 namespace WPF_GUI_Demo
 {
@@ -22,10 +23,11 @@ namespace WPF_GUI_Demo
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainWindow model;
+        MainWindowModel model;
         public MainWindow()
         {
             InitializeComponent();
+            model = this.Resources["model"] as MainWindowModel;
             FillList();
         }
         List<string> list = new List<string>();
@@ -138,18 +140,22 @@ namespace WPF_GUI_Demo
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
         {
-            Rpm1.Value = 1040;
+            new WindowLogin().Show();
+            this.Close();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //Temp1.Max = 100;
-            //model.Min = -100;
+            
 
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 1);
-            //timer.Tick += Timer_Tick;
+            timer.Tick += Timer_Tick;
             timer.Start();
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+
         }
         private void FillList()
         {
@@ -253,18 +259,19 @@ namespace WPF_GUI_Demo
             }
         }
 
-        private void BtnShowon_Click(object sender, RoutedEventArgs e)
-        {
-            BtnShowOff.Visibility = Visibility.Visible;
-            BtnShowOn.Visibility = Visibility.Hidden;
-        }
+   
 
         private void BtnShowoff_Click(object sender, RoutedEventArgs e)
         {
-            BtnShowOff.Visibility = Visibility.Hidden;
-            BtnShowOn.Visibility = Visibility.Visible;
+           
+
+            DownGrid.Children.Remove(STKItems);
+            DownGrid.Children.Remove(scrollBarGuages);
+
+            scrollBarValues.Visibility = Visibility.Visible;
+            lblGuages.Text = "Values :";
         }
 
-        
+
     }
 }
