@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_GUI_Demo.Classes;
 
 namespace WPF_GUI_Demo.Forms
 {
@@ -23,6 +24,30 @@ namespace WPF_GUI_Demo.Forms
         public CreateDrivingCycle()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                listview.Items.Add(new DrivingCycle { Torque = Convert.ToDouble(txtTorque.Text), Gradiant = Convert.ToDouble(txtGradiant.Text), Rpm = Convert.ToDouble(txtRPM.Text), Load = txtLoad.Text, Time = timerpicker.Text });
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            foreach (var t in stpTextboxes1.Children)
+            {
+                if (t.GetType() == typeof(TextBox))
+                {
+                    TextBox tt = (TextBox)t;
+                    Console.WriteLine(tt.Name);
+                    tt.Text = string.Empty;
+                }
+
+            }
+            timerpicker.Text = string.Empty;
         }
     }
 }
