@@ -10,7 +10,7 @@
     <Grid>
        
       
-        <Grid x:Name="GridMain" Grid.Row="1" Background="#FFECECEC">
+        <Grid x:Name="GridMain" Grid.Row="1" Background="#FFECECEC" Margin="10">
            
             <Grid.RowDefinitions>
                 <RowDefinition Height="25"/>

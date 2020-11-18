@@ -6,18 +6,19 @@
              xmlns:local="clr-namespace:WPF_GUI_Demo.Forms"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="WPF_GUI_Demo.Forms.CreateDrivingCycle"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="450" Background="#fff">
+             d:DesignHeight="600" d:DesignWidth="450" Background="#fff">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition/>
+            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="15" Fill="#265B5B5B"/>
-        <StackPanel Margin="20 40" Grid.Column="0">
+        <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="14" Fill="#265B5B5B"/>
+        <StackPanel Margin="20 20" Grid.Column="0">
             <Label Content="Torque :"/>
             <TextBox x:Name="txtTorque" Height="30" Margin="5 0 0 0" />
             <Label  Margin="0 15 0 0 " Content="Rpm :"/>
@@ -30,15 +31,18 @@
 
 
         </StackPanel>
-        <StackPanel Grid.Column="1" Margin="20 40">
+        <StackPanel Grid.Column="1" Margin="20 20">
             <Label  Content="Hour :"/>
             <TextBox x:Name="txtMail" Height="30" Margin="5 0 0 0"/>
             <Label Margin="0 15 0 0 "  Content="Minute :"/>
             <TextBox x:Name="txtRole" Height="30" Margin="5 0 0 0"/>
             <Label Margin="0 15 0 0 " Content="Second :"/>
             <TextBox x:Name="txtSecond" Height="30" Margin="5 0 0 0"/>
-            <materialDesign:TimePicker Height="30" Margin="5 40 0 0" />
+           
         </StackPanel>
-        <Button Height="40"  Width="140" Content="Submit" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button Height="40"  Width="140" Content="Add" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <ListView Margin="20 15" Grid.Row="2" Grid.ColumnSpan="2">
+               
+        </ListView>
     </Grid>
 </UserControl>
