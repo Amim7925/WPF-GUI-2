@@ -135,13 +135,11 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                 <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="#FFF6F6F6" Name="GridTemp">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition Width="2.2*"/>
+                        <ColumnDefinition Width="239*"/>
+                        <ColumnDefinition Width="261*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="Temperature :" FontSize="18" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" Height="24" Width="109" />
 
-                    <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Left"  Grid.ColumnSpan="2" >
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,-0.2"  >
                         <local2:ArcGauge  Margin="20,0,0,0"
                         GaugeTitle="TORQUE"
                         GaugeUnit="{Binding Path=GaugeUnit}"
@@ -170,13 +168,14 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                         GaugeColor="Peru"
                         SettingGaugeColor="#FF3333" />
                     </StackPanel>
-                    <ScrollViewer Grid.Column="2" >
-                        <Grid Margin="0 30">
+                    <ScrollViewer Grid.Column="1" Margin="14.6,0,0,-0.2" HorizontalScrollBarVisibility="Auto" >
+                        <Grid Margin="0 5">
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
-                            <WrapPanel Grid.Row="0">
+                            
+                                <StackPanel Orientation="Horizontal" Grid.Row="0">
                                 <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
                                     <StackPanel>
                                         <Label FontWeight="Bold" Content="Urms1 :" HorizontalAlignment="Center"></Label>
@@ -225,8 +224,8 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                                         <Label FontWeight="Bold" Content="0.07 A" HorizontalAlignment="Center"></Label>
                                     </StackPanel>
                                 </md:Card>
-                            </WrapPanel>
-                            <WrapPanel Grid.Row="1">
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1">
 
                                 <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
                                     <StackPanel>
@@ -278,7 +277,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                                         <Label FontWeight="Bold" Content="0 Hz" HorizontalAlignment="Center"></Label>
                                     </StackPanel>
                                 </md:Card>
-                            </WrapPanel>
+                            </StackPanel>
                         </Grid>
 
 
