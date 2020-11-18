@@ -135,12 +135,12 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                 <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Background="#FFF6F6F6" Name="GridTemp">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="239*"/>
-                        <ColumnDefinition Width="261*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
                     <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,-0.2"  >
-                        <local2:ArcGauge  Margin="20,0,0,0"
+                        <local2:ArcGauge  Margin="30,0,0,0"
                         GaugeTitle="TORQUE"
                         GaugeUnit="{Binding Path=GaugeUnit}"
                         Max="100"
@@ -168,120 +168,126 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                         GaugeColor="Peru"
                         SettingGaugeColor="#FF3333" />
                     </StackPanel>
-                    <ScrollViewer Grid.Column="1" Margin="14.6,0,0,-0.2" HorizontalScrollBarVisibility="Auto" >
-                        <Grid Margin="0 5">
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            
+                    <Viewbox Grid.Column="1">
+                        <ScrollViewer Grid.Column="1" Margin="14.6,0,0,-0.2" HorizontalScrollBarVisibility="Auto" Width="660" >
+                            <Grid Margin="0 5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
                                 <StackPanel Orientation="Horizontal" Grid.Row="0">
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="Urms1 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.2 V" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="Urms2 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.2 V" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="Urms3 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.2 V" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="Udc4 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="-0.2 V" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="Irms1 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.01 A" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="Irms2 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.41 A" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,5,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="Irms3 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.25 A" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="0,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="Idc4 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.07 A" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Grid.Row="1">
 
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="A1 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.2747" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="A2 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.3127" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="A3 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.1909" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="OFF :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="Pm :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.00K W" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="CH A :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.08 N-w" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="CH B :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0.00K r/min" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="Urms1 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.2 V" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
 
 
-                                <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
-                                    <StackPanel>
-                                        <Label FontWeight="Bold" Content="f1 :" HorizontalAlignment="Center"></Label>
-                                        <Label FontWeight="Bold" Content="0 Hz" HorizontalAlignment="Center"></Label>
-                                    </StackPanel>
-                                </md:Card>
-                            </StackPanel>
-                        </Grid>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="Urms2 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.2 V" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="Urms3 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.2 V" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="Udc4 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="-0.2 V" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="Irms1 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.01 A" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="Irms2 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.41 A" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,5,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="Irms3 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.25 A" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="0,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="Idc4 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.07 A" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Grid.Row="1">
+
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="A1 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.2747" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="A2 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.3127" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="A3 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.1909" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="OFF :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="Pm :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.00K W" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="CH A :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.08 N-w" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="CH B :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0.00K r/min" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
 
 
-                    </ScrollViewer>
+                                    <md:Card Padding="5" Width="75" Height="65" Margin="5,3,0,3"  Background="White" UniformCornerRadius="5" >
+                                        <StackPanel>
+                                            <Label FontWeight="Bold" Content="f1 :" HorizontalAlignment="Center"></Label>
+                                            <Label FontWeight="Bold" Content="0 Hz" HorizontalAlignment="Center"></Label>
+                                        </StackPanel>
+                                    </md:Card>
+                                </StackPanel>
+                            </Grid>
+
+
+                        </ScrollViewer>
+                    </Viewbox>
+                
 
 
                 </Grid>
@@ -468,7 +474,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                         </Button>
 
-                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_2">
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}" >
                             <StackPanel Orientation="Horizontal" >
 
                                 <TextBlock Text="Search Cycle" Foreground="White" Margin="0,0,-40,0" />
