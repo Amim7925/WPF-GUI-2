@@ -219,7 +219,7 @@
 
                 <TextBlock Text="{Binding Value, Converter={StaticResource Double2Str}}"
                     Foreground="{StaticResource BR6}"
-                    FontSize="100"
+                    FontSize="80"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     Margin="0,50,0,0"/>

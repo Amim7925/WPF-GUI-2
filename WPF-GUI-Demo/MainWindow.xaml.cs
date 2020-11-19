@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LiveCharts.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using WPF_GUI_Demo.Black_Gauge;
+using WPF_GUI_Demo.Classes;
 
 namespace WPF_GUI_Demo
 {
@@ -23,13 +25,24 @@ namespace WPF_GUI_Demo
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainWindowModel model;
         public MainWindow()
         {
             InitializeComponent();
-            model = this.Resources["model"] as MainWindowModel;
+
+            Gauges values = new Gauges
+            {
+               BGRpm= 3100,
+               BGTemp = 150,
+               BGTorque = 1600,
+               RpmGauge1 = 3150,
+               RpmGuage2 = 3200,
+               TempGauge1 = 155,
+               TempGuage2 = 160,
+               TorqueGauge1 = 1650,
+               TorqueGauge2 = 1700
+            };
+            FillGauges(values);
         }
-        Timer t = new Timer();
         private void BtnGoleft_Click(object sender, RoutedEventArgs e)
         {
             BtnGoleft.Visibility = Visibility.Hidden;
@@ -140,6 +153,19 @@ namespace WPF_GUI_Demo
                 scrollBarGuages.Visibility = Visibility.Visible;
                 lblGuages.Text = "Gauges :";
             }
+        }
+
+        private void FillGauges(Gauges obj)
+        {
+            Rpm1.Value = obj.RpmGauge1;
+            Rpm2.Value = obj.RpmGuage2;
+            Temp1.Value = obj.TempGauge1;
+            Temp2.Value = obj.TempGuage2;
+            Torque1.Value = obj.TorqueGauge1;
+            Torque2.Value = obj.TorqueGauge2;
+            BlackRpm.Value = obj.BGRpm;
+            BlackTemp.Value = obj.BGTemp;
+            BlackTorue.Value = obj.BGTorque;
         }
 
     }

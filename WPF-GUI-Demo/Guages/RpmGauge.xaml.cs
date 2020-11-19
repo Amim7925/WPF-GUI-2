@@ -24,6 +24,7 @@ namespace WPF_GUI_Demo.Guages
         {
             InitializeComponent();
         }
+        
         private long _value;
         public long Value
         {
@@ -33,29 +34,15 @@ namespace WPF_GUI_Demo.Guages
                 if ((value >= 0) && (value <= 6000))
                 {
                     _value = value;
-                    Rpm.Value = _value / 60;
-                    txtValue.Text = _value.ToString() ;
+                    Rpm.Value = _value ;
+                    //txtValue.Text = _value.ToString() ;
                 }
             }
         }
-        public void SetMinValue()
-        {
-            Value = 0;
-
-        }
-        public void SetMaxValue()
-        {
-            Value = 6000;
-
-        }
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
+        
 
 
 
-        }
-
-       
 
 
 

@@ -91,6 +91,7 @@
     <Compile Include="Black Gauge\PCANBasic.cs" />
     <Compile Include="Classes\CSVFile.cs" />
     <Compile Include="Classes\DrivingCycle.cs" />
+    <Compile Include="Classes\Gauges.cs" />
     <Compile Include="Forms\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>
@@ -111,6 +112,9 @@
     </Compile>
     <Compile Include="Guages\RpmGauge.xaml.cs">
       <DependentUpon>RpmGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Guages\TempGauge.xaml.cs">
+      <DependentUpon>TempGauge.xaml</DependentUpon>
     </Compile>
     <Compile Include="Guages\TorqueGauge.xaml.cs">
       <DependentUpon>TorqueGauge.xaml</DependentUpon>
@@ -153,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Guages\RpmGauge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Guages\TempGauge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

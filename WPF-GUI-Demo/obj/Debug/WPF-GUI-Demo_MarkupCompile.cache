@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml
-14-735533600
+15-1552200640
 
-231696779557
+25-441528141
 126-700050074
-Black Gauge\ArcGauge.xaml;Forms\AboutUs.xaml;Forms\CanbusConnection.xaml;Forms\CreateDrivingCycle.xaml;Forms\CreateUser.xaml;Forms\TCPConnection.xaml;Forms\UploadCSV.xaml;Guages\RpmGauge.xaml;Guages\TorqueGauge.xaml;LineChart.xaml;MainWindow.xaml;PopupWindow.xaml;SearchText.xaml;WindowLogin.xaml;
+Black Gauge\ArcGauge.xaml;Forms\AboutUs.xaml;Forms\CanbusConnection.xaml;Forms\CreateDrivingCycle.xaml;Forms\CreateUser.xaml;Forms\TCPConnection.xaml;Forms\UploadCSV.xaml;Guages\RpmGauge.xaml;Guages\TempGauge.xaml;Guages\TorqueGauge.xaml;LineChart.xaml;MainWindow.xaml;PopupWindow.xaml;SearchText.xaml;WindowLogin.xaml;
 
 False
 
