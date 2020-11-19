@@ -124,6 +124,134 @@ namespace WPF_GUI_Demo {
         #line hidden
         
         
+        #line 184 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueUrms1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 192 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueUrms2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 198 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueUrms3;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 204 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueUdc4;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 210 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueIdc1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 216 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueIdc2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 222 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueIdc3;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 228 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueIdc4;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 237 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueA1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 243 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueA2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 249 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueA3;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 255 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueOFF;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 261 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valuePm;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 267 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueCHA;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 273 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueCHB;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 281 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valuef1;
+        
+        #line default
+        #line hidden
+        
+        
         #line 295 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid GridChart;
@@ -191,6 +319,134 @@ namespace WPF_GUI_Demo {
         #line 327 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ScrollViewer scrollBarValues;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 332 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueS1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 338 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueS2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 345 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueS3;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 352 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueS4;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 359 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueOFF2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 365 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueP1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 371 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueP2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 377 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueP3;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 383 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueP4;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 389 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueOFF3;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 395 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueQ1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 402 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueQ2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 409 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueQ3;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 416 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueUthd1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 422 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueUthd2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 428 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label valueUthd3;
         
         #line default
         #line hidden
@@ -352,6 +608,54 @@ namespace WPF_GUI_Demo {
             this.GridTemp = ((System.Windows.Controls.Grid)(target));
             return;
             case 10:
+            this.valueUrms1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 11:
+            this.valueUrms2 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 12:
+            this.valueUrms3 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 13:
+            this.valueUdc4 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 14:
+            this.valueIdc1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 15:
+            this.valueIdc2 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 16:
+            this.valueIdc3 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 17:
+            this.valueIdc4 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 18:
+            this.valueA1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 19:
+            this.valueA2 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 20:
+            this.valueA3 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 21:
+            this.valueOFF = ((System.Windows.Controls.Label)(target));
+            return;
+            case 22:
+            this.valuePm = ((System.Windows.Controls.Label)(target));
+            return;
+            case 23:
+            this.valueCHA = ((System.Windows.Controls.Label)(target));
+            return;
+            case 24:
+            this.valueCHB = ((System.Windows.Controls.Label)(target));
+            return;
+            case 25:
+            this.valuef1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 26:
             this.GridChart = ((System.Windows.Controls.Grid)(target));
             
             #line 295 "..\..\MainWindow.xaml"
@@ -360,13 +664,13 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 11:
+            case 27:
             this.DownGrid = ((System.Windows.Controls.Grid)(target));
             return;
-            case 12:
+            case 28:
             this.lblGuages = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 13:
+            case 29:
             this.tgbGuages = ((System.Windows.Controls.Primitives.ToggleButton)(target));
             
             #line 315 "..\..\MainWindow.xaml"
@@ -375,28 +679,76 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 14:
+            case 30:
             this.scrollBarGuages = ((System.Windows.Controls.ScrollViewer)(target));
             return;
-            case 15:
+            case 31:
             this.Rpm1 = ((WPF_GUI_Demo.Guages.RpmGauge)(target));
             return;
-            case 16:
+            case 32:
             this.Rpm2 = ((WPF_GUI_Demo.Guages.RpmGauge)(target));
             return;
-            case 17:
+            case 33:
             this.Rpm3 = ((WPF_GUI_Demo.Guages.RpmGauge)(target));
             return;
-            case 18:
+            case 34:
             this.scrollBarValues = ((System.Windows.Controls.ScrollViewer)(target));
             return;
-            case 19:
+            case 35:
+            this.valueS1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 36:
+            this.valueS2 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 37:
+            this.valueS3 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 38:
+            this.valueS4 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 39:
+            this.valueOFF2 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 40:
+            this.valueP1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 41:
+            this.valueP2 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 42:
+            this.valueP3 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 43:
+            this.valueP4 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 44:
+            this.valueOFF3 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 45:
+            this.valueQ1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 46:
+            this.valueQ2 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 47:
+            this.valueQ3 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 48:
+            this.valueUthd1 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 49:
+            this.valueUthd2 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 50:
+            this.valueUthd3 = ((System.Windows.Controls.Label)(target));
+            return;
+            case 51:
             this.leftGrid = ((System.Windows.Controls.Grid)(target));
             return;
-            case 20:
+            case 52:
             this.stackPanel = ((System.Windows.Controls.Grid)(target));
             return;
-            case 21:
+            case 53:
             
             #line 442 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnTCPConnection_Click);
@@ -404,7 +756,7 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 22:
+            case 54:
             
             #line 453 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnUser_Click);
@@ -412,7 +764,7 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 23:
+            case 55:
             
             #line 466 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnCanbusConnection_Click);
@@ -420,7 +772,7 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 24:
+            case 56:
             this.BtnGoleft = ((System.Windows.Controls.Button)(target));
             
             #line 495 "..\..\MainWindow.xaml"
@@ -429,7 +781,7 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 25:
+            case 57:
             this.BtnGoright = ((System.Windows.Controls.Button)(target));
             
             #line 503 "..\..\MainWindow.xaml"
@@ -438,7 +790,7 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 26:
+            case 58:
             
             #line 513 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnAboutUs_Click);
@@ -446,7 +798,7 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 27:
+            case 59:
             this.BtnLogout = ((System.Windows.Controls.Button)(target));
             
             #line 525 "..\..\MainWindow.xaml"
@@ -455,13 +807,13 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 28:
+            case 60:
             this.RightGrid = ((System.Windows.Controls.Grid)(target));
             return;
-            case 29:
+            case 61:
             this.txt_UserName = ((System.Windows.Controls.TextBlock)(target));
             return;
-            case 30:
+            case 62:
             
             #line 675 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnUploadCSVFile_Click);
@@ -469,7 +821,7 @@ namespace WPF_GUI_Demo {
             #line default
             #line hidden
             return;
-            case 31:
+            case 63:
             
             #line 686 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnDrivingCycle_Click);
