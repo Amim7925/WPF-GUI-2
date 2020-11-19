@@ -58,14 +58,7 @@ namespace WPF_GUI_Demo
                     PointGeometrySize = 15,
                     Fill= Brushes.Transparent
                 },
-                 new LineSeries
-                {
-                    Title = "Series 4",
-                    Values = new ChartValues<double> { 3,5,2,1,8 },
-                    PointGeometry = DefaultGeometries.Square,
-                    PointGeometrySize = 15,
-                    Fill= Brushes.Transparent
-                }
+               
             };
 
             Labels = new[] { "12:00", "12:01", "12:02", "12:03", "12:04" , "12:05", "12:06", "12:07", "12:08", "12:09", "12:010" };

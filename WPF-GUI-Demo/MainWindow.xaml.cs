@@ -100,12 +100,6 @@ namespace WPF_GUI_Demo
 
             
         }
-
-        private void MainItemsGrid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
-
         private void MainItemsGrid_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
             DragMove();
@@ -142,14 +136,6 @@ namespace WPF_GUI_Demo
             this.Close();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-
-           
-        }
-      
-        
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
             if (tgbGuages.IsChecked == true)
@@ -166,14 +152,5 @@ namespace WPF_GUI_Demo
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void txtSearch_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
     }
 }
