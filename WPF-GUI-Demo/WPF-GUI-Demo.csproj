@@ -89,6 +89,7 @@
     <Compile Include="Black Gauge\Double2StringConverter.cs" />
     <Compile Include="Black Gauge\MainWindowModel.cs" />
     <Compile Include="Black Gauge\PCANBasic.cs" />
+    <Compile Include="CardValueClass.cs" />
     <Compile Include="Classes\CSVFile.cs" />
     <Compile Include="Classes\DrivingCycle.cs" />
     <Compile Include="Forms\AboutUs.xaml.cs">

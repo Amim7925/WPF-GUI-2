@@ -28,8 +28,9 @@ namespace WPF_GUI_Demo
         {
             InitializeComponent();
             model = this.Resources["model"] as MainWindowModel;
-            
+            setCardValue(cardval);
         }
+        CardValueClass cardval = new CardValueClass();
         Timer t = new Timer();
         private void BtnGoleft_Click(object sender, RoutedEventArgs e)
         {
@@ -153,42 +154,42 @@ namespace WPF_GUI_Demo
             }
         }
 
-        private void setCardValue(string a)
+        private void setCardValue(CardValueClass value)
         {
-            valueUrms1.Content = a;
-            valueUrms2.Content = a;
-            valueUrms3.Content = a;
-            valueUdc4.Content = a;
-            valueIdc1.Content = a;
-            valueIdc2.Content = a;
-            valueIdc3.Content = a;
-            valueIdc4.Content = a;
-            valueA1.Content = a;
-            valueA2.Content = a;
-            valueA3.Content = a;
-            valuePm.Content = a;
-            valueCHA.Content = a;
-            valueOFF.Content = string.Empty;
-            valueCHB.Content = a;
-            valuef1.Content = a;
+            valueUrms1.Content = value.Urms1;
+            valueUrms2.Content = value.Urms2;
+            valueUrms3.Content = value.Urms3.ToString(); 
+            valueUdc4.Content = value.Udc4.ToString();
+            valueIdc1.Content = value.Idc1;
+            valueIdc2.Content = value.Idc2;
+            valueIdc3.Content  = value.Idc3; 
+            valueIdc4.Content  = value.Idc4;
+            valueA1.Content    = value.A1;
+            valueA2.Content    = value.A2;
+            valueA3.Content    = value.A3;
+            valuePm.Content    = value.Pm;
+            valueCHA.Content   = value.CHA;
+            valueOFF.Content   = string.Empty;
+            valueCHB.Content   = value.CHB;
+            valuef1.Content    = value.f1;
+                                
 
-
-            valueS1.Content = a;
-            valueS2.Content = a;
-            valueS3.Content = a;
-            valueS4.Content = a;
-            valueOFF2.Content = string.Empty;
-            valueP1.Content = a;
-            valueP2.Content = a;
-            valueP3.Content = a;
-            valueP4.Content = a;
-            valueOFF3.Content = string.Empty;
-            valueQ1.Content = a;
-            valueQ2.Content = a;
-            valueQ3.Content = a;
-            valueUthd1.Content = a;
-            valueUthd2.Content = a;
-            valueUthd3.Content = a;
+            valueS1.Content    = value.S1;
+            valueS2.Content    = value.S2;
+            valueS3.Content    = value.S3;
+            valueS4.Content    = value.S4;
+            valueOFF2.Content  = string.Empty;
+            valueP1.Content    = value.P1;
+            valueP2.Content    = value.P2;
+            valueP3.Content    = value.P3;
+            valueP4.Content    = value.P4;
+            valueOFF3.Content  = string.Empty;
+            valueQ1.Content    = value.Q1;
+            valueQ2.Content    = value.Q2;
+            valueQ3.Content    = value.Q3;
+            valueUthd1.Content = value.Uthd1;
+            valueUthd2.Content = value.Uthd2;
+            valueUthd3.Content = value.Uthd3;
             
 
         }

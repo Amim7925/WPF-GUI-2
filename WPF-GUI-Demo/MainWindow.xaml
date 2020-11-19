@@ -526,7 +526,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                             <StackPanel Orientation="Horizontal" >
 
                                 <TextBlock Text="LogOut" Foreground="White" Margin="0,0,5,0" />
-                                <md:PackIcon Kind="LogoutVariant" Margin="102,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+                                <md:PackIcon Kind="LogoutVariant" Margin="100,0,0,0" HorizontalAlignment="Left" Foreground="White" />
 
                             </StackPanel>
 
