@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPF_GUI_Demo.Guages
 {
     /// <summary>
-    /// Interaction logic for TorqueGauge.xaml
+    /// Interaction logic for TempGauge.xaml
     /// </summary>
-    public partial class TorqueGauge : UserControl
+    public partial class TempGauge : UserControl
     {
-        public TorqueGauge()
+        public TempGauge()
         {
             InitializeComponent();
         }
@@ -30,23 +30,13 @@ namespace WPF_GUI_Demo.Guages
             get => _value;
             set
             {
-                if ((value >= 0) && (value <= 3000))
+                if ((value >= 0) && (value <= 200))
                 {
                     _value = value;
-                    Torq.Value = _value;
+                    Temp.Value = _value;
                     //txtValue.Text = _value.ToString();
                 }
             }
-        }
-        public void SetMinValue()
-        {
-            Value = 0;
-
-        }
-        public void SetMaxValue()
-        {
-            Value = 3000;
-
         }
     }
 }

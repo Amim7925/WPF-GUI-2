@@ -139,31 +139,31 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left" Margin="0,0,0,-0.2"  >
-                        <local2:ArcGauge  Margin="30,0,0,0"
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Center"  Margin="0,0,0,-0.2"  >
+                        <local2:ArcGauge x:Name="BlackTorue" Margin="30,0,0,0"
                         GaugeTitle="TORQUE"
                         GaugeUnit="{Binding Path=GaugeUnit}"
-                        Max="100"
-                        Min="-100"
-                        Value="10"
+                        Max="3000"
+                        Min="0"
+                        Value="1500"
                         SettingValue="{Binding Path=SettingValue}"
                         GaugeColor="Peru"
                         SettingGaugeColor="#FF3333" />
-                        <local2:ArcGauge  Margin="20,0,0,0"
+                        <local2:ArcGauge x:Name="BlackRpm"  Margin="20,0,0,0"
                         GaugeTitle="RPM"
                         GaugeUnit="{Binding Path=GaugeUnit}"
-                        Max="100"
-                        Min="-100"
-                        Value="10"
+                        Max="6000"
+                        Min="0"
+                        Value="3000"
                         SettingValue="{Binding Path=SettingValue}"
                         GaugeColor="Peru"
                         SettingGaugeColor="#FF3333" />
-                        <local2:ArcGauge Margin="20,0,0,0"
+                        <local2:ArcGauge x:Name="BlackTemp"  Margin="20,0,0,0"
                         GaugeTitle="TEMP"
                         GaugeUnit="{Binding Path=GaugeUnit}"
-                        Max="100"
-                        Min="-100"
-                        Value="10"
+                        Max="200"
+                        Min="0"
+                        Value="100"
                         SettingValue="{Binding Path=SettingValue}"
                         GaugeColor="Peru"
                         SettingGaugeColor="#FF3333" />
@@ -318,10 +318,10 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="0 0 0 20" Height="110"  >
                         <local1:RpmGauge x:Name="Rpm1" Margin="40 0 0 0" />
                         <local1:RpmGauge x:Name="Rpm2" />
-                        <local1:RpmGauge x:Name="Rpm3" />
-                        <local1:TorqueGauge Margin="40 0 0 0" />
-                        <local1:TorqueGauge  />
-                        <local1:TorqueGauge  />
+                        <local1:TempGauge x:Name="Temp1" />
+                        <local1:TempGauge x:Name="Temp2" Margin="40 0 0 0" />
+                        <local1:TorqueGauge x:Name="Torque1"  />
+                        <local1:TorqueGauge x:Name="Torque2"  />
                     </StackPanel>
                 </ScrollViewer>
                 <ScrollViewer x:Name="scrollBarValues" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Visibility="Hidden">

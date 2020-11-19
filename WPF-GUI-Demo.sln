@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-GUI-Demo", "WPF-GUI-Dem
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WPF-GUI-Setup", "WPF-GUI-Setup\WPF-GUI-Setup.vdproj", "{26B17041-2A1B-411C-B594-3D8475BC4964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWpfApp1", "TestWpfApp1\TestWpfApp1.csproj", "{828321FA-9313-4F27-8528-BA62BBC1B96D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +19,6 @@ Global
 		{2D73F0AF-A45B-4517-8050-5967D023BB77}.Release|Any CPU.Build.0 = Release|Any CPU
 		{26B17041-2A1B-411C-B594-3D8475BC4964}.Debug|Any CPU.ActiveCfg = Debug
 		{26B17041-2A1B-411C-B594-3D8475BC4964}.Release|Any CPU.ActiveCfg = Release
-		{828321FA-9313-4F27-8528-BA62BBC1B96D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{828321FA-9313-4F27-8528-BA62BBC1B96D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{828321FA-9313-4F27-8528-BA62BBC1B96D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{828321FA-9313-4F27-8528-BA62BBC1B96D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -47,19 +47,15 @@ C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LiveCharts.Wpf
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MaterialDesignColors.pdb
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guage.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\LineChart.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\MainWindow.g.cs
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SolidGauge.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\App.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo_MarkupCompile.cache
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo_MarkupCompile.lref
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\App.baml
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guage.baml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\LineChart.baml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\MainWindow.baml
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SolidGauge.baml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.g.resources
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF_GUI_Demo.Properties.Resources.resources
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.csproj.GenerateResource.cache
@@ -306,8 +302,6 @@ C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.pdb
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.xml
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.baml
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\BlackGauges.dll
-C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo_Content.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Black Gauge\ArcGauge.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Black Gauge\ArcGauge.baml
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Black Gauge\ArcGauge.g.cs
@@ -317,3 +311,5 @@ C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SearchText.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SearchText.baml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SearchText.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SearchText.baml
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TempGauge.g.cs
+C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TempGauge.baml

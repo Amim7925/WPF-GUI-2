@@ -25,8 +25,8 @@ namespace WPF_GUI_Demo
         {
             argo = arg;
             InitializeComponent();
-            //ShowUC();
-
+           
+            //adding user controls to the pop up window
             switch (argo)
             {
                 case 1:

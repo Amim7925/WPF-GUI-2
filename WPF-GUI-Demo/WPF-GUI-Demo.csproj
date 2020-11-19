@@ -92,6 +92,7 @@
     <Compile Include="CardValueClass.cs" />
     <Compile Include="Classes\CSVFile.cs" />
     <Compile Include="Classes\DrivingCycle.cs" />
+    <Compile Include="Classes\Gauges.cs" />
     <Compile Include="Forms\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>
@@ -113,6 +114,9 @@
     <Compile Include="Guages\RpmGauge.xaml.cs">
       <DependentUpon>RpmGauge.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Guages\TempGauge.xaml.cs">
+      <DependentUpon>TempGauge.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Guages\TorqueGauge.xaml.cs">
       <DependentUpon>TorqueGauge.xaml</DependentUpon>
     </Compile>
@@ -121,9 +125,6 @@
     </Compile>
     <Compile Include="SearchText.xaml.cs">
       <DependentUpon>SearchText.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SolidGauge.xaml.cs">
-      <DependentUpon>SolidGauge.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
@@ -156,11 +157,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Guage.xaml">
+    <Page Include="Guages\RpmGauge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Guages\RpmGauge.xaml">
+    <Page Include="Guages\TempGauge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,10 +181,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Double2StringConverter.cs" />
-    <Compile Include="Guage.xaml.cs">
-      <DependentUpon>Guage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="LineChart.xaml.cs">
       <DependentUpon>LineChart.xaml</DependentUpon>
     </Compile>
@@ -196,10 +193,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SearchText.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SolidGauge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -237,10 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pic\aaa.jpg" />
-    <Resource Include="pic\s.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Refrences\BlackGauges.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />

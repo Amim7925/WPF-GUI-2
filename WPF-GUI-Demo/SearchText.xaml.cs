@@ -26,7 +26,9 @@ namespace WPF_GUI_Demo
             FillList();
         }
         List<string> list = new List<string>();
-
+        /// <summary>
+        /// A test list for the auto complete textbox
+        /// </summary>
         private void FillList()
         {
             list.Add("John");
@@ -106,7 +108,6 @@ namespace WPF_GUI_Demo
             };
             block.MouseLeftButtonDown += (sender, e) =>
             {
-
                 txtSearch.Text = (sender as TextBlock).Text;
             };
             // Add to the panel

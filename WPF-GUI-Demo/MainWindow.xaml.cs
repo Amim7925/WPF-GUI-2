@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LiveCharts.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using WPF_GUI_Demo.Black_Gauge;
+using WPF_GUI_Demo.Classes;
 
 namespace WPF_GUI_Demo
 {
@@ -23,15 +25,24 @@ namespace WPF_GUI_Demo
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainWindowModel model;
         public MainWindow()
         {
             InitializeComponent();
-            model = this.Resources["model"] as MainWindowModel;
-            setCardValue(cardval);
+
+            Gauges values = new Gauges
+            {
+               BGRpm= 3100,
+               BGTemp = 150,
+               BGTorque = 1600,
+               RpmGauge1 = 3150,
+               RpmGuage2 = 3200,
+               TempGauge1 = 155,
+               TempGuage2 = 160,
+               TorqueGauge1 = 1650,
+               TorqueGauge2 = 1700
+            };
+            FillGauges(values);
         }
-        CardValueClass cardval = new CardValueClass();
-        Timer t = new Timer();
         private void BtnGoleft_Click(object sender, RoutedEventArgs e)
         {
             BtnGoleft.Visibility = Visibility.Hidden;
@@ -66,11 +77,6 @@ namespace WPF_GUI_Demo
             btnCloseMenu.Visibility = Visibility.Hidden;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        
         private void btnTCPConnection_Click(object sender, RoutedEventArgs e)
         {
             new PopupWindow(4).ShowDialog();
@@ -127,11 +133,6 @@ namespace WPF_GUI_Demo
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
         {
             new WindowLogin().Show();
@@ -154,44 +155,17 @@ namespace WPF_GUI_Demo
             }
         }
 
-        private void setCardValue(CardValueClass value)
+        private void FillGauges(Gauges obj)
         {
-            valueUrms1.Content = value.Urms1;
-            valueUrms2.Content = value.Urms2;
-            valueUrms3.Content = value.Urms3.ToString(); 
-            valueUdc4.Content = value.Udc4.ToString();
-            valueIdc1.Content = value.Idc1;
-            valueIdc2.Content = value.Idc2;
-            valueIdc3.Content  = value.Idc3; 
-            valueIdc4.Content  = value.Idc4;
-            valueA1.Content    = value.A1;
-            valueA2.Content    = value.A2;
-            valueA3.Content    = value.A3;
-            valuePm.Content    = value.Pm;
-            valueCHA.Content   = value.CHA;
-            valueOFF.Content   = string.Empty;
-            valueCHB.Content   = value.CHB;
-            valuef1.Content    = value.f1;
-                                
-
-            valueS1.Content    = value.S1;
-            valueS2.Content    = value.S2;
-            valueS3.Content    = value.S3;
-            valueS4.Content    = value.S4;
-            valueOFF2.Content  = string.Empty;
-            valueP1.Content    = value.P1;
-            valueP2.Content    = value.P2;
-            valueP3.Content    = value.P3;
-            valueP4.Content    = value.P4;
-            valueOFF3.Content  = string.Empty;
-            valueQ1.Content    = value.Q1;
-            valueQ2.Content    = value.Q2;
-            valueQ3.Content    = value.Q3;
-            valueUthd1.Content = value.Uthd1;
-            valueUthd2.Content = value.Uthd2;
-            valueUthd3.Content = value.Uthd3;
-            
-
+            Rpm1.Value = obj.RpmGauge1;
+            Rpm2.Value = obj.RpmGuage2;
+            Temp1.Value = obj.TempGauge1;
+            Temp2.Value = obj.TempGuage2;
+            Torque1.Value = obj.TorqueGauge1;
+            Torque2.Value = obj.TorqueGauge2;
+            BlackRpm.Value = obj.BGRpm;
+            BlackTemp.Value = obj.BGTemp;
+            BlackTorue.Value = obj.BGTorque;
         }
 
     }
