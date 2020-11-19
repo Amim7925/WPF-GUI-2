@@ -42,7 +42,9 @@ namespace WPF_GUI_Demo
                TorqueGauge2 = 1700
             };
             FillGauges(values);
+            fillValueCards(cr);
         }
+        CardValueClass cr = new CardValueClass();
         private void BtnGoleft_Click(object sender, RoutedEventArgs e)
         {
             BtnGoleft.Visibility = Visibility.Hidden;
@@ -167,6 +169,45 @@ namespace WPF_GUI_Demo
             BlackTemp.Value = obj.BGTemp;
             BlackTorue.Value = obj.BGTorque;
         }
+
+        private void fillValueCards(CardValueClass cardsvalue)
+        {
+            valueUrms1.Content = cardsvalue.Urms1;
+            valueUrms2.Content = cardsvalue.Urms2;
+            valueUrms3.Content = cardsvalue.Urms3;
+            valueUdc4.Content = cardsvalue.Udc4;
+            valueIdc1.Content = cardsvalue.Idc1;
+            valueIdc2.Content = cardsvalue.Idc2;
+            valueIdc3.Content = cardsvalue.Idc3;
+            valueIdc4.Content = cardsvalue.Idc4;
+            valueA1.Content = cardsvalue.A1;
+            valueA2.Content = cardsvalue.A2;
+            valueA3.Content = cardsvalue.A3;
+            valuePm.Content = cardsvalue.Pm;
+            valueCHA.Content = cardsvalue.CHA;
+            valueCHB.Content = cardsvalue.CHB;
+            valuef1.Content = cardsvalue.f1;
+            valueS1.Content = cardsvalue.S1;
+            valueS2.Content = cardsvalue.S2;
+            valueS3.Content = cardsvalue.S3;
+            valueS4.Content = cardsvalue.S4;
+            valueQ1.Content = cardsvalue.Q1;
+            valueQ2.Content = cardsvalue.Q2;
+            valueQ3.Content = cardsvalue.Q3;
+            valueP1.Content = cardsvalue.P1;
+            valueP2.Content = cardsvalue.P2;
+            valueP3.Content = cardsvalue.P3;
+            valueP4.Content = cardsvalue.P4;
+            valueUthd1.Content = cardsvalue.Uthd1;
+            valueUthd2.Content = cardsvalue.Uthd2;
+            valueUthd3.Content = cardsvalue.Uthd3;
+            
+            
+            
+            
+        }
+
+
 
     }
 }

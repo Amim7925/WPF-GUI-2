@@ -107,12 +107,10 @@ C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\CreateDrivingCy
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\CreateUser.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\TCPConnection.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\UploadCSV.g.cs
-C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guage.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\RpmGauge.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TorqueGauge.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\LineChart.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\MainWindow.g.cs
-C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SolidGauge.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WindowLogin.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\App.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -125,12 +123,10 @@ C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\CreateDrivingCy
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\CreateUser.baml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\TCPConnection.baml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\UploadCSV.baml
-C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guage.baml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\RpmGauge.baml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TorqueGauge.baml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\LineChart.baml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\MainWindow.baml
-C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SolidGauge.baml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WindowLogin.baml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.g.resources
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF_GUI_Demo.Properties.Resources.resources
@@ -296,8 +292,6 @@ C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Fra
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.xml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.csprojAssemblyReference.cache
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\PopupWindow.g.cs
-C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo_Content.g.cs
-C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\BlackGauges.dll
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.dll
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.pdb
 C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LumenWorks.Framework.IO.xml
@@ -313,3 +307,5 @@ C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SearchText.g.c
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SearchText.baml
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TempGauge.g.cs
 C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TempGauge.baml
+C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TempGauge.g.cs
+C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TempGauge.baml

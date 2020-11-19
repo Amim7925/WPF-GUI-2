@@ -29,6 +29,11 @@ namespace WPF_GUI_Demo
         public double CHB { set; get; }
         public double f1 { set; get; }
 
+        
+        public double Uthd1 { set; get; }
+        public double Uthd2 { set; get; }
+        public double Uthd3 { set; get; }
+
         public double S1 { set; get; }
         public double S2 { set; get; }
         public double S3 { set; get; }
@@ -36,11 +41,6 @@ namespace WPF_GUI_Demo
         public double Q1 { set; get; }
         public double Q2 { set; get; }
         public double Q3 { set; get; }
-        public double Uthd1 { set; get; }
-        public double Uthd2 { set; get; }
-        public double Uthd3 { set; get; }
-
-
         public double P1 { set; get; }
         public double P2 { set; get; }
         public double P3 { set; get; }
