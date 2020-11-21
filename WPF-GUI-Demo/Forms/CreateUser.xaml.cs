@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_GUI_Core;
+using WPF_GUI_Core.Property_Classes;
+using WPF_GUI_Demo.Classes;
 
 namespace WPF_GUI_Demo.Forms
 {
@@ -24,6 +27,39 @@ namespace WPF_GUI_Demo.Forms
         {
             InitializeComponent();
         }
+        ClassUser db = new ClassUser();
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var user = new User
+            {
+                UserName = txtUserName.Text,
+                Password = txtPassword.Password,
+                CreatedBy = SettingSoft.CurrentUser.UserName,
+                PhoneNumber = txtPhoneNumber.Text,
+                CreatedDateTime = DateTime.Now,
+                Email = txtMail.Text,
+                Role = txtRole.Text
 
+            };
+            try
+            {
+                db.Insert(user);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            foreach (var t in stpTextboxes1.Children)
+            {
+                if (t.GetType() == typeof(TextBox))
+                {
+                    TextBox tt = (TextBox)t;
+                    Console.WriteLine(tt.Name);
+                    tt.Text = string.Empty;
+                }
+
+            }
+
+        }
     }
 }

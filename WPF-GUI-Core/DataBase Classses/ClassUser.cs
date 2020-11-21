@@ -73,6 +73,7 @@ namespace WPF_GUI_Core
                 db.CloseConnection();
             }
         }
+
         public void Edit(User argo)
         {
             if (db.OpenConnection())
@@ -102,6 +103,7 @@ namespace WPF_GUI_Core
                 db.CloseConnection();
             }
         }
+
         public void Delete(int id)
         {
             if (db.OpenConnection())
@@ -124,17 +126,28 @@ namespace WPF_GUI_Core
                 db.CloseConnection();
             }
         }
-        public bool UserLogin(string UserName, string Password)
+
+        public UserVerification UserLogin(string UserName, string Password)
         {
+            UserVerification user = null;
             if (db.OpenConnection())
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT count(*) from tbluser WHERE UserName = @UserName and Password=@Password", db.conn);
+               
+                MySqlCommand cmd = new MySqlCommand("SELECT UserName,Password,Role from tbluser WHERE UserName = @UserName and Password=@Password", db.conn);
                 cmd.Parameters.AddWithValue("UserName", UserName);
                 cmd.Parameters.AddWithValue("Password", Password);
-                int count;
                 try
                 {
-                    count = Convert.ToInt32(cmd.ExecuteScalar());
+                    MySqlDataReader datareader = cmd.ExecuteReader();
+                    while (datareader.Read())
+                    {
+                         user = new UserVerification
+                        {
+                            UserName = datareader["UserName"].ToString(),
+                            Password = datareader["Password"].ToString(),
+                            Role = datareader["Role"].ToString()
+                        };
+                    }
                 }
                 catch (MySqlException ex)
                 {
@@ -144,11 +157,10 @@ namespace WPF_GUI_Core
                 {
                     throw new Exception(em.Message);
                 }
-                if (count > 0 )
+                if (user!=null)
                 {
                     db.CloseConnection();
-                    return true;
-
+                    return user;
                 }
                 else
                 {
@@ -159,7 +171,7 @@ namespace WPF_GUI_Core
             }
             else
             {
-                return false;
+                return user;
 
             }
            

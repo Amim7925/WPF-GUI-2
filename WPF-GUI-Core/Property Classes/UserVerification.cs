@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_GUI_Core.Property_Classes
 {
-    class UserVerification
+    public class UserVerification
     {
         public string UserName { get; set; }
 
