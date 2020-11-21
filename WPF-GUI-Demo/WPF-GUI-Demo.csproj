@@ -37,12 +37,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ActiproSoftware.Ribbon.Wpf, Version=20.1.0.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL" />
-    <Reference Include="ActiproSoftware.Shared.Wpf, Version=20.1.0.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL" />
-    <Reference Include="BlackGauges, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Refrences\BlackGauges.dll</HintPath>
-    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -77,6 +71,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WPF-GUI-Core">
+      <HintPath>..\WPF-GUI-Core\bin\Debug\WPF-GUI-Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -89,7 +86,7 @@
     <Compile Include="Black Gauge\Double2StringConverter.cs" />
     <Compile Include="Black Gauge\MainWindowModel.cs" />
     <Compile Include="Black Gauge\PCANBasic.cs" />
-    <Compile Include="CardValueClass.cs" />
+    <Compile Include="Classes\CardValueClass.cs" />
     <Compile Include="Classes\CSVFile.cs" />
     <Compile Include="Classes\DrivingCycle.cs" />
     <Compile Include="Classes\Gauges.cs" />
