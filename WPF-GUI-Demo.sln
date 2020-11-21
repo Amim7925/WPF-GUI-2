@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-GUI-Demo", "WPF-GUI-Demo\WPF-GUI-Demo.csproj", "{2D73F0AF-A45B-4517-8050-5967D023BB77}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WPF-GUI-Setup", "WPF-GUI-Setup\WPF-GUI-Setup.vdproj", "{26B17041-2A1B-411C-B594-3D8475BC4964}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-GUI-Core", "WPF-GUI-Core\WPF-GUI-Core.csproj", "{D7E2CF9B-6D6E-4740-BDE4-3B4F73338CB0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core-Test", "Core-Test\Core-Test.csproj", "{EC688DC1-7992-463E-B2E1-09AD54BAF737}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup-WPF-Functionallity", "Setup-WPF-Functionallity\Setup-WPF-Functionallity.vdproj", "{5971F644-EB40-43E0-A2E1-DCF093964EC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +21,6 @@ Global
 		{2D73F0AF-A45B-4517-8050-5967D023BB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D73F0AF-A45B-4517-8050-5967D023BB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D73F0AF-A45B-4517-8050-5967D023BB77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26B17041-2A1B-411C-B594-3D8475BC4964}.Debug|Any CPU.ActiveCfg = Debug
-		{26B17041-2A1B-411C-B594-3D8475BC4964}.Release|Any CPU.ActiveCfg = Release
 		{D7E2CF9B-6D6E-4740-BDE4-3B4F73338CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D7E2CF9B-6D6E-4740-BDE4-3B4F73338CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7E2CF9B-6D6E-4740-BDE4-3B4F73338CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,6 +29,8 @@ Global
 		{EC688DC1-7992-463E-B2E1-09AD54BAF737}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC688DC1-7992-463E-B2E1-09AD54BAF737}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC688DC1-7992-463E-B2E1-09AD54BAF737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5971F644-EB40-43E0-A2E1-DCF093964EC8}.Debug|Any CPU.ActiveCfg = Debug
+		{5971F644-EB40-43E0-A2E1-DCF093964EC8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
