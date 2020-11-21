@@ -387,3 +387,5 @@ F:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.e
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Core.dll
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MySql.Data.dll
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Core.pdb
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SimulationList.g.cs
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SimulationList.baml

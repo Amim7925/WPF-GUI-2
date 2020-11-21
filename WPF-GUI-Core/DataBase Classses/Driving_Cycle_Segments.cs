@@ -10,6 +10,6 @@ namespace WPF_GUI_Core.DataBase_Classses
     public class Driving_Cycle_Segments
     {
         DBConnect db = new DBConnect();
-    
+        
     }
 }

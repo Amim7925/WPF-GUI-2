@@ -16,7 +16,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Height="28" Width="28" Background="#FF1C7BC7" Margin="197 -28 0 0" ToolTip="Search" BorderBrush="{x:Null}">
+            <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Height="28" Width="28" Background="#FF1C7BC7" Margin="197 -28 0 0" ToolTip="Search" BorderBrush="{x:Null}" Click="Button_Click">
                 <md:PackIcon Kind="Search" Foreground="#FFFFFDFD"/>
             </Button>
             <Border x:Name="ACBorder" Width="170" Height="150" BorderBrush="#fff" BorderThickness="1" Visibility="Collapsed" Background="#fff">

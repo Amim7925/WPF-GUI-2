@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_GUI_Core.DataBase_Classses;
 
 namespace WPF_GUI_Demo
 {
@@ -25,19 +26,14 @@ namespace WPF_GUI_Demo
             InitializeComponent();
             FillList();
         }
+        Driving_Cycle_Master dr = new Driving_Cycle_Master();
         List<string> list = new List<string>();
         /// <summary>
         /// A test list for the auto complete textbox
         /// </summary>
         private void FillList()
         {
-            list.Add("John");
-            list.Add("Jason");
-            list.Add("Amim");
-            list.Add("Bhrath");
-            list.Add("File1");
-            list.Add("File2");
-            list.Add("File3");
+            list = dr.ListDcName();
         }
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
@@ -114,5 +110,9 @@ namespace WPF_GUI_Demo
             resultStack.Children.Add(block);
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
