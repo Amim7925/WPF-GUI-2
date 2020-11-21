@@ -44,6 +44,7 @@ namespace WPF_GUI_Demo.Forms
             try
             {
                 db.Insert(user);
+                MessageBox.Show("New User Successfully added");
             }
             catch(Exception ex)
             {
@@ -59,6 +60,7 @@ namespace WPF_GUI_Demo.Forms
                 }
 
             }
+            txtPassword.Password = "";
 
         }
     }

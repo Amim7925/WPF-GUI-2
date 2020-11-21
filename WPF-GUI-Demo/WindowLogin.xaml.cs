@@ -31,7 +31,7 @@ namespace WPF_GUI_Demo
             try
             {
                 var login = Cu.UserLogin(txtusername.Text, txtpassword.Password);
-                if(login !=null && login.UserName != string.Empty)
+                if(login !=null)
                 {
                     SettingSoft.CurrentUser = login;
                     new MainWindow().Show();

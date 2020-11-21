@@ -28,8 +28,8 @@ namespace Core_Test
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadData();
-            if (cu.UserLogin("Amim", "123"))
-                MessageBox.Show("you logged in");
+            //if (cu.UserLogin("Amim", "123"))
+            //    MessageBox.Show("you logged in");
 
 
         }
