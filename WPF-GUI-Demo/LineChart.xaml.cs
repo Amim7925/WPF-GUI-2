@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -26,20 +27,45 @@ namespace WPF_GUI_Demo
         public LineChart()
         {
             InitializeComponent();
-
-            double[] a = { 4, 6, 5, 2, 4 };
-            double[] b = { 6, 7, 3, 4, 6 };
-            double[] c = { 4, 2, 7, 2, 7 };
-            double[] d = { 9, 3, 8, 6, 9 };
-            FillChart(a, b, c,d);
-
+            AllCharts();
+        }
+        public delegate void ChartDelegate();
+        private int Minvalue { set; get; }
+        private int Maxvalue { set; get; }
+        public void SetMinMax()
+        {
+            Minvalue = DateTime.Now.Second ;
+            Maxvalue = DateTime.Now.Second + 6;
         }
 
+        private void AllCharts()
+        {
+            TorqueValues.PointGeometry = DefaultGeometries.Triangle;
+            RpmValues.PointGeometry = DefaultGeometries.Circle;
+            Rpm_cValues.PointGeometry = DefaultGeometries.Diamond;
+            TempValues.PointGeometry = DefaultGeometries.Square;
+
+        }
+                
+        
+
+        
+
+      
+        
+       
+
+       
+        public void removeData()
+        {
+            //SeriesCollection.RemoveAt(SeriesCollection.Count - 1);
+        }
+        
         public SeriesCollection SeriesCollection { get; set; }
 
         public string[] Labels { get; set; }
 
-        private void FillChart(double[] Torque, double[] Rpm, double[] Temp, double[] Rpm_c)
+        public void FillChart(double[] Torque, double[] Rpm, double[] Temp, double[] Rpm_c)
         {
             var torqueValues = new ChartValues<double>();
             foreach (var item in Torque)
@@ -61,40 +87,10 @@ namespace WPF_GUI_Demo
             {
                 rpm_cValues.Add(item);
             }
-            SeriesCollection = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Title = "Torque",
-                    Values = torqueValues,
-                    Fill= Brushes.Transparent
-
-                },
-                new LineSeries
-                {
-                    Title = "Rpm",
-                    Values = rpmValues,
-                    PointGeometry = null,
-                    Fill= Brushes.Transparent
-                },
-                new LineSeries
-                {
-                    Title = "Temp",
-                    Values = tempValues,
-                    PointGeometry = DefaultGeometries.Square,
-                    PointGeometrySize = 15,
-                    Fill= Brushes.Transparent
-                },
-                 new LineSeries
-                {
-                    Title = "Rpm_c",
-                    Values = rpm_cValues,
-                    PointGeometry = DefaultGeometries.Diamond,
-                    PointGeometrySize = 15,
-                    Fill= Brushes.Transparent
-                },
-
-            };
+            TorqueValues.Values = torqueValues;
+            TempValues.Values = tempValues;
+            Rpm_cValues.Values = rpm_cValues;
+            RpmValues.Values = rpmValues;
 
             Labels = new[] { "12:00", "12:01", "12:02", "12:03", "12:04", "12:05", "12:06", "12:07", "12:08", "12:09", "12:10" };
 

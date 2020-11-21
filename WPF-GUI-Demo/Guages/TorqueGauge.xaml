@@ -18,7 +18,7 @@
                 </Grid>
                 <lvc:Gauge Grid.Row="0" Grid.Column="1" Margin="5" Name="Torq"
                    Uses360Mode="True" Width="100"
-                   From="0" To="3000" Value="50" >
+                   From="0" To="3000"  >
                     <lvc:Gauge.GaugeRenderTransform>
                         <TransformGroup>
                             <RotateTransform Angle="90"></RotateTransform>
