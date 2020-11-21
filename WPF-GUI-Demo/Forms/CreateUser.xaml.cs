@@ -49,7 +49,7 @@ namespace WPF_GUI_Demo.Forms
             {
                 MessageBox.Show(ex.Message);
             }
-            foreach (var t in stpTextboxes1.Children)
+            foreach (var t in mainstackpanel.Children)
             {
                 if (t.GetType() == typeof(TextBox))
                 {

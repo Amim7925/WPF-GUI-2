@@ -27,14 +27,20 @@ namespace WPF_GUI_Demo
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly BackgroundWorker worker = new BackgroundWorker();
+
         public MainWindow()
         {
             InitializeComponent();
+            worker.DoWork += worker_DoWork;
+            //worker.ProgressChanged += worker_Progresschanged;
+            worker.RunWorkerCompleted += worker_RunWorkerCompleted;
+            worker.ProgressChanged += worker_Progresschanged;
 
-           
+
+            worker.RunWorkerAsync();
         }
 
-        private readonly BackgroundWorker worker = new BackgroundWorker();
         CardValueClass cr = new CardValueClass();
         private void BtnGoleft_Click(object sender, RoutedEventArgs e)
         {
@@ -203,38 +209,24 @@ namespace WPF_GUI_Demo
             btnStartSimulation.Visibility = Visibility.Hidden;
             btnEndSimulation.Visibility = Visibility.Visible;
 
-            worker.DoWork += worker_DoWork;
-            //worker.ProgressChanged += worker_Progresschanged;
-            
-            worker.RunWorkerCompleted += worker_RunWorkerCompleted;
-
-            worker.RunWorkerAsync();
 
         }
-        int counter = 0;
         private void btnEndSimulation_Click(object sender, RoutedEventArgs e)
         {
             btnStartSimulation.Visibility = Visibility.Visible;
             btnEndSimulation.Visibility = Visibility.Hidden;
 
-            worker.DoWork += worker_DoWork;
-            //worker.ProgressChanged += worker_Progresschanged;
-
-            worker.RunWorkerCompleted += worker_RunWorkerCompleted;
-
-            worker.RunWorkerAsync();
-            a = true;
+           
         }
-        bool a = false;
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            
-            while (counter<3)
+            int a = 0;
+            while (a<30000)
             {
-                counter++;
+                a++;
                 Thread.Sleep(300);
-                
+                worker.ReportProgress(a);
             }
             //double[] a = { 9, 1, 5, 0, 8 };
             //double[] b = { 9, 1, 5, 0, 8 };
@@ -250,23 +242,25 @@ namespace WPF_GUI_Demo
             //}
         }
 
-        private void worker_Progresschanged(object sender,
-                                           RunWorkerCompletedEventArgs e)
+        private void worker_Progresschanged(object sender, ProgressChangedEventArgs e)
         {
+             //e.UserState;
+            aa();
             
+
         }
         private void worker_RunWorkerCompleted(object sender,
                                            RunWorkerCompletedEventArgs e)
         {
             //update ui once worker complete his work
-            if (a) bb();
-            else aa();
+            bb();
+                  
 
         }
         private void aa()
         {
             LineChart.SetMinMax();
-
+            
             double[] a = { 0, 2, 5, 7, 3 };
             double[] b = { 1, 6, 3, 4, 5 };
             double[] c = { 2, 9, 7, 7, 7 };

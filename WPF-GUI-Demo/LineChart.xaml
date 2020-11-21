@@ -7,10 +7,25 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="#fff">
     <Grid>
-        <lvc:CartesianChart Series="{Binding SeriesCollection}">
-
+        <lvc:CartesianChart DisableAnimations="True" >
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries  Name="TorqueValues" Title="Torque"
+                                
+                                LineSmoothness="0"
+                                
+                                StrokeThickness="2"
+                                
+                                Fill="Transparent"/>
+                <lvc:LineSeries Name="RpmValues" Title="Rpm" StrokeThickness="2"  Fill="#00000000"/>
+                <lvc:LineSeries Name="TempValues" Title="Tempreture"  StrokeThickness="2"  Fill="Transparent" />
+                <lvc:LineSeries Name="Rpm_cValues" Title="RpmC"  StrokeThickness="2"  Fill="Transparent" />
+            </lvc:CartesianChart.Series>
             <lvc:CartesianChart.AxisY>
-                <lvc:Axis Title="Torque / Rpm / Temp / Rpm_c"></lvc:Axis>
+                <lvc:Axis Title="Torque / Rpm / Temp / Rpm_c"
+                          
+                          
+                          
+                          ></lvc:Axis>
             </lvc:CartesianChart.AxisY>
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Title="Time" Labels="{Binding Labels}" MaxValue="{Binding MaxValue}" MinValue="{Binding MinVlaue}" ></lvc:Axis>
