@@ -10,5 +10,7 @@ namespace WPF_GUI_Demo.Classes
     public static class SettingSoft
     {
         public static UserVerification CurrentUser { get; set; } = new UserVerification();
+
+        
     }
 }

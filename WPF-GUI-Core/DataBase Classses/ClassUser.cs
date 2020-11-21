@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPF_GUI_Core.Helper;
 using WPF_GUI_Core.Property_Classes;
 
 namespace WPF_GUI_Core
@@ -11,7 +12,6 @@ namespace WPF_GUI_Core
     public class ClassUser
     {
         DBConnect db = new DBConnect();
-
         public List<User> LoadData()
         {
             List<User> list = new List<User>();
@@ -55,7 +55,7 @@ namespace WPF_GUI_Core
                 MySqlCommand cmd = new
                     MySqlCommand("INSERT INTO tbluser (UserName , Password , Created_by , Created_Datetime , Email , PhoneNumber ) VALUES (@argo.UserName , @argo.Password , @argo.CreatedBy , @argo.CreatedDateTime , @argo.Email , @argo.PhoneNumber)", db.conn);
                 cmd.Parameters.AddWithValue("argo.UserName", argo.UserName);
-                cmd.Parameters.AddWithValue("argo.Password", argo.Password);
+                cmd.Parameters.AddWithValue("argo.Password", argo.Password.GetMd5Hash());
                 cmd.Parameters.AddWithValue("argo.PhoneNumber", argo.PhoneNumber);
                 cmd.Parameters.AddWithValue("argo.Email", argo.Email);
                 cmd.Parameters.AddWithValue("argo.CreatedDateTime", argo.CreatedDateTime);
@@ -133,7 +133,7 @@ namespace WPF_GUI_Core
             if (db.OpenConnection())
             {
                
-                MySqlCommand cmd = new MySqlCommand("SELECT UserName,Password,Role from tbluser WHERE UserName = @UserName and Password=@Password", db.conn);
+                MySqlCommand cmd = new MySqlCommand("SELECT UserName,Password,Role from tbluser WHERE UserName = @UserName", db.conn);
                 cmd.Parameters.AddWithValue("UserName", UserName);
                 cmd.Parameters.AddWithValue("Password", Password);
                 try
@@ -157,7 +157,13 @@ namespace WPF_GUI_Core
                 {
                     throw new Exception(em.Message);
                 }
-                if (user!=null)
+                if (user == null)
+                {
+                    db.CloseConnection();
+                    throw new Exception("Invalid username");
+
+                }
+                if (ClassHashing.VerifyMd5Hash(Password, user.Password))
                 {
                     db.CloseConnection();
                     return user;

@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DataBase Classses\ClassUser.cs" />
     <Compile Include="DataBase Classses\DBConnect.cs" />
+    <Compile Include="Helper\ClassHashing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Property Classes\User.cs" />
     <Compile Include="Property Classes\UserVerification.cs" />

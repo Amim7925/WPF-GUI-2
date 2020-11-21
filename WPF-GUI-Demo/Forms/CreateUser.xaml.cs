@@ -44,12 +44,13 @@ namespace WPF_GUI_Demo.Forms
             try
             {
                 db.Insert(user);
+                MessageBox.Show("New User Successfully added");
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            foreach (var t in stpTextboxes1.Children)
+            foreach (var t in mainstackpanel.Children)
             {
                 if (t.GetType() == typeof(TextBox))
                 {
@@ -59,6 +60,7 @@ namespace WPF_GUI_Demo.Forms
                 }
 
             }
+            txtPassword.Password = "";
 
         }
     }
