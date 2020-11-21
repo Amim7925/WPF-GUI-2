@@ -8,9 +8,9 @@ namespace WPF_GUI_Core.Property_Classes
 {
     class SimulationMaster
     {
-        public int SimulationID { get; set; }
+        public string SimulationID { get; set; }
 
-        public int DcID { get; set; }
+        public string DcID { get; set; }
 
         public string SIMUUser { get; set; }
 

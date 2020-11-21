@@ -9,22 +9,22 @@ namespace WPF_GUI_Core.Property_Classes
     class DrivingCycleMotorSimulationLog
     {
 
-        public int SimulationID { get; set; }
+        public string SimulationID { get; set; }
 
         public string DCID { get; set; }
 
         public string SegID { get; set; }
 
-        public DateTime SetTPS { get; set; }
+        public int SetTPS { get; set; }
 
-        public string Rpm { get; set; }
+        public int Rpm { get; set; }
 
-        public DateTime OB_Temp { get; set; }
+        public double OB_Temp { get; set; }
 
-        public string Vehicle_Time { get; set; }
+        public TimeSpan Vehicle_Time { get; set; }
 
 
-        public int SimulatorDatetime { get; set; }
+        public DateTime SimulatorDatetime { get; set; }
 
         public double Urms1 { get; set; }
 
