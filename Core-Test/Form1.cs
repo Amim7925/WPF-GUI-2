@@ -27,11 +27,12 @@ namespace Core_Test
         ClassUser cu = new ClassUser();
         DBConnect db = new DBConnect();
         Driving_Cycle_Master dcm = new Driving_Cycle_Master();
+        Driving_Cycle_Segments dcs = new Driving_Cycle_Segments();
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (var item in dcm.ListDcName())
+            foreach (var item in dcs.ListSegments("DCNAME1"))
             {
-                MessageBox.Show(item);
+                MessageBox.Show(item.SegID);
             }
         }
         private void LoadData()
