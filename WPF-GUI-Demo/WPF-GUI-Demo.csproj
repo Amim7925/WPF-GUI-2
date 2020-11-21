@@ -124,6 +124,9 @@
     <Compile Include="SearchText.xaml.cs">
       <DependentUpon>SearchText.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SimulationList.xaml.cs">
+      <DependentUpon>SimulationList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
@@ -191,6 +194,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SearchText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SimulationList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
