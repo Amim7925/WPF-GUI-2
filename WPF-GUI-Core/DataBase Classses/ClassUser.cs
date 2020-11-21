@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPF_GUI_Core.Property_Classes;
 
 namespace WPF_GUI_Core
 {
@@ -16,7 +17,7 @@ namespace WPF_GUI_Core
             List<User> list = new List<User>();
             if (db.OpenConnection())
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT * From user", db.conn);
+                MySqlCommand cmd = new MySqlCommand("SELECT * From tbluser", db.conn);
 
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
@@ -25,8 +26,12 @@ namespace WPF_GUI_Core
                     User data = new User
                     {
                         Id = (int)dataReader["Id"],
-                        Name = dataReader["Name"].ToString(),
-                        Role = dataReader["Role"].ToString()
+                        UserName = dataReader["UserName"].ToString(),
+                        Password = dataReader["Password"].ToString(),
+                        Email = dataReader["Email"].ToString(),
+                        CreatedBy = dataReader["Created_By"].ToString(),
+                        CreatedDateTime = (DateTime)(dataReader["Created_Datetime"]),
+                        PhoneNumber = dataReader["PhoneNumber"].ToString(),
                     };
                     list.Add(data);
                 }
@@ -47,15 +52,20 @@ namespace WPF_GUI_Core
         {
             if (db.OpenConnection())
             {
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO user (Role, Name) VALUES (@argo.Role , @argo.Name)");
-                cmd.Parameters.AddWithValue("argo.Name", argo.Name);
-                cmd.Parameters.AddWithValue("argo.Role", argo.Role);
-
+                MySqlCommand cmd = new
+                    MySqlCommand("INSERT INTO tbluser (UserName , Password , Created_by , Created_Datetime , Email , PhoneNumber ) VALUES (@argo.UserName , @argo.Password , @argo.CreatedBy , @argo.CreatedDateTime , @argo.Email , @argo.PhoneNumber)", db.conn);
+                cmd.Parameters.AddWithValue("argo.UserName", argo.UserName);
+                cmd.Parameters.AddWithValue("argo.Password", argo.Password);
+                cmd.Parameters.AddWithValue("argo.PhoneNumber", argo.PhoneNumber);
+                cmd.Parameters.AddWithValue("argo.Email", argo.Email);
+                cmd.Parameters.AddWithValue("argo.CreatedDateTime", argo.CreatedDateTime);
+                cmd.Parameters.AddWithValue("argo.CreatedBy", argo.CreatedBy);
+                cmd.Parameters.AddWithValue("argo.Id", argo.Id);
                 try
                 {
                     cmd.ExecuteNonQuery();
                 }
-                catch(MySqlException ex)
+                catch (MySqlException ex)
                 {
                     throw new Exception(ex.Message);
                 }
@@ -67,56 +77,95 @@ namespace WPF_GUI_Core
         {
             if (db.OpenConnection())
             {
-                var query = "UPDATE user SET Name=@argo.Name , Role=argo.Role WHERE Id=@argo.Id";
+                var query = "UPDATE tbluser SET UserName=@argo.UserName , Password=argo.Password , PhoneNumber=argo.PhoneNumber , Email=argo.Email , CreatedDateTime=argo.CreatedDateTime , CreatedBy=argo.CreatedBy WHERE Id=@argo.Id";
 
                 MySqlCommand cmd = new MySqlCommand();
 
                 cmd.CommandText = query;
-                cmd.Parameters.AddWithValue("argo.Name", argo.Name);
-                cmd.Parameters.AddWithValue("argo.Role", argo.Role);
+                cmd.Parameters.AddWithValue("argo.UserName", argo.UserName);
+                cmd.Parameters.AddWithValue("argo.Password", argo.Password);
+                cmd.Parameters.AddWithValue("argo.PhoneNumber", argo.PhoneNumber);
+                cmd.Parameters.AddWithValue("argo.Email", argo.Email);
+                cmd.Parameters.AddWithValue("argo.CreatedDateTime", argo.CreatedDateTime);
+                cmd.Parameters.AddWithValue("argo.CreatedBy", argo.CreatedBy);
                 cmd.Parameters.AddWithValue("argo.Id", argo.Id);
 
+                cmd.Connection = db.conn;
                 try
                 {
                     cmd.ExecuteNonQuery();
                 }
-                catch(MySqlException ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-                db.CloseConnection();   
-            }
-        }
-        public void Delete(int id)
-        {
-            if (db.OpenConnection())
-            {
-                var query = "DELETE FROM user WHERE Id=@id";
-
-                MySqlCommand cmd = new MySqlCommand();
-
-                cmd.CommandText = query;
-                cmd.Parameters.AddWithValue("@Id", id);
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                }
-                catch(MySqlException ex)
+                catch (MySqlException ex)
                 {
                     throw new Exception(ex.Message);
                 }
                 db.CloseConnection();
             }
         }
+        public void Delete(int id)
+        {
+            if (db.OpenConnection())
+            {
+                var query = "DELETE FROM tbluser WHERE Id=@id";
+
+                MySqlCommand cmd = new MySqlCommand();
+
+                cmd.CommandText = query;
+                cmd.Connection = db.conn;
+                cmd.Parameters.AddWithValue("@Id", id);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (MySqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                db.CloseConnection();
+            }
+        }
+        public bool UserLogin(string UserName, string Password)
+        {
+            if (db.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT count(*) from tbluser WHERE UserName = @UserName and Password=@Password", db.conn);
+                cmd.Parameters.AddWithValue("UserName", UserName);
+                cmd.Parameters.AddWithValue("Password", Password);
+                int count;
+                try
+                {
+                    count = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+                catch (MySqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                catch (Exception em)
+                {
+                    throw new Exception(em.Message);
+                }
+                if (count > 0 )
+                {
+                    db.CloseConnection();
+                    return true;
+
+                }
+                else
+                {
+                    db.CloseConnection();
+                    throw new Exception("Invalid username or password");
+                }
+              
+            }
+            else
+            {
+                return false;
+
+            }
+           
+
+        }
+ 
     }
-    public class User
-    {
-        public int Id { get; set; }
 
-        public string Name { get; set; }
-
-        public string Role { get; set; }
-
-
-    }
 }

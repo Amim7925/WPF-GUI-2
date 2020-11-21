@@ -9,7 +9,7 @@ namespace WPF_GUI_Core
 {
     public class DBConnect
     {
-        public const string ConnectionString = "server=localhost;user=root;database=test;port=3306;";
+        public const string ConnectionString = "server=localhost;user=root;database=car_simulation;port=3306;";
 
         public MySqlConnection conn = new MySqlConnection(ConnectionString);
 
@@ -30,11 +30,11 @@ namespace WPF_GUI_Core
                 {
                     throw new Exception("Invalid username/password, please try again");
                 }
-                //else
-                //{
-                //    throw new Exception("Unknown error please contatct the admin");
-                //}
-                return false;
+                else
+                {
+                    throw new Exception("Unknown error please contatct the admin");
+                }
+               
             }
         }
 
@@ -50,6 +50,7 @@ namespace WPF_GUI_Core
                 throw new Exception(ex.Message);
             }
         }
+   
 
 
     }

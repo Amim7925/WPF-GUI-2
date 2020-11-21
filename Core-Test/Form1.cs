@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WPF_GUI_Core;
+using WPF_GUI_Core.Property_Classes;
 
 namespace Core_Test
 {
@@ -22,11 +23,34 @@ namespace Core_Test
         {
 
         }
-
+        ClassUser cu = new ClassUser();
+        DBConnect db = new DBConnect();
         private void Form1_Load(object sender, EventArgs e)
         {
-            ClassUser cu = new ClassUser();
+            LoadData();
+            if (cu.UserLogin("Amim", "123"))
+                MessageBox.Show("you logged in");
+
+
+        }
+        private void LoadData()
+        {
             dataGridView1.DataSource = cu.LoadData();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            User user = new User
+            {
+                UserName = "MR.Bharath",
+                PhoneNumber = "00000",
+                CreatedBy = "AmimB",
+                CreatedDateTime = DateTime.Now,
+                Email = "Test@protonmail.com",
+                Password = "123"
+            };
+            cu.Insert(user);
+            LoadData();
         }
     }
 }
