@@ -15,16 +15,18 @@
         <Grid Grid.Row="1">
             <Rectangle   Fill="White"/>
 
-            <StackPanel Margin="20" >
+            <StackPanel x:Name="mainstackpanel" Margin="20"  >
                 <Label Content="User Name :"></Label>
                 <TextBox x:Name="txtUserName" Height="30" Margin="5 0 0 0" ></TextBox>
                 <Label  Margin="0 15 0 0 " Content="Passwrod :"></Label>
                 <PasswordBox x:Name="txtPassword" Height="30" Margin="5 0 0 0" ></PasswordBox>
+                <Label Content="Phone Number :" Margin="0 15 0 0 "></Label>
+                <TextBox x:Name="txtPhoneNumber" Height="30" Margin="5 0 0 0" ></TextBox>
                 <Label Margin="0 15 0 0 " Content="Mail :"></Label>
                 <TextBox x:Name="txtMail" Height="30" Margin="5 0 0 0"></TextBox>
                 <Label Margin="0 15 0 0 " Content="Role :"></Label>
                 <TextBox x:Name="txtRole" Height="30" Margin="5 0 0 0"></TextBox>
-                <Button Height="40" Margin="0 30" Width="140" Content="Submit"></Button>
+                <Button Height="40" Margin="0 30" Width="140" Content="Submit" Click="Button_Click"></Button>
             </StackPanel>
         </Grid>
     </Grid>

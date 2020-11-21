@@ -90,6 +90,7 @@
     <Compile Include="Classes\CSVFile.cs" />
     <Compile Include="Classes\DrivingCycle.cs" />
     <Compile Include="Classes\Gauges.cs" />
+    <Compile Include="Classes\SettingSoft.cs" />
     <Compile Include="Forms\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>

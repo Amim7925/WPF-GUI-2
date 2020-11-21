@@ -15,27 +15,27 @@ namespace WPF_GUI_Core
 
         public bool OpenConnection()
         {
-            //try
-            //{
-            conn.Open();
-            return true;
-            //}
-            //catch(MySqlException ex)
-            //{
-            //    if(ex.Number == 0)
-            //    {
-            //        throw new Exception("Cannot connect to server.  Contact administrator");
-            //    }
-            //    else if(ex.Number == 1045)
-            //    {
-            //        throw new Exception("Invalid username/password, please try again");
-            //    }
-            //    //else
-            //    //{
-            //    //    throw new Exception("Unknown error please contatct the admin");
-            //    //}
-            //    return false;
-            //}
+            try
+            {
+                conn.Open();
+                return true;
+            }
+            catch(MySqlException ex)
+            {
+                if(ex.Number == 0)
+                {
+                    throw new Exception("Cannot connect to server.  Contact administrator");
+                }
+                else if(ex.Number == 1045)
+                {
+                    throw new Exception("Invalid username/password, please try again");
+                }
+                else
+                {
+                    throw new Exception("Unknown error please contatct the admin");
+                }
+               
+            }
         }
 
         public bool CloseConnection()
@@ -50,6 +50,7 @@ namespace WPF_GUI_Core
                 throw new Exception(ex.Message);
             }
         }
+   
 
 
     }

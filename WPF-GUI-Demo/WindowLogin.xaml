@@ -25,8 +25,8 @@
         <Grid Width="280" Height="240" VerticalAlignment="Bottom" Margin="20,0,20,110">
 
             <StackPanel VerticalAlignment="Center" Margin="10,-18,10,-22" Height="280" >
-                <TextBox VerticalContentAlignment="Center"  x:Name="textBox1" materialDesign:HintAssist.Hint="User Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="13 10" FontFamily="Calibri" FontSize="16" KeyDown="textBox1_KeyDown"/>
-                <PasswordBox  x:Name="maskedTextBox1" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="15 10" FontFamily="Calibri" FontSize="16" KeyDown="maskedTextBox1_KeyDown" />
+                <TextBox VerticalContentAlignment="Center"  x:Name="txtusername" materialDesign:HintAssist.Hint="User Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="13 10" FontFamily="Calibri" FontSize="16" KeyDown="textBox1_KeyDown"/>
+                <PasswordBox  x:Name="txtpassword" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="15 10" FontFamily="Calibri" FontSize="16" KeyDown="maskedTextBox1_KeyDown" />
             </StackPanel>
             <Image  Width="90" Height="90" VerticalAlignment="Top" Margin="96,-66,94,0"/>
         </Grid>

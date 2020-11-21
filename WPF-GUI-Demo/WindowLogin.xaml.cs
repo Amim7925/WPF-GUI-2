@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_GUI_Core;
+using WPF_GUI_Demo.Classes;
 
 namespace WPF_GUI_Demo
 {
@@ -23,13 +25,28 @@ namespace WPF_GUI_Demo
         {
             InitializeComponent();
         }
-
+        ClassUser Cu = new ClassUser();
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
-            this.Close();
-            
-            
+            try
+            {
+                var login = Cu.UserLogin(txtusername.Text, txtpassword.Password);
+                if(login !=null && login.UserName != string.Empty)
+                {
+                    SettingSoft.CurrentUser = login;
+                    new MainWindow().Show();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
