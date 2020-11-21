@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -32,8 +33,32 @@ namespace WPF_GUI_Demo
             double[] c = { 4, 2, 7, 2, 7 };
             double[] d = { 9, 3, 8, 6, 9 };
             FillChart(a, b, c,d);
+            Repeater();
+        }
+        public delegate void ChartDelegate();
+        private int Minvalue { set; get; }
+        private int Maxvalue { set; get; }
+        private void GetMinMax()
+        {
+            Minvalue = DateTime.Now.Second - 4;
+            Maxvalue = DateTime.Now.Second ;
+        }
+
+        Timer timer = new Timer();
+
+
+        private void Repeater()
+        {
+            Dispatcher.BeginInvoke(
+                 System.Windows.Threading.DispatcherPriority.Normal,
+                 new ChartDelegate(GetMinMax));
+
+
 
         }
+
+
+
 
         public SeriesCollection SeriesCollection { get; set; }
 
