@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WPF_GUI_Core;
+using WPF_GUI_Core.DataBase_Classses;
 using WPF_GUI_Core.Property_Classes;
 
 namespace Core_Test
@@ -25,13 +26,13 @@ namespace Core_Test
         }
         ClassUser cu = new ClassUser();
         DBConnect db = new DBConnect();
+        Driving_Cycle_Master dcm = new Driving_Cycle_Master();
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadData();
-            //if (cu.UserLogin("Amim", "123"))
-            //    MessageBox.Show("you logged in");
-
-
+            foreach (var item in dcm.ListDcName())
+            {
+                MessageBox.Show(item);
+            }
         }
         private void LoadData()
         {

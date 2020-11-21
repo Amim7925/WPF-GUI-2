@@ -9,9 +9,9 @@ namespace WPF_GUI_Core.Property_Classes
     class DivingCycleSegment
     {
 
-        public int DcID { get; set; }
+        public string DcID { get; set; }
 
-        public int SegID { get; set; }
+        public string SegID { get; set; }
 
         public int GetRpm { get; set; }
 

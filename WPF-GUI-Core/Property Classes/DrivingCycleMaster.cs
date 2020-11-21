@@ -9,7 +9,7 @@ namespace WPF_GUI_Core.Property_Classes
     class DrivingCycleMaster
     {
 
-        public int DCID { get; set; }
+        public string DCID { get; set; }
 
         public string DCName { get; set; }
 
