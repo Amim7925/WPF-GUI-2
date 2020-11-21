@@ -4,18 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPF_GUI_Demo
+namespace WPF_GUI_Core.Property_Classes
 {
-    class CardValueClass
+    class DrivingCycleMotorSimulationLog
     {
-        public double Urms1 { set; get; }
 
-        public double Urms2 { set; get; }
+        public int SimulationID { get; set; }
 
-        public double Urms3 { set; get; }
+        public string DCID { get; set; }
 
-        public double Udc4 { set; get; }
+        public string SegID { get; set; }
 
+        public DateTime SetTPS { get; set; }
+
+        public string Rpm { get; set; }
+
+        public DateTime OB_Temp { get; set; }
+
+        public string Vehicle_Time { get; set; }
+
+
+        public int SimulatorDatetime { get; set; }
+
+        public double Urms1 { get; set; }
+
+        public double Urms2 { get; set; }
+
+        public double Urms3 { get; set; }
+
+        public double Udc4 { get; set; }
+
+        public double DCModifiedDateTime { get; set; }
+
+        public double Status { get; set; }
         public double Irms1 { set; get; }
         public double Irms2 { set; get; }
         public double Irms3 { set; get; }
@@ -24,12 +45,16 @@ namespace WPF_GUI_Demo
         public double A1 { set; get; }
         public double A2 { set; get; }
         public double A3 { set; get; }
+
+        public double OFF1 { set; get; }
+        public double OFF2 { set; get; }
+        public double OFF3 { set; get; }
+
         public double Pm { set; get; }
         public double CHA { set; get; }
         public double CHB { set; get; }
         public double f1 { set; get; }
 
-        
         public double Uthd1 { set; get; }
         public double Uthd2 { set; get; }
         public double Uthd3 { set; get; }

@@ -173,9 +173,9 @@ namespace WPF_GUI_Demo
             valueUrms2.Content = cardsvalue.Urms2;
             valueUrms3.Content = cardsvalue.Urms3;
             valueUdc4.Content = cardsvalue.Udc4;
-            valueIdc1.Content = cardsvalue.Idc1;
-            valueIdc2.Content = cardsvalue.Idc2;
-            valueIdc3.Content = cardsvalue.Idc3;
+            valueIdc1.Content = cardsvalue.Irms1;
+            valueIdc2.Content = cardsvalue.Irms2;
+            valueIdc3.Content = cardsvalue.Irms3;
             valueIdc4.Content = cardsvalue.Idc4;
             valueA1.Content = cardsvalue.A1;
             valueA2.Content = cardsvalue.A2;
@@ -206,29 +206,21 @@ namespace WPF_GUI_Demo
 
         private void btnStartSimulation_Click(object sender, RoutedEventArgs e)
         {
-            btnStartSimulation.Visibility = Visibility.Hidden;
-            btnEndSimulation.Visibility = Visibility.Visible;
 
 
         }
-        private void btnEndSimulation_Click(object sender, RoutedEventArgs e)
-        {
-            btnStartSimulation.Visibility = Visibility.Visible;
-            btnEndSimulation.Visibility = Visibility.Hidden;
-
-           
-        }
+       
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            int a = 0;
-            while (a<30000)
-            {
-                a++;
-                Thread.Sleep(300);
-                worker.ReportProgress(a);
-            }
-            //double[] a = { 9, 1, 5, 0, 8 };
+            //int a = 0;
+            //while (a<30000)
+            //{
+            //    a++;
+            //    Thread.Sleep(300);
+            //    worker.ReportProgress(a);
+            //}
+            ////double[] a = { 9, 1, 5, 0, 8 };
             //double[] b = { 9, 1, 5, 0, 8 };
             //double[] c = { 9, 1, 5, 0, 8 };
             //double[] d = { 9, 1, 5, 0, 8 };
@@ -245,7 +237,7 @@ namespace WPF_GUI_Demo
         private void worker_Progresschanged(object sender, ProgressChangedEventArgs e)
         {
              //e.UserState;
-            aa();
+            //aa();
             
 
         }
@@ -253,7 +245,7 @@ namespace WPF_GUI_Demo
                                            RunWorkerCompletedEventArgs e)
         {
             //update ui once worker complete his work
-            bb();
+            aa();
                   
 
         }
