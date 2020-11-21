@@ -18,7 +18,7 @@
                 </Grid>
                 <lvc:Gauge Grid.Row="0" Grid.Column="1" Margin="5" Name="Temp"
                    Uses360Mode="True" Width="100"
-                   From="0" To="200" Value="50" GaugeActiveFill="#FF18BB96" >
+                   From="0" To="200"  GaugeActiveFill="#FF18BB96" >
                     <lvc:Gauge.GaugeRenderTransform>
                         <TransformGroup>
                             <RotateTransform Angle="90"></RotateTransform>

@@ -1,8 +1,10 @@
 ﻿using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
@@ -29,21 +31,10 @@ namespace WPF_GUI_Demo
         {
             InitializeComponent();
 
-            Gauges values = new Gauges
-            {
-               BGRpm= 3100,
-               BGTemp = 150,
-               BGTorque = 1600,
-               RpmGauge1 = 3150,
-               RpmGuage2 = 3200,
-               TempGauge1 = 155,
-               TempGuage2 = 160,
-               TorqueGauge1 = 1650,
-               TorqueGauge2 = 1700
-            };
-            FillGauges(values);
-            fillValueCards(cr);
+           
         }
+
+        private readonly BackgroundWorker worker = new BackgroundWorker();
         CardValueClass cr = new CardValueClass();
         private void BtnGoleft_Click(object sender, RoutedEventArgs e)
         {
@@ -206,6 +197,130 @@ namespace WPF_GUI_Demo
             
             
         }
+
+        private void btnStartSimulation_Click(object sender, RoutedEventArgs e)
+        {
+            btnStartSimulation.Visibility = Visibility.Hidden;
+            btnEndSimulation.Visibility = Visibility.Visible;
+
+            worker.DoWork += worker_DoWork;
+            //worker.ProgressChanged += worker_Progresschanged;
+            
+            worker.RunWorkerCompleted += worker_RunWorkerCompleted;
+
+            worker.RunWorkerAsync();
+
+        }
+        int counter = 0;
+        private void btnEndSimulation_Click(object sender, RoutedEventArgs e)
+        {
+            btnStartSimulation.Visibility = Visibility.Visible;
+            btnEndSimulation.Visibility = Visibility.Hidden;
+
+            worker.DoWork += worker_DoWork;
+            //worker.ProgressChanged += worker_Progresschanged;
+
+            worker.RunWorkerCompleted += worker_RunWorkerCompleted;
+
+            worker.RunWorkerAsync();
+            a = true;
+        }
+        bool a = false;
+
+        private void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
+            while (counter<3)
+            {
+                counter++;
+                Thread.Sleep(300);
+                
+            }
+            //double[] a = { 9, 1, 5, 0, 8 };
+            //double[] b = { 9, 1, 5, 0, 8 };
+            //double[] c = { 9, 1, 5, 0, 8 };
+            //double[] d = { 9, 1, 5, 0, 8 };
+            //LineChart.FillChart(a, b, c, d);
+            //int counter = 0;
+            //while (true)
+            //{
+            //    counter++;
+            //    Thread.Sleep(300);
+            //    worker.ReportProgress(counter);
+            //}
+        }
+
+        private void worker_Progresschanged(object sender,
+                                           RunWorkerCompletedEventArgs e)
+        {
+            
+        }
+        private void worker_RunWorkerCompleted(object sender,
+                                           RunWorkerCompletedEventArgs e)
+        {
+            //update ui once worker complete his work
+            if (a) bb();
+            else aa();
+
+        }
+        private void aa()
+        {
+            LineChart.SetMinMax();
+
+            double[] a = { 0, 2, 5, 7, 3 };
+            double[] b = { 1, 6, 3, 4, 5 };
+            double[] c = { 2, 9, 7, 7, 7 };
+            double[] d = { 7, 2, 9, 9, 0 };
+            LineChart.FillChart(a, b, c, d);
+            Gauges values = new Gauges
+            {
+                BGRpm = 3100,
+                BGTemp = 150,
+                BGTorque = 1600,
+                RpmGauge1 = 3150,
+                RpmGuage2 = 3200,
+                TempGauge1 = 155,
+                TempGuage2 = 160,
+                TorqueGauge1 = 1650,
+                TorqueGauge2 = 1700
+            };
+            FillGauges(values);
+            fillValueCards(cr);
+        }
+
+        private void bb()
+        {
+            //LineChart.removeData();
+            //LineChart.SetMinMax();
+
+            double[] a = { 9, 1, 5, 0, 8 };
+            double[] b = { 9, 1, 5, 0, 8 };
+            double[] c = { 9, 1, 5, 0, 8 };
+            double[] d = { 9, 1, 5, 0, 8 };
+            LineChart.FillChart(a, b, c, d);
+            Gauges values = new Gauges
+            {
+                BGRpm = 1100,
+                BGTemp = 50,
+                BGTorque = 160,
+                RpmGauge1 = 350,
+                RpmGuage2 = 5200,
+                TempGauge1 = 255,
+                TempGuage2 = 16,
+                TorqueGauge1 = 50,
+                TorqueGauge2 = 1700
+            };
+            FillGauges(values);
+            fillValueCards(cr);
+        }
+
+
+
+
+
+
+
+
 
 
 

@@ -27,44 +27,36 @@ namespace WPF_GUI_Demo
         public LineChart()
         {
             InitializeComponent();
-
-            double[] a = { 4, 6, 5, 2, 4 };
-            double[] b = { 6, 7, 3, 4, 6 };
-            double[] c = { 4, 2, 7, 2, 7 };
-            double[] d = { 9, 3, 8, 6, 9 };
-            FillChart(a, b, c,d);
-            Repeater();
+            
         }
         public delegate void ChartDelegate();
         private int Minvalue { set; get; }
         private int Maxvalue { set; get; }
-        private void GetMinMax()
+        public void SetMinMax()
         {
-            Minvalue = DateTime.Now.Second - 4;
-            Maxvalue = DateTime.Now.Second ;
-        }
-
-        Timer timer = new Timer();
-
-
-        private void Repeater()
-        {
-            Dispatcher.BeginInvoke(
-                 System.Windows.Threading.DispatcherPriority.Normal,
-                 new ChartDelegate(GetMinMax));
-
-
-
+            Minvalue = DateTime.Now.Second ;
+            Maxvalue = DateTime.Now.Second + 6;
         }
 
 
 
+        
+
+      
+        
+       
+
+       
+        public void removeData()
+        {
+            //SeriesCollection.RemoveAt(SeriesCollection.Count - 1);
+        }
 
         public SeriesCollection SeriesCollection { get; set; }
 
         public string[] Labels { get; set; }
 
-        private void FillChart(double[] Torque, double[] Rpm, double[] Temp, double[] Rpm_c)
+        public void FillChart(double[] Torque, double[] Rpm, double[] Temp, double[] Rpm_c)
         {
             var torqueValues = new ChartValues<double>();
             foreach (var item in Torque)
@@ -92,6 +84,7 @@ namespace WPF_GUI_Demo
                 {
                     Title = "Torque",
                     Values = torqueValues,
+                    PointGeometry = DefaultGeometries.Triangle,
                     Fill= Brushes.Transparent
 
                 },
@@ -99,7 +92,7 @@ namespace WPF_GUI_Demo
                 {
                     Title = "Rpm",
                     Values = rpmValues,
-                    PointGeometry = null,
+                    PointGeometry = DefaultGeometries.Circle,
                     Fill= Brushes.Transparent
                 },
                 new LineSeries
@@ -120,6 +113,11 @@ namespace WPF_GUI_Demo
                 },
 
             };
+
+            if (SeriesCollection.Count > 5)
+            {
+                SeriesCollection.Remove(0);
+            }
 
             Labels = new[] { "12:00", "12:01", "12:02", "12:03", "12:04", "12:05", "12:06", "12:07", "12:08", "12:09", "12:10" };
 

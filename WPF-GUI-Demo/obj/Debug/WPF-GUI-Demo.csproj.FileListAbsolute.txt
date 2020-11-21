@@ -86,14 +86,10 @@ C:\Users\RizRayaneh\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Guages\TorqueG
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Demo.exe.config
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Demo.exe
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Demo.pdb
-C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ActiproSoftware.Ribbon.Wpf.dll
-C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ActiproSoftware.Shared.Wpf.dll
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LiveCharts.dll
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LiveCharts.Wpf.dll
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MaterialDesignColors.dll
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MaterialDesignThemes.Wpf.dll
-C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ActiproSoftware.Ribbon.Wpf.xml
-C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\ActiproSoftware.Shared.Wpf.xml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LiveCharts.pdb
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LiveCharts.xml
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\LiveCharts.Wpf.pdb
@@ -388,3 +384,6 @@ F:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\bin\Debug\System.Runtime
 F:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\bin\Debug\WPF-GUI-Core.pdb
 F:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\bin\Debug\MySql.Data.xml
 F:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\obj\Debug\WPF-GUI-Demo.exe.config
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Core.dll
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\MySql.Data.dll
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\bin\Debug\WPF-GUI-Core.pdb
