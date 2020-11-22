@@ -13,16 +13,16 @@ namespace WPF_GUI_Core.DataBase_Classses
     {
         DBConnect db = new DBConnect();
 
-        public List<DivingCycleSegment> ListSegments(string DCName)
+        public List<DivingCycleSegment> ListSegments(string DcId)
         {
             List<DivingCycleSegment> list = new List<DivingCycleSegment>();
             if (db.OpenConnection())
             {
-                var query = "SELECT driving_cycle_segments.Seg_Id,driving_cycle_segments.Get_Rpm,driving_cycle_segments.Gradient,driving_cycle_segments.Default_Load,driving_cycle_segments.Added_Load,driving_cycle_segments.Run_Time FROM driving_cycle_segments INNER JOIN tbldriving_cycle_master ON tbldriving_cycle_master.Dc_Name=@DCName";
+                var query = "SELECT driving_cycle_segments.* FROM driving_cycle_segments INNER JOIN tbldriving_cycle_master ON driving_cycle_segments.Dc_Id=@DcId";
 
                 MySqlCommand cmd = new MySqlCommand(query, db.conn);
 
-                cmd.Parameters.AddWithValue("DCName", DCName);
+                cmd.Parameters.AddWithValue("DcId", DcId);
 
                 //try
                 //{
