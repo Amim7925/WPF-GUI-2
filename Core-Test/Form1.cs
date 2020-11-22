@@ -43,17 +43,63 @@ namespace Core_Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User user = new User
+            Driving_Cycle_Motor_Simulation_Log dcms = new Driving_Cycle_Motor_Simulation_Log();
+            try
             {
-                UserName = "MR.Bharath",
-                PhoneNumber = "00000",
-                CreatedBy = "AmimB",
-                CreatedDateTime = DateTime.Now,
-                Email = "Test@protonmail.com",
-                Password = "123"
-            };
-            cu.Insert(user);
-            LoadData();
+                dcms.Insert(new DrivingCycleMotorSimulationLog
+                {
+                    A1 = 12,
+                    Uthd3 = 12,
+                    Uthd2 = 12,
+                    Uthd1 = 12,
+                    Urms3 = 12,
+                    Urms2 = 12,
+                    Urms1 = 12,
+                    Udc4 = 12,
+                    Status = 12,
+                    S4 = 12,
+                    S3 = 12,
+                    A2 = 12,
+                    A3 = 12,
+                    CHA = 12,
+                    CHB = 12,
+                    Idc4 = 12,
+                    DCModifiedDateTime = 12,
+                    f1 = 12,
+                    Irms1 = 12,
+                    Irms2 = 12,
+                    Irms3 = 12,
+                    OB_Temp = 12,
+                    OFF1 = 12,
+                    OFF2 = 12,
+                    OFF3 = 12,
+                    P1 = 12,
+                    P2 = 12,
+                    P3 = 12,
+                    P4 = 12,
+                    Pm = 12,
+                    Q1 = 12,
+                    Q2 = 12,
+                    Q3 = 12,
+                    Rpm = 12,
+                    S1 = 12,
+                    S2 = 12,
+                    SetTPS = 12,
+                    SimulatorDatetime = DateTime.Now,
+                    Vehicle_Time = TimeSpan.Parse("12:00:00"),
+                    SimulationID = "SIM1",
+                    DCID = "DC1",
+                    SegID = "SEG1",
+                });
+                MessageBox.Show("successfully added");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
+     
         }
     }
 }

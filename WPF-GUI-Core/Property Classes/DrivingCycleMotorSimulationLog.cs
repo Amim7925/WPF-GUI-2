@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_GUI_Core.Property_Classes
 {
-    class DrivingCycleMotorSimulationLog
+    public class DrivingCycleMotorSimulationLog
     {
 
         public string SimulationID { get; set; }

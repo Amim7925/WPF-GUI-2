@@ -48,6 +48,7 @@
     <Compile Include="DataBase Classses\ClassUser.cs" />
     <Compile Include="DataBase Classses\DBConnect.cs" />
     <Compile Include="DataBase Classses\Driving_Cycle_Master.cs" />
+    <Compile Include="DataBase Classses\Driving_Cycle_Motor_Simulation_Log.cs" />
     <Compile Include="DataBase Classses\Driving_Cycle_Segments.cs" />
     <Compile Include="Helper\ClassHashing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
