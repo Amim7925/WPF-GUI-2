@@ -342,10 +342,10 @@ namespace WPF_GUI_Demo
             // Add the result
             foreach (var obj in data)
             {
-                if (obj.ToLower().StartsWith(query.ToLower()))
+                if (obj.DCName.ToLower().StartsWith(query.ToLower()))
                 {
                     // The word starts with this... Autocomplete must work
-                    addItem(obj);
+                    addItem(obj.DCName);
                     found = true;
                 }
             }
@@ -356,7 +356,7 @@ namespace WPF_GUI_Demo
             }
         }
         Driving_Cycle_Master dr = new Driving_Cycle_Master();
-        List<string> list = new List<string>();
+        List<DrivingCycleDc> list = new List<DrivingCycleDc>();
         /// <summary>
         /// A test list for the auto complete textbox
         /// </summary>
@@ -404,12 +404,10 @@ namespace WPF_GUI_Demo
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             RightListview.Items.Clear();
-            AddListViewItems(  new Driving_Cycle_Segments().ListSegments(txtSearch.Text));
 
+            AddListViewItems(new Driving_Cycle_Segments().ListSegments(
 
-
-
-
+               list.FirstOrDefault(i=>i.DCName == txtSearch.Text).DCID));
 
         }
 

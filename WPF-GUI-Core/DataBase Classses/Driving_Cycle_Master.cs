@@ -17,7 +17,7 @@ namespace WPF_GUI_Core.DataBase_Classses
             var list = new List<DrivingCycleDc>();
             if (db.OpenConnection())
             {
-                var query = "SELECT Dc_Name From tbldriving_cycle_master";
+                var query = "SELECT Dc_Name, Dc_Id From tbldriving_cycle_master";
 
                 MySqlCommand cmd = new MySqlCommand(query, db.conn);
 

@@ -20,11 +20,12 @@
 
             <TextBlock x:Name="txtFileName"  FontSize="13" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"   />
 
-            <TextBlock x:Name="txtNumber" FontSize="13"  Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"   />
+            <TextBlock x:Name="txtNumber" FontSize="13"  Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"   />
 
             <TextBlock x:Name="txtZero"   FontSize="13" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"   />
             <TextBlock x:Name="txtPeriod"   FontSize="13" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"   />
 
+            
 
         </Grid>
 

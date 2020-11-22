@@ -287,7 +287,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                         </ScrollViewer>
                     </Viewbox>
-                
+
 
 
                 </Grid>
@@ -564,33 +564,37 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 </Grid>
 
 
-               
+
 
                 <Grid Grid.Row="2" >
 
                     <Button x:Name="btnStartSimulation" Margin="20,0" IsEnabled="False"  Content="START/END SIMULATION" Click="btnStartSimulation_Click" Background="#FF1C7BC7"/>
-                    
+
 
                 </Grid>
-                
-                
-                
+
+
+
                 <Grid Grid.Row="3" >
-                    
-
-                    <ListView x:Name="RightListview">
-                        <StackPanel Orientation="Horizontal" Margin="0 0 15 0">
-
-
-                            <TextBlock Text="SEGMENT" Margin="17,0,0,0"/>
-
-                            <TextBlock Text="RPM" Margin="16,0,0,0"/>
-
-                            <TextBlock Text="GRADIENT" Margin="16,0,0,0"/>
-                            <TextBlock Text="RUNTIME" Margin="16,0,0,0"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="86*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 15 0">
 
 
-                        </StackPanel>
+                        <TextBlock Text="SEGMENT" Margin="17,0,0,0"/>
+
+                        <TextBlock Text="RPM" Margin="16,0,0,0"/>
+
+                        <TextBlock Text="GRADIENT" Margin="26,0,0,0"/>
+                        <TextBlock Text="RUNTIME" Margin="26,0,0,0"/>
+
+
+                    </StackPanel>
+
+
+                    <ListView x:Name="RightListview" Grid.Row="1" Margin="0,0,0,-0.4" Grid.RowSpan="2">
 
 
                     </ListView>

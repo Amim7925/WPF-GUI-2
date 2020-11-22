@@ -24,55 +24,55 @@ namespace WPF_GUI_Demo
         public SearchText()
         {
             InitializeComponent();
-            FillList();
+            //FillList();
         }
         Driving_Cycle_Master dr = new Driving_Cycle_Master();
-        List<string> list = new List<string>();
+        List<Driving_Cycle_Master> list = new List<Driving_Cycle_Master>();
         /// <summary>
         /// A test list for the auto complete textbox
         /// </summary>
-        private void FillList()
-        {
-            list = dr.ListDcName();
-        }
+        //private void FillList()
+        //{
+        //    list = dr.ListDcName();
+        //}
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            bool found = false;
-            var border = (resultStack.Parent as ScrollViewer).Parent as Border;
-            var data = list;
+            //bool found = false;
+            //var border = (resultStack.Parent as ScrollViewer).Parent as Border;
+            //var data = list;
 
-            string query = (sender as TextBox).Text;
+            //string query = (sender as TextBox).Text;
 
-            if (query.Length == 0)
-            {
-                // Clear
-                resultStack.Children.Clear();
-                border.Visibility = System.Windows.Visibility.Collapsed;
-            }
-            else
-            {
-                border.Visibility = System.Windows.Visibility.Visible;
-            }
+            //if (query.Length == 0)
+            //{
+            //    // Clear
+            //    resultStack.Children.Clear();
+            //    border.Visibility = System.Windows.Visibility.Collapsed;
+            //}
+            //else
+            //{
+            //    border.Visibility = System.Windows.Visibility.Visible;
+            //}
 
-            // Clear the list
-            resultStack.Children.Clear();
+            //// Clear the list
+            //resultStack.Children.Clear();
 
-            // Add the result
-            foreach (var obj in data)
-            {
-                if (obj.ToLower().StartsWith(query.ToLower()))
-                {
-                    // The word starts with this... Autocomplete must work
-                    addItem(obj);
-                    found = true;
-                }
-            }
+            //// Add the result
+            //foreach (var obj in data)
+            //{
+            //    if (obj.ToLower().StartsWith(query.ToLower()))
+            //    {
+            //        // The word starts with this... Autocomplete must work
+            //        addItem(obj);
+            //        found = true;
+            //    }
+            //}
 
-            if (!found)
-            {
-                resultStack.Children.Add(new TextBlock() { Text = "No results found." });
-            }
+            //if (!found)
+            //{
+            //    resultStack.Children.Add(new TextBlock() { Text = "No results found." });
+            //}
         }
         private void addItem(string text)
         {
