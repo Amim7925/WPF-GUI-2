@@ -126,7 +126,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 </Button>
 
                 <TextBlock x:Name="DigtalClock" Text="00 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,0,0" />
-
+                <local:StopWatch Width="300" HorizontalAlignment="Left" />
 
 
 
@@ -484,18 +484,18 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                         </Button>
 
-                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}" >
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" x:Name="SocketClient" Click="SocketClient_Click" Background="{x:Null}" BorderBrush="{x:Null}" >
                             <StackPanel Orientation="Horizontal" >
 
-                                <TextBlock Text="Search Cycle" Foreground="White" Margin="0,0,-40,0" />
-                                <md:PackIcon Kind="Search" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+                                <TextBlock Text="Socket Client" Foreground="White" Margin="0,0,-40,0" />
+                                <md:PackIcon Kind="PlugSocket" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
 
                             </StackPanel>
 
 
                         </Button>
 
-
+                        
                     </StackPanel>
 
 

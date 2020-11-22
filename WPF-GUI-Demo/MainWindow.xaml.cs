@@ -119,6 +119,10 @@ namespace WPF_GUI_Demo
 
             
         }
+        private void SocketClient_Click(object sender, RoutedEventArgs e)
+        {
+            new PopupWindow(7).ShowDialog();
+        }
         private void MainItemsGrid_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
             DragMove();
@@ -215,13 +219,16 @@ namespace WPF_GUI_Demo
             
             
         }
-
+        int sec, milisec;
         private void btnStartSimulation_Click(object sender, RoutedEventArgs e)
         {
+            
+
             DispatcherTimer dt = new DispatcherTimer();
             dt.Interval = TimeSpan.FromMilliseconds(1);
             dt.Tick += TickEvent;
-
+            sec = DateTime.Now.Second;
+            milisec = DateTime.Now.Millisecond;
             dt.Start();
             thread2.RunWorkerAsync();
             woker.RunWorkerAsync();
@@ -230,7 +237,8 @@ namespace WPF_GUI_Demo
        
         private void TickEvent(object sender,EventArgs e)
         {
-            DigtalClock.Text = DateTime.Now.ToString() +":" + DateTime.Now.Millisecond.ToString();
+            
+            //DigtalClock.Text = (DateTime.Now.Second - sec ).ToString() + ":" +( DateTime.Now.Millisecond-milisec).Math.Abs().ToString();
         }
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
@@ -303,7 +311,6 @@ namespace WPF_GUI_Demo
             TestValue2();
 
             int counter = e.ProgressPercentage;
-            counter++;
 
         }
         private void worker_RunWorkerCompleted2(object sender,
@@ -458,6 +465,8 @@ namespace WPF_GUI_Demo
                list.FirstOrDefault(i=>i.DCName == txtSearch.Text).DCID));
 
         }
+
+       
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

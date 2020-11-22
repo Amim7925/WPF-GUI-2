@@ -103,6 +103,9 @@
     <Compile Include="Forms\CreateUser.xaml.cs">
       <DependentUpon>CreateUser.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SocketClient.xaml.cs">
+      <DependentUpon>SocketClient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TCPConnection.xaml.cs">
       <DependentUpon>TCPConnection.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,9 @@
     <Compile Include="SimulationList.xaml.cs">
       <DependentUpon>SimulationList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StopWatch.xaml.cs">
+      <DependentUpon>StopWatch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
@@ -147,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Forms\CreateUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Forms\SocketClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SimulationList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StopWatch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
