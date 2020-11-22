@@ -24,8 +24,8 @@ namespace WPF_GUI_Core.DataBase_Classses
 
                 cmd.Parameters.AddWithValue("DCName", DCName);
 
-                try
-                {
+                //try
+                //{
                     MySqlDataReader datareader = cmd.ExecuteReader();
 
                     while (datareader.Read())
@@ -37,20 +37,20 @@ namespace WPF_GUI_Core.DataBase_Classses
                             Defaultload = (int)(datareader["Default_Load"]),
                             Gradient = (int)(datareader["Gradient"]),
                             GetRpm = (int)(datareader["Get_Rpm"]),
-                            RunTime = (DateTime)datareader["Run_Time"],
+                            RunTime = Convert.ToDateTime(datareader["Run_Time"]),
                         };
                         list.Add(data);
                     }
                     datareader.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-                catch (Exception em)
-                {
-                    throw new Exception(em.Message);
-                }
+                //}
+                //catch (MySqlException ex)
+                //{
+                //    throw new Exception(ex.Message);
+                //}
+                //catch (Exception em)
+                //{
+                //    throw new Exception(em.Message);
+                //}
                 db.CloseConnection();
 
                 return list;
