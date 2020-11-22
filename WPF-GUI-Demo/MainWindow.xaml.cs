@@ -224,15 +224,13 @@ namespace WPF_GUI_Demo
 
             dt.Start();
             thread2.RunWorkerAsync();
+            woker.RunWorkerAsync();
 
         }
        
         private void TickEvent(object sender,EventArgs e)
         {
             DigtalClock.Text = DateTime.Now.ToString() +":" + DateTime.Now.Millisecond.ToString();
-
-
-
         }
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
@@ -473,6 +471,9 @@ namespace WPF_GUI_Demo
 
         }
 
-        
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
