@@ -598,21 +598,21 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                 
                 
                 <Grid Grid.Row="3" >
-                    <StackPanel Orientation="Horizontal">
-                        
-
-                        <TextBlock Text="SEGMENT" Margin="17,0,0,0"/>
-
-                        <TextBlock Text="RPM" Margin="16,0,0,0"/>
-
-                        <TextBlock Text="GRADIENT" Margin="16,0,0,0"/>
-                        <TextBlock Text="RUNTIME" Margin="16,0,0,0"/>
-
-
-                    </StackPanel>
+                    
 
                     <ListView x:Name="RightListview">
-                       
+                        <StackPanel Orientation="Horizontal" Margin="0 0 15 0">
+
+
+                            <TextBlock Text="SEGMENT" Margin="17,0,0,0"/>
+
+                            <TextBlock Text="RPM" Margin="16,0,0,0"/>
+
+                            <TextBlock Text="GRADIENT" Margin="16,0,0,0"/>
+                            <TextBlock Text="RUNTIME" Margin="16,0,0,0"/>
+
+
+                        </StackPanel>
 
 
                     </ListView>
