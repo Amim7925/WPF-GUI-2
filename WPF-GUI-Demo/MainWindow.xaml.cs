@@ -358,14 +358,14 @@ namespace WPF_GUI_Demo
                 resultStack.Children.Add(new TextBlock() { Text = "No results found." });
             }
         }
-       
+        Driving_Cycle_Master dr = new Driving_Cycle_Master();
         List<string> list = new List<string>();
         /// <summary>
         /// A test list for the auto complete textbox
         /// </summary>
         private void FillList()
         {
-            list = new Driving_Cycle_Master().ListDcName();
+            list = dr.ListDcName();
         }
         private void addItem(string text)
         {
@@ -402,15 +402,10 @@ namespace WPF_GUI_Demo
             // Add to the panel
             resultStack.Children.Add(block);
         }
-        Driving_Cycle_Segments red = new Driving_Cycle_Segments();
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ///* AddListViewItems(*/.ListSegments(txtSearch.Text);
-            var a = red.ListSegments(txtSearch.Text);
-
-
-
-
+            AddListViewItems(  new Driving_Cycle_Segments().ListSegments(txtSearch.Text));
         }
 
         

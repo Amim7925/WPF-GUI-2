@@ -5,20 +5,28 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_GUI_Demo" xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="30" d:DesignWidth="230" Background="White">
-    <Grid>
-        <StackPanel Orientation="Horizontal">
-            <md:PackIcon Kind="File" Foreground="#DD007326"/>
+             d:DesignHeight="50" d:DesignWidth="230" >
+    <Grid Width="230" Margin="0 30 0 0">
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
 
-            <TextBlock x:Name="txtFileName" Margin="4,0,0,0"/>
+            </Grid.ColumnDefinitions>
+            <md:PackIcon Kind="File" Grid.Column="0" Foreground="#DD007326"/>
 
-            <TextBlock x:Name="txtNumber" Margin="12,0,0,0"/>
+            <TextBlock x:Name="txtFileName" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-            <TextBlock x:Name="txtZero" Margin="12,0,0,0"/>
-            <TextBlock x:Name="txtPeriod" Margin="12,0,0,0"/>
+            <TextBlock x:Name="txtNumber" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+            <TextBlock x:Name="txtZero" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock x:Name="txtPeriod" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
 
-        </StackPanel>
+        </Grid>
 
     </Grid>
 </UserControl>
