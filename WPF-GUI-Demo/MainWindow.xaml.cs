@@ -35,13 +35,6 @@ namespace WPF_GUI_Demo
         {
             InitializeComponent();
             FillList();
-            worker.DoWork += worker_DoWork;
-            //worker.ProgressChanged += worker_Progresschanged;
-            worker.RunWorkerCompleted += worker_RunWorkerCompleted;
-            worker.ProgressChanged += worker_Progresschanged;
-
-
-            worker.RunWorkerAsync();
         }
 
         CardValueClass cr = new CardValueClass();
@@ -212,98 +205,6 @@ namespace WPF_GUI_Demo
 
             
         }
-       
-
-        private void worker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            //int a = 0;
-            //while (a<30000)
-            //{
-            //    a++;
-            //    Thread.Sleep(300);
-            //    worker.ReportProgress(a);
-            //}
-            ////double[] a = { 9, 1, 5, 0, 8 };
-            //double[] b = { 9, 1, 5, 0, 8 };
-            //double[] c = { 9, 1, 5, 0, 8 };
-            //double[] d = { 9, 1, 5, 0, 8 };
-            //LineChart.FillChart(a, b, c, d);
-            //int counter = 0;
-            //while (true)
-            //{
-            //    counter++;
-            //    Thread.Sleep(300);
-            //    worker.ReportProgress(counter);
-            //}
-        }
-
-        private void worker_Progresschanged(object sender, ProgressChangedEventArgs e)
-        {
-             //e.UserState;
-            //aa();
-            
-
-        }
-        private void worker_RunWorkerCompleted(object sender,
-                                           RunWorkerCompletedEventArgs e)
-        {
-            //update ui once worker complete his work
-            atest();
-                  
-
-        }
-        private void atest()
-        {
-            LineChart.SetMinMax();
-            
-            double[] a = { 0, 2, 5, 7, 3 };
-            double[] b = { 1, 6, 3, 4, 5 };
-            double[] c = { 2, 9, 7, 7, 7 };
-            double[] d = { 7, 2, 9, 9, 0 };
-            LineChart.FillChart(a, b, c, d);
-            Gauges values = new Gauges
-            {
-                BGRpm = 3100,
-                BGTemp = 150,
-                BGTorque = 1600,
-                RpmGauge1 = 3150,
-                RpmGuage2 = 3200,
-                TempGauge1 = 155,
-                TempGuage2 = 160,
-                TorqueGauge1 = 1650,
-                TorqueGauge2 = 1700
-            };
-            FillGauges(values);
-            fillValueCards(cr);
-        }
-
-        private void btest()
-        {
-            //LineChart.removeData();
-            //LineChart.SetMinMax();
-
-            double[] a = { 9, 1, 5, 0, 8 };
-            double[] b = { 9, 1, 5, 0, 8 };
-            double[] c = { 9, 1, 5, 0, 8 };
-            double[] d = { 9, 1, 5, 0, 8 };
-            LineChart.FillChart(a, b, c, d);
-            Gauges values = new Gauges
-            {
-                BGRpm = 1100,
-                BGTemp = 50,
-                BGTorque = 160,
-                RpmGauge1 = 350,
-                RpmGuage2 = 5200,
-                TempGauge1 = 255,
-                TempGuage2 = 16,
-                TorqueGauge1 = 50,
-                TorqueGauge2 = 1700
-            };
-            FillGauges(values);
-            fillValueCards(cr);
-        }
-
-
         public void AddListViewItems(List<DivingCycleSegment> theList)
         {
 
@@ -411,6 +312,9 @@ namespace WPF_GUI_Demo
 
         }
 
-        
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            txt_UserName.Text = SettingSoft.CurrentUser.UserName;
+        }
     }
 }
