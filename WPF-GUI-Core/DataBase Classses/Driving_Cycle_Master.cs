@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPF_GUI_Core.Property_Classes;
 
 namespace WPF_GUI_Core.DataBase_Classses
 {
@@ -11,9 +12,9 @@ namespace WPF_GUI_Core.DataBase_Classses
     {
         DBConnect db = new DBConnect();
 
-        public List<string> ListDcName()
+        public List<DrivingCycleDc> ListDcName()
         {
-            var list = new List<string>();
+            var list = new List<DrivingCycleDc>();
             if (db.OpenConnection())
             {
                 var query = "SELECT Dc_Name From tbldriving_cycle_master";
@@ -26,7 +27,12 @@ namespace WPF_GUI_Core.DataBase_Classses
 
                     while (datareader.Read())
                     {
-                        list.Add(datareader["Dc_Name"].ToString());
+                        var data = new DrivingCycleDc
+                        {
+                            DCID = datareader["Dc_Id"].ToString(),
+                            DCName = datareader["Dc_Name"].ToString()
+                        };
+                        list.Add(data);
                     }
 
                     datareader.Close();

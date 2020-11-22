@@ -30,9 +30,10 @@ namespace Core_Test
         Driving_Cycle_Segments dcs = new Driving_Cycle_Segments();
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach (var item in dcs.ListSegments("DCNAME1"))
+          
+            foreach (var item in dcs.ListSegments("dc2").GroupBy(x=>x.SegID))
             {
-                MessageBox.Show(item.RunTime.TimeOfDay.ToString());
+                MessageBox.Show(item.Key);
             }
         }
         private void LoadData()

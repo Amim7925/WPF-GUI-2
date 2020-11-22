@@ -306,6 +306,7 @@ namespace WPF_GUI_Demo
 
         public void AddListViewItems(List<DivingCycleSegment> theList)
         {
+
             foreach(var item in theList)
             {
                 //theList.Where(i=>i.I == )
@@ -313,15 +314,7 @@ namespace WPF_GUI_Demo
 
 
                 RightListview.Items.Add(new SimulationList(item));
-
-
-
             }
-
-
-
-
-
         }
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
@@ -410,6 +403,7 @@ namespace WPF_GUI_Demo
        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            RightListview.Items.Clear();
             AddListViewItems(  new Driving_Cycle_Segments().ListSegments(txtSearch.Text));
 
 
