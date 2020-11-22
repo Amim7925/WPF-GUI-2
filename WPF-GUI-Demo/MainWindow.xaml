@@ -124,6 +124,16 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                  Background="{x:Null}" BorderBrush="{x:Null}"   >
                     <md:PackIcon Kind="Menu"  FontSize="20"  />
                 </Button>
+
+                <TextBlock Name="DigtalClock" Text="00 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,0,0" />
+
+
+
+
+
+
+
+
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Name="GridTempChart">
@@ -568,7 +578,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                 <Grid Grid.Row="2" >
 
-                    <Button x:Name="btnStartSimulation" Margin="20,0" IsEnabled="False"  Content="START/END SIMULATION" Click="btnStartSimulation_Click" Background="#FF1C7BC7"/>
+                    <Button x:Name="btnStartSimulation" Margin="20,0" IsEnabled="True"  Content="START/END SIMULATION" Click="btnStartSimulation_Click" Background="#FF1C7BC7"/>
 
 
                 </Grid>

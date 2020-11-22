@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,19 +30,27 @@ namespace WPF_GUI_Demo
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly BackgroundWorker worker = new BackgroundWorker();
+        BackgroundWorker woker = new BackgroundWorker { WorkerReportsProgress = true };
+        BackgroundWorker thread2 = new BackgroundWorker { WorkerReportsProgress = true };
 
         public MainWindow()
         {
+
+            woker.DoWork += worker_DoWork;
+            woker.RunWorkerCompleted += worker_RunWorkerCompleted;
+            woker.ProgressChanged += worker_Progresschanged;
+
+            thread2.DoWork += worker_DoWork2;
+            thread2.RunWorkerCompleted += worker_RunWorkerCompleted2;
+            thread2.ProgressChanged += worker_Progresschanged2;
+
+
             InitializeComponent();
             FillList();
-            worker.DoWork += worker_DoWork;
-            //worker.ProgressChanged += worker_Progresschanged;
-            worker.RunWorkerCompleted += worker_RunWorkerCompleted;
-            worker.ProgressChanged += worker_Progresschanged;
+           
 
 
-            worker.RunWorkerAsync();
+            
         }
 
         CardValueClass cr = new CardValueClass();
@@ -209,99 +218,152 @@ namespace WPF_GUI_Demo
 
         private void btnStartSimulation_Click(object sender, RoutedEventArgs e)
         {
+            DispatcherTimer dt = new DispatcherTimer();
+            dt.Interval = TimeSpan.FromMilliseconds(1);
+            dt.Tick += TickEvent;
 
-            
+            dt.Start();
+            thread2.RunWorkerAsync();
+
         }
        
+        private void TickEvent(object sender,EventArgs e)
+        {
+            DigtalClock.Text = DateTime.Now.ToString() +":" + DateTime.Now.Millisecond.ToString();
+
+
+
+        }
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-            //int a = 0;
-            //while (a<30000)
-            //{
-            //    a++;
-            //    Thread.Sleep(300);
-            //    worker.ReportProgress(a);
-            //}
-            ////double[] a = { 9, 1, 5, 0, 8 };
-            //double[] b = { 9, 1, 5, 0, 8 };
-            //double[] c = { 9, 1, 5, 0, 8 };
-            //double[] d = { 9, 1, 5, 0, 8 };
-            //LineChart.FillChart(a, b, c, d);
-            //int counter = 0;
-            //while (true)
-            //{
-            //    counter++;
-            //    Thread.Sleep(300);
-            //    worker.ReportProgress(counter);
-            //}
+            int a = 0;
+            while (true)
+            {
+                a++;
+                Thread.Sleep(300);
+                woker.ReportProgress(a);
+            }
+           
         }
 
         private void worker_Progresschanged(object sender, ProgressChangedEventArgs e)
         {
-             //e.UserState;
-            //aa();
-            
+            TestValue();
+
+            int counter = e.ProgressPercentage;
+            counter++;
 
         }
         private void worker_RunWorkerCompleted(object sender,
                                            RunWorkerCompletedEventArgs e)
         {
             //update ui once worker complete his work
-            atest();
+            MessageBox.Show("aaaa");
                   
 
         }
-        private void atest()
+        private void TestValue()
         {
+            var random = new Random();
             LineChart.SetMinMax();
             
-            double[] a = { 0, 2, 5, 7, 3 };
-            double[] b = { 1, 6, 3, 4, 5 };
-            double[] c = { 2, 9, 7, 7, 7 };
-            double[] d = { 7, 2, 9, 9, 0 };
-            LineChart.FillChart(a, b, c, d);
+            double[] a = new double[20]; 
+            double[] b = new double[20]; 
+            double[] c = new double[20]; 
+            double[] d = new double[20]; 
+
+             for(int i = 0; i < 20; i++)
+                {
+                    a[i] = random.Next(1, 10);
+                    b[i] = random.Next(1, 10);
+                    c[i] = random.Next(1, 10);
+                    d[i] = random.Next(1, 10);
+                }  
+             
+
+                LineChart.FillChart(a, b, c, d);
+            
             Gauges values = new Gauges
             {
-                BGRpm = 3100,
-                BGTemp = 150,
-                BGTorque = 1600,
-                RpmGauge1 = 3150,
-                RpmGuage2 = 3200,
-                TempGauge1 = 155,
-                TempGuage2 = 160,
-                TorqueGauge1 = 1650,
-                TorqueGauge2 = 1700
+                BGRpm = random.Next(1, 6000),
+                BGTemp = random.Next(1, 200),
+                BGTorque = random.Next(1, 3000),
+                RpmGauge1 = random.Next(1, 6000),
+                RpmGuage2 = random.Next(1, 6000),
+                TempGauge1 = random.Next(1, 200),
+                TempGuage2 = random.Next(1, 200),
+                TorqueGauge1 = random.Next(1, 3000),
+                TorqueGauge2 = random.Next(1, 3000)
             };
             FillGauges(values);
             fillValueCards(cr);
         }
 
-        private void btest()
+        private void worker_DoWork2(object sender, DoWorkEventArgs e)
         {
-            //LineChart.removeData();
-            //LineChart.SetMinMax();
-
-            double[] a = { 9, 1, 5, 0, 8 };
-            double[] b = { 9, 1, 5, 0, 8 };
-            double[] c = { 9, 1, 5, 0, 8 };
-            double[] d = { 9, 1, 5, 0, 8 };
-            LineChart.FillChart(a, b, c, d);
-            Gauges values = new Gauges
+            int a = 0;
+            while (true)
             {
-                BGRpm = 1100,
-                BGTemp = 50,
-                BGTorque = 160,
-                RpmGauge1 = 350,
-                RpmGuage2 = 5200,
-                TempGauge1 = 255,
-                TempGuage2 = 16,
-                TorqueGauge1 = 50,
-                TorqueGauge2 = 1700
-            };
-            FillGauges(values);
-            fillValueCards(cr);
+                a++;
+                Thread.Sleep(300);
+                thread2.ReportProgress(a);
+            }
+
         }
+
+        private void worker_Progresschanged2(object sender, ProgressChangedEventArgs e)
+        {
+            TestValue2();
+
+            int counter = e.ProgressPercentage;
+            counter++;
+
+        }
+        private void worker_RunWorkerCompleted2(object sender,
+                                           RunWorkerCompletedEventArgs e)
+        {
+            //update ui once worker complete his work
+            MessageBox.Show("bbbb");
+
+
+        }
+
+        private void TestValue2()
+        {
+            var random = new Random();
+            valueUrms1.Content = random.Next(1,20);
+            valueUrms2.Content = random.Next(1,20);
+            valueUrms3.Content = random.Next(1,20);
+            valueUdc4.Content =  random.Next(1,20);
+            valueIdc1.Content =  random.Next(1,20);
+            valueIdc2.Content =  random.Next(1,20);
+            valueIdc3.Content =  random.Next(1,20);
+            valueIdc4.Content =  random.Next(1,20);
+            valueA1.Content =    random.Next(1,20);
+            valueA2.Content =    random.Next(1,20);
+            valueA3.Content =    random.Next(1,20);
+            valuePm.Content =    random.Next(1,20);
+            valueCHA.Content =   random.Next(1,20);
+            valueCHB.Content =   random.Next(1,20);
+            valuef1.Content =    random.Next(1,20);
+            valueS1.Content =    random.Next(1,20);
+            valueS2.Content =    random.Next(1,20);
+            valueS3.Content =    random.Next(1,20);
+            valueS4.Content =    random.Next(1,20);
+            valueQ1.Content =    random.Next(1,20);
+            valueQ2.Content =    random.Next(1,20);
+            valueQ3.Content =    random.Next(1,20);
+            valueP1.Content =    random.Next(1,20);
+            valueP2.Content =    random.Next(1,20);
+            valueP3.Content =    random.Next(1,20);
+            valueP4.Content =    random.Next(1,20);
+            valueUthd1.Content = random.Next(1,20);
+            valueUthd2.Content = random.Next(1,20);
+            valueUthd3.Content = random.Next(1, 20);
+
+        }
+
 
 
         public void AddListViewItems(List<DivingCycleSegment> theList)
