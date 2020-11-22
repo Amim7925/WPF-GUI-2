@@ -248,11 +248,11 @@ namespace WPF_GUI_Demo
                                            RunWorkerCompletedEventArgs e)
         {
             //update ui once worker complete his work
-            aa();
+            atest();
                   
 
         }
-        private void aa()
+        private void atest()
         {
             LineChart.SetMinMax();
             
@@ -277,7 +277,7 @@ namespace WPF_GUI_Demo
             fillValueCards(cr);
         }
 
-        private void bb()
+        private void btest()
         {
             //LineChart.removeData();
             //LineChart.SetMinMax();
@@ -308,6 +308,10 @@ namespace WPF_GUI_Demo
         {
             foreach(var item in theList)
             {
+                //theList.Where(i=>i.I == )
+
+
+
                 RightListview.Items.Add(new SimulationList(item));
 
 
@@ -366,6 +370,7 @@ namespace WPF_GUI_Demo
         private void FillList()
         {
             list = dr.ListDcName();
+            
         }
         private void addItem(string text)
         {
@@ -406,6 +411,12 @@ namespace WPF_GUI_Demo
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             AddListViewItems(  new Driving_Cycle_Segments().ListSegments(txtSearch.Text));
+
+
+
+
+
+
         }
 
         
