@@ -223,7 +223,7 @@ namespace WPF_GUI_Demo
             dt.Tick += TickEvent;
 
             dt.Start();
-            thread2.RunWorkerAsync();
+            woker.RunWorkerAsync();
 
         }
        
@@ -266,23 +266,10 @@ namespace WPF_GUI_Demo
         private void TestValue()
         {
             var random = new Random();
-            LineChart.SetMinMax();
-            
-            double[] a = new double[20]; 
-            double[] b = new double[20]; 
-            double[] c = new double[20]; 
-            double[] d = new double[20]; 
-
-             for(int i = 0; i < 20; i++)
-                {
-                    a[i] = random.Next(1, 10);
-                    b[i] = random.Next(1, 10);
-                    c[i] = random.Next(1, 10);
-                    d[i] = random.Next(1, 10);
-                }  
+           
              
 
-                LineChart.FillChart(a, b, c, d);
+             LineChart.FillChart(random.Next(1, 10), random.Next(1, 10), random.Next(1, 10), random.Next(1, 10));
             
             Gauges values = new Gauges
             {

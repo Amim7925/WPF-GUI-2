@@ -1,9 +1,12 @@
 ﻿using LiveCharts;
+using LiveCharts.Configurations;
 using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
@@ -24,19 +27,27 @@ namespace WPF_GUI_Demo
     /// </summary>
     public partial class LineChart : UserControl
     {
+        private static long tickZero = DateTime.Now.Ticks;
+
+        public Func<double, string> X_Axis_LabelFormatter { get; set; } = d => TimeSpan.FromTicks((long)d - tickZero).TotalSeconds.ToString();
+
         public LineChart()
         {
             InitializeComponent();
+
+
+            TempValues.Configuration = Mappers.Xy<FactoryTelemetry>().X(ft => ft.TimeStamp.Ticks).Y(ft => ft.Temp);
+
+            RpmValues.Configuration = Mappers.Xy<FactoryTelemetry>().X(ft => ft.TimeStamp.Ticks).Y(ft => ft.Rpm);
+            Rpm_cValues.Configuration = Mappers.Xy<FactoryTelemetry>().X(ft => ft.TimeStamp.Ticks).Y(ft => ft.Rpm_c);
+            TorqueValues.Configuration = Mappers.Xy<FactoryTelemetry>().X(ft => ft.TimeStamp.Ticks).Y(ft => ft.Torque);
+
+
+
             AllCharts();
         }
         public delegate void ChartDelegate();
-        private int Minvalue { set; get; }
-        private int Maxvalue { set; get; }
-        public void SetMinMax()
-        {
-            Minvalue = DateTime.Now.Second ;
-            Maxvalue = DateTime.Now.Second + 6;
-        }
+        
 
         private void AllCharts()
         {
@@ -46,53 +57,66 @@ namespace WPF_GUI_Demo
             TempValues.PointGeometry = DefaultGeometries.Square;
 
         }
-                
-        
+        public double AxisStep { get; set; } = TimeSpan.FromSeconds(5).Ticks;
+        public double AxisUnit { get; set; } = TimeSpan.FromSeconds(1).Ticks;
 
-        
+        private double _axisMax = tickZero + TimeSpan.FromSeconds(30).Ticks;
+        public double AxisMax { get => _axisMax; set { _axisMax = value; OnPropertyChanged(nameof(AxisMax)); } }
 
-      
-        
-       
+        private double _axisMin = tickZero;
+        public double AxisMin { get => _axisMin; set { _axisMin = value; OnPropertyChanged(nameof(AxisMin)); } }
 
-       
+        private void AdjustAxis(long ticks)
+        {
+            var width = TimeSpan.FromSeconds(30).Ticks;
+
+            AxisMin = (ticks - tickZero < width) ? tickZero : ticks - width;
+            AxisMax = (ticks - tickZero < width) ? tickZero + width : ticks;
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string name = null) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+
+
+
+
+
+
+
+
+
         public void removeData()
         {
             //SeriesCollection.RemoveAt(SeriesCollection.Count - 1);
         }
         
         public SeriesCollection SeriesCollection { get; set; }
-
+        public ChartValues<FactoryTelemetry> ChartValues { get; set; } = new ChartValues<FactoryTelemetry>();
         public string[] Labels { get; set; }
 
-        public void FillChart(double[] Torque, double[] Rpm, double[] Temp, double[] Rpm_c)
+        public void FillChart(double Torque, double Rpm, double Temp, double Rpm_c)
         {
-            var torqueValues = new ChartValues<double>();
-            foreach (var item in Torque)
-            {
-                torqueValues.Add(item);
-            }
-            var rpmValues = new ChartValues<double>();
-            foreach (var item in Rpm)
-            {
-                rpmValues.Add(item);
-            }
-            var tempValues = new ChartValues<double>();
-            foreach (var item in Temp)
-            {
-                tempValues.Add(item);
-            }
-            var rpm_cValues = new ChartValues<double>();
-            foreach (var item in Rpm_c)
-            {
-                rpm_cValues.Add(item);
-            }
-            TorqueValues.Values = torqueValues;
-            TempValues.Values = tempValues;
-            Rpm_cValues.Values = rpm_cValues;
-            RpmValues.Values = rpmValues;
+            //var torqueValues = new ChartValues<double>();
 
-            Labels = new[] { "12:00", "12:01", "12:02", "12:03", "12:04", "12:05", "12:06", "12:07", "12:08", "12:09", "12:10" };
+            
+            FactoryTelemetry FT = new FactoryTelemetry();
+            FT.Rpm = Rpm;
+            FT.Rpm_c = Rpm_c;
+            FT.Temp = Temp;
+            FT.Torque = Torque;
+
+            ChartValues.Add(FT);
+
+
+
+            
+            AdjustAxis(FT.TimeStamp.Ticks);
+
+            if (ChartValues.Count > 10)
+                ChartValues.RemoveAt(0);
+
+            
+           
 
             DataContext = this;
         }
@@ -100,5 +124,16 @@ namespace WPF_GUI_Demo
 
 
     }
-}
+
+    public class FactoryTelemetry
+    {
+        public DateTime TimeStamp { get; set; } = DateTime.Now;
+        public double Torque { get; set; }
+        public double Rpm { get; set; }
+        public double Rpm_c { get; set; }
+        public double Temp { get; set; }
+    }
+
+
+ }
 
