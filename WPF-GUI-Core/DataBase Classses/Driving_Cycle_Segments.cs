@@ -18,7 +18,7 @@ namespace WPF_GUI_Core.DataBase_Classses
             List<DivingCycleSegment> list = new List<DivingCycleSegment>();
             if (db.OpenConnection())
             {
-                var query = "SELECT driving_cycle_segments.* FROM driving_cycle_segments INNER JOIN tbldriving_cycle_master ON driving_cycle_segments.Dc_Id=@DcId";
+                var query = "SELECT driving_cycle_segments.* FROM driving_cycle_segments INNER JOIN tbldriving_cycle_master ON driving_cycle_segments.Dc_Id=@DcId GROUP BY Seg_Id";
 
                 MySqlCommand cmd = new MySqlCommand(query, db.conn);
 
