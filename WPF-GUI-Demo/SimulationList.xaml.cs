@@ -27,7 +27,7 @@ namespace WPF_GUI_Demo
             InitializeComponent();
             txtFileName.Text = obj.SegID;
             txtNumber.Text = obj.AddedLoad.ToString();
-            txtPeriod.Text = obj.RunTime.ToString();
+            txtPeriod.Text = obj.RunTime.TimeOfDay.ToString();
             txtZero.Text = obj.AddedLoad.ToString();
 
 
