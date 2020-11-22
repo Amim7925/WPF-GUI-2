@@ -7,7 +7,7 @@
         xmlns:ribbon="http://schemas.actiprosoftware.com/winfx/xaml/ribbon" xmlns:ribbon1="http://schemas.microsoft.com/netfx/2009/xaml/presentation" xmlns:local1="clr-namespace:WPF_GUI_Demo.Guages" xmlns:local2="clr-namespace:WPF_GUI_Demo.Black_Gauge" x:Class="WPF_GUI_Demo.MainWindow"
            
     mc:Ignorable="d"
-      Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized"   >
+      Title="MainWindow" Height="768" Width="1024" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized" Loaded="Window_Loaded"   >
     <Window.Resources>
         <Storyboard x:Key="Leftdashboardgoesright">
             <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="MainGrid">
@@ -125,7 +125,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                     <md:PackIcon Kind="Menu"  FontSize="20"  />
                 </Button>
 
-                <TextBlock Name="DigtalClock" Text="00 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,0,0" />
+                <TextBlock x:Name="DigtalClock" Text="00 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,0,0" />
 
 
 
@@ -569,7 +569,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                     <Image Source="Pic/aaa.jpg" Height="100" StretchDirection="UpOnly" Stretch="Fill"   />
 
 
-                    <TextBlock x:Name="txt_UserName" Text="John" Width="60"  Foreground="#FF0E0E0E" VerticalAlignment="Bottom" Margin="10,0,0,6" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock x:Name="txt_UserName" Text="User Name" Width="150"  Foreground="#FF0E0E0E" VerticalAlignment="Bottom" Margin="10,0,0,6" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold"/>
 
                 </Grid>
 
