@@ -71,8 +71,8 @@ namespace WPF_GUI_Core.DataBase_Classses
                 var query = "INSERT INTO `driving_cycle_segments`(`Seg_Id`, `Dc_Id`, `Get_Rpm`, `Gradient`, `Default_Load`, `Added_Load`, `Run_Time`) VALUES (@argo.SegID,@argo.DcId,@argo.GetRpm,@argo.Gradient,@argo.Defaultload,@argo.AddedLoad,@argo.RunTime)";
 
                 var cmd = new MySqlCommand(query, db.conn);
-                cmd.Parameters.AddWithValue("@argo.SegID", argo.SegID); cmd.Parameters.AddWithValue("@argo.Defaultload", argo.Defaultload);
-                cmd.Parameters.AddWithValue("@argo.DcId", argo.DcId); cmd.Parameters.AddWithValue("@argo.GetRpm", argo.GetRpm);
+                cmd.Parameters.AddWithValue("@argo.SegID", argo.SegID.ToUpper()); cmd.Parameters.AddWithValue("@argo.Defaultload", argo.Defaultload);
+                cmd.Parameters.AddWithValue("@argo.DcId", argo.DcId.ToUpper()); cmd.Parameters.AddWithValue("@argo.GetRpm", argo.GetRpm);
                 cmd.Parameters.AddWithValue("@argo.Gradient", argo.Gradient); cmd.Parameters.AddWithValue("@argo.RunTime", argo.RunTime);
                 cmd.Parameters.AddWithValue("@argo.AddedLoad", argo.AddedLoad);
 
