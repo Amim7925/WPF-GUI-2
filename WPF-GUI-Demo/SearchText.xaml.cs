@@ -109,10 +109,10 @@ namespace WPF_GUI_Demo
             // Add to the panel
             resultStack.Children.Add(block);
         }
-
+        Driving_Cycle_Segments drs = new Driving_Cycle_Segments();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //AddListViewItems(drs.ListSegments(txtSearch.Text));
         }
     }
 }

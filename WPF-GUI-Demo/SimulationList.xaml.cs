@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_GUI_Core.Property_Classes;
 
 namespace WPF_GUI_Demo
 {
@@ -20,11 +21,19 @@ namespace WPF_GUI_Demo
     /// </summary>
     public partial class SimulationList : UserControl
     {
-        string id;
-        public SimulationList(string _id)
+        
+        public SimulationList(DivingCycleSegment obj)
         {
             InitializeComponent();
-            id = _id;
+            txtFileName.Text = obj.SegID;
+            txtNumber.Text = obj.AddedLoad.ToString();
+            txtPeriod.Text = obj.RunTime.ToString();
+            txtZero.Text = obj.AddedLoad.ToString();
+
+
+
+
+
         }
 
 
