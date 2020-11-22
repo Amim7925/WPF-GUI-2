@@ -590,7 +590,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                 <Grid Grid.Row="2" >
 
-                    <Button x:Name="btnStartSimulation" Margin="20,0" IsEnabled="True"  Content="START/END SIMULATION" Click="btnStartSimulation_Click" Background="#FF1C7BC7"/>
+                    <Button x:Name="btnStartSimulation" Margin="20,0" IsEnabled="False"  Content="START/END SIMULATION" Click="btnStartSimulation_Click" Background="#FF1C7BC7"/>
                     
 
                 </Grid>

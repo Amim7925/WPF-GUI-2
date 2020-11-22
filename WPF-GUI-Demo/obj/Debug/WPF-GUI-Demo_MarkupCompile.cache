@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\
 WPF_GUI_Demo
 none
 false
 DEBUG;TRACE
-C:\Users\PRH\source\repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml
 16-475811476
 
 28-324049462
-21-1612344352
+211715932628
 Black Gauge\ArcGauge.xaml;Forms\AboutUs.xaml;Forms\CanbusConnection.xaml;Forms\CreateDrivingCycle.xaml;Forms\CreateUser.xaml;Forms\TCPConnection.xaml;Forms\UploadCSV.xaml;Guages\RpmGauge.xaml;Guages\TempGauge.xaml;Guages\TorqueGauge.xaml;LineChart.xaml;MainWindow.xaml;PopupWindow.xaml;SearchText.xaml;SimulationList.xaml;WindowLogin.xaml;
 
 False

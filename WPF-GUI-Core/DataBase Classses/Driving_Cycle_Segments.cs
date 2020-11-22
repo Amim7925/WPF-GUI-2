@@ -37,7 +37,7 @@ namespace WPF_GUI_Core.DataBase_Classses
                             Defaultload = (int)(datareader["Default_Load"]),
                             Gradient = (int)(datareader["Gradient"]),
                             GetRpm = (int)(datareader["Get_Rpm"]),
-                            RunTime = (DateTime)datareader["Run_Time"],
+                            RunTime = Convert.ToDateTime(datareader["Run_Time"]),
                         };
                         list.Add(data);
                     }
