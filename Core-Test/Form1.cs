@@ -32,7 +32,7 @@ namespace Core_Test
         {
             foreach (var item in dcs.ListSegments("DCNAME1"))
             {
-                MessageBox.Show(item.SegID);
+                MessageBox.Show(item.RunTime.TimeOfDay.ToString());
             }
         }
         private void LoadData()
