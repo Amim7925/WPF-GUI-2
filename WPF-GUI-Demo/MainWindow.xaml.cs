@@ -32,18 +32,20 @@ namespace WPF_GUI_Demo
     {
         BackgroundWorker woker = new BackgroundWorker { WorkerReportsProgress = true };
         BackgroundWorker thread2 = new BackgroundWorker { WorkerReportsProgress = true };
+        DispatcherTimer dt = new DispatcherTimer();
 
         public MainWindow()
         {
 
             woker.DoWork += worker_DoWork;
-            woker.RunWorkerCompleted += worker_RunWorkerCompleted;
             woker.ProgressChanged += worker_Progresschanged;
+            woker.RunWorkerCompleted += Woker_RunWorkerCompleted;
+            woker.WorkerSupportsCancellation = true;
 
             thread2.DoWork += worker_DoWork2;
-            thread2.RunWorkerCompleted += worker_RunWorkerCompleted2;
             thread2.ProgressChanged += worker_Progresschanged2;
-
+            thread2.RunWorkerCompleted += Thread2_RunWorkerCompleted;
+            thread2.WorkerSupportsCancellation = true;
 
             InitializeComponent();
             FillList();
@@ -51,6 +53,21 @@ namespace WPF_GUI_Demo
 
 
             
+        }
+
+        private void Thread2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+                MessageBox.Show("Simulation Cancelled");
+            dt.Stop();
+            DigtalClock.Text = "00 : 00 : 00";
+
+
+        }
+
+        private void Woker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
         }
 
         CardValueClass cr = new CardValueClass();
@@ -218,26 +235,40 @@ namespace WPF_GUI_Demo
 
         private void btnStartSimulation_Click(object sender, RoutedEventArgs e)
         {
-            DispatcherTimer dt = new DispatcherTimer();
+            if (woker.IsBusy && thread2.IsBusy)
+            {
+                thread2.CancelAsync();
+                woker.CancelAsync();
+                return;
+            }
+          
             dt.Interval = TimeSpan.FromMilliseconds(1);
             dt.Tick += TickEvent;
 
             dt.Start();
             thread2.RunWorkerAsync();
             woker.RunWorkerAsync();
+           
 
         }
        
         private void TickEvent(object sender,EventArgs e)
         {
-            DigtalClock.Text = DateTime.Now.ToString() +":" + DateTime.Now.Millisecond.ToString();
+            DigtalClock.Text = DateTime.Now.Hour.ToString("hh") + " : " + DateTime.Now.Minute.ToString("MM") + " : " + DateTime.Now.Second.ToString("SS");
         }
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
+           
             int a = 0;
             while (true)
             {
+                if (woker.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+
                 a++;
                 Thread.Sleep(300);
                 woker.ReportProgress(a);
@@ -253,14 +284,7 @@ namespace WPF_GUI_Demo
             counter++;
 
         }
-        private void worker_RunWorkerCompleted(object sender,
-                                           RunWorkerCompletedEventArgs e)
-        {
-            //update ui once worker complete his work
-            MessageBox.Show("aaaa");
-                  
 
-        }
         private void TestValue()
         {
             var random = new Random();
@@ -288,9 +312,15 @@ namespace WPF_GUI_Demo
 
         private void worker_DoWork2(object sender, DoWorkEventArgs e)
         {
+            
             int a = 0;
             while (true)
             {
+                if (thread2.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
                 a++;
                 Thread.Sleep(300);
                 thread2.ReportProgress(a);
@@ -306,14 +336,7 @@ namespace WPF_GUI_Demo
             counter++;
 
         }
-        private void worker_RunWorkerCompleted2(object sender,
-                                           RunWorkerCompletedEventArgs e)
-        {
-            //update ui once worker complete his work
-            MessageBox.Show("bbbb");
-
-
-        }
+     
 
         private void TestValue2()
         {
@@ -451,11 +474,21 @@ namespace WPF_GUI_Demo
        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (txtSearch.Text == string.Empty)
+                return;
             RightListview.Items.Clear();
+            try
+            {
+                AddListViewItems(new Driving_Cycle_Segments().ListSegments(
 
-            AddListViewItems(new Driving_Cycle_Segments().ListSegments(
+             list.FirstOrDefault(i => i.DCName == txtSearch.Text).DCID));
 
-               list.FirstOrDefault(i=>i.DCName == txtSearch.Text).DCID));
+                btnStartSimulation.IsEnabled = true;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 

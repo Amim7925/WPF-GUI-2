@@ -30,11 +30,11 @@ namespace Core_Test
         Driving_Cycle_Segments dcs = new Driving_Cycle_Segments();
         private void Form1_Load(object sender, EventArgs e)
         {
-          
-            foreach (var item in dcs.ListSegments("dc2").GroupBy(x=>x.SegID))
-            {
-                MessageBox.Show(item.Key);
-            }
+
+            //foreach (var item in dcs.ListSegments("dc2").GroupBy(x=>x.SegID))
+            //{
+            //    MessageBox.Show(item.Key);
+            //}
         }
         private void LoadData()
         {
@@ -43,63 +43,29 @@ namespace Core_Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Driving_Cycle_Motor_Simulation_Log dcms = new Driving_Cycle_Motor_Simulation_Log();
+            Driving_Cycle_Segments dcms = new Driving_Cycle_Segments();
             try
             {
-                dcms.Insert(new DrivingCycleMotorSimulationLog
+                dcms.Insert(new DivingCycleSegment
                 {
-                    A1 = 12,
-                    Uthd3 = 12,
-                    Uthd2 = 12,
-                    Uthd1 = 12,
-                    Urms3 = 12,
-                    Urms2 = 12,
-                    Urms1 = 12,
-                    Udc4 = 12,
-                    Status = 12,
-                    S4 = 12,
-                    S3 = 12,
-                    A2 = 12,
-                    A3 = 12,
-                    CHA = 12,
-                    CHB = 12,
-                    Idc4 = 12,
-                    DCModifiedDateTime = 12,
-                    f1 = 12,
-                    Irms1 = 12,
-                    Irms2 = 12,
-                    Irms3 = 12,
-                    OB_Temp = 12,
-                    OFF1 = 12,
-                    OFF2 = 12,
-                    OFF3 = 12,
-                    P1 = 12,
-                    P2 = 12,
-                    P3 = 12,
-                    P4 = 12,
-                    Pm = 12,
-                    Q1 = 12,
-                    Q2 = 12,
-                    Q3 = 12,
-                    Rpm = 12,
-                    S1 = 12,
-                    S2 = 12,
-                    SetTPS = 12,
-                    SimulatorDatetime = DateTime.Now,
-                    Vehicle_Time = TimeSpan.Parse("12:00:00"),
-                    SimulationID = "SIM1",
-                    DCID = "DC1",
-                    SegID = "SEG1",
+                    SegID = "SEG2",
+                    DcId = "DC1",
+                    AddedLoad = 10,
+                    Defaultload = 10,
+                    GetRpm = 10,
+                    Gradient = 10,
+                    RunTime = DateTime.Now
+
                 });
                 MessageBox.Show("successfully added");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
-            
-     
+
+
         }
     }
 }

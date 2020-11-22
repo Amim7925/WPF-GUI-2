@@ -11,6 +11,8 @@ namespace WPF_GUI_Core.Property_Classes
 
         public string SegID { get; set; }
 
+        public string DcId { get; set; }
+
         public int GetRpm { get; set; }
 
         public int Gradient { get; set; }
