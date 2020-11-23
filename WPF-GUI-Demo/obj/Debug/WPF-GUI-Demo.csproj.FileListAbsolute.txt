@@ -391,3 +391,7 @@ C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SimulationList.g.cs
 C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\SimulationList.baml
 F:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\obj\Debug\SimulationList.g.cs
 F:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\obj\Debug\SimulationList.baml
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\StopWatch.g.cs
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\StopWatch.baml
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\SocketClient.g.cs
+C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\Forms\SocketClient.baml

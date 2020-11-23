@@ -8,10 +8,13 @@ namespace WPF_GUI_Demo.Classes
 {
     public class DrivingCycle
     {
-        public double Torque { get; set; }
-        public double Rpm { get; set; }
-        public double Gradiant { get; set; }
-        public string Load { get; set; }
-        public string Time { get; set; }
+        public string SegId { get; set; }
+        public string DcID { get; set; }
+        //public double Torque { get; set; }
+        public int Rpm { get; set; }
+        public int Gradiant { get; set; }
+        public int Load { get; set; }
+        public int AddedLoad { get; set; }
+        public TimeSpan Time { get; set; }
     }
 }

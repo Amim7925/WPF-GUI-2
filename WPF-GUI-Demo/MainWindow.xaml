@@ -125,8 +125,8 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                     <md:PackIcon Kind="Menu"  FontSize="20"  />
                 </Button>
 
-                <TextBlock x:Name="DigtalClock" Text="00 : 00 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,0,0" />
-
+                <TextBlock x:Name="DigtalClock" Text="00 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,0,0" />
+                <local:StopWatch Width="300" HorizontalAlignment="Left" />
 
 
 
@@ -484,18 +484,18 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                         </Button>
 
-                        <Button  d:LayoutOverrides="Height" Margin="0,15" Background="{x:Null}" BorderBrush="{x:Null}" >
+                        <Button  d:LayoutOverrides="Height" Margin="0,15" x:Name="SocketClient" Click="SocketClient_Click" Background="{x:Null}" BorderBrush="{x:Null}" >
                             <StackPanel Orientation="Horizontal" >
 
-                                <TextBlock Text="Search Cycle" Foreground="White" Margin="0,0,-40,0" />
-                                <md:PackIcon Kind="Search" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+                                <TextBlock Text="Socket Client" Foreground="White" Margin="0,0,-38,0" />
+                                <md:PackIcon Kind="PowerSocket" Margin="110,0,0,0" HorizontalAlignment="Left" Foreground="White" />
 
                             </StackPanel>
 
 
                         </Button>
 
-
+                        
                     </StackPanel>
 
 
@@ -578,7 +578,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
 
                 <Grid Grid.Row="2" >
 
-                    <Button x:Name="btnStartSimulation" Margin="20,0" IsEnabled="False"  Content="START/END SIMULATION" Click="btnStartSimulation_Click" Background="#FF1C7BC7"/>
+                    <Button x:Name="btnStartSimulation" Margin="20,0" IsEnabled="True"  Content="START/END SIMULATION" Click="btnStartSimulation_Click" Background="#FF1C7BC7"/>
 
 
                 </Grid>

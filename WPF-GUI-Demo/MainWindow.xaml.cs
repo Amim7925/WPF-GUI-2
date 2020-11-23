@@ -136,6 +136,11 @@ namespace WPF_GUI_Demo
 
             
         }
+        private void SocketClient_Click(object sender, RoutedEventArgs e)
+        {
+            new PopupWindow(7).ShowDialog();
+
+        }
         private void MainItemsGrid_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
             DragMove();
@@ -496,5 +501,7 @@ namespace WPF_GUI_Demo
         {
 
         }
+
+       
     }
 }

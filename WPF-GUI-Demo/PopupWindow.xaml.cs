@@ -47,6 +47,9 @@ namespace WPF_GUI_Demo
                 case 6:
                     gridShow.Children.Add(UCAboutUs);
                     break;
+                case 7:
+                    gridShow.Children.Add(new SocketClient());
+                    break;
 
             }
         }
