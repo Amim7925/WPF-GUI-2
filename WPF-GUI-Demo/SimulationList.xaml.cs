@@ -21,7 +21,7 @@ namespace WPF_GUI_Demo
     /// </summary>
     public partial class SimulationList : UserControl
     {
-        
+        public TimeSpan Run_Time { get; set; }
         public SimulationList(DrivingCycleSegment obj)
         {
             InitializeComponent();
@@ -29,11 +29,7 @@ namespace WPF_GUI_Demo
             txtNumber.Text = obj.AddedLoad.ToString();
             txtPeriod.Text = obj.RunTime.TimeOfDay.ToString();
             txtZero.Text = obj.AddedLoad.ToString();
-
-
-
-
-
+            Run_Time = obj.RunTime.TimeOfDay;
         }
 
 

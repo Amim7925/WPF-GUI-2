@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-GUI-Core", "WPF-GUI-Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core-Test", "Core-Test\Core-Test.csproj", "{EC688DC1-7992-463E-B2E1-09AD54BAF737}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup-WPF-Func", "Setup-WPF-Func\Setup-WPF-Func.vdproj", "{B965B5AE-6903-42BE-9ECF-56ADFEA01C30}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup-WPF-Functionality", "Setup-WPF-Functionality\Setup-WPF-Functionality.vdproj", "{0F437144-289B-41F1-9DBA-CDF0201A09A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +29,8 @@ Global
 		{EC688DC1-7992-463E-B2E1-09AD54BAF737}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC688DC1-7992-463E-B2E1-09AD54BAF737}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC688DC1-7992-463E-B2E1-09AD54BAF737}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B965B5AE-6903-42BE-9ECF-56ADFEA01C30}.Debug|Any CPU.ActiveCfg = Debug
-		{B965B5AE-6903-42BE-9ECF-56ADFEA01C30}.Release|Any CPU.ActiveCfg = Release
+		{0F437144-289B-41F1-9DBA-CDF0201A09A3}.Debug|Any CPU.ActiveCfg = Debug
+		{0F437144-289B-41F1-9DBA-CDF0201A09A3}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
