@@ -25,15 +25,15 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1">
 
                 <TextBlock Text="Server IP :" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"  />
-                <TextBox  x:Name="txtServerIP" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="44,0,0,0" Background="#FFF0F0F0" FontSize="18"/>
-                <Button Margin="37,0,16,0" x:Name="BtnTestConnection" VerticalAlignment="Center"  Content="Test Connection" FontSize="18" Click="BtnTestConnection_Click"  />
+                <TextBox  x:Name="tbxIP" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="44,0,0,0" Background="#FFF0F0F0" FontSize="18"/>
+                <Button Margin="37,0,16,0" x:Name="btnConn" VerticalAlignment="Center"  Content="Test Connection" FontSize="18" Click="btnConn_Click"  />
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2">
 
                 <TextBlock Text="Port :" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"  />
-                <TextBox x:Name="txtPort" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="44,0,24,0" Background="#FFF0F0F0" FontSize="18"/>
-                <Button Margin="37,0,32,0" x:Name="BtnDisconnect" VerticalAlignment="Center" Content="Disconnect" IsEnabled="False" FontSize="18" Click="BtnDisconnect_Click" />
+                <TextBox x:Name="tbxPort" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="44,0,24,0" Background="#FFF0F0F0" FontSize="18"/>
+                <Button Margin="37,0,32,0" x:Name="btnClose" VerticalAlignment="Center" Content="Disconnect" IsEnabled="False" FontSize="18" Click="btnClose_Click" />
 
             </StackPanel>
 
@@ -43,7 +43,7 @@
         <Grid x:Name="GroupBox2" Grid.Row="1" Margin="0" >
            
                 <TextBlock Text="Information Window" Margin="10,0,0,0" FontSize="13"/>
-            <TextBox Margin="15,23,15,15" x:Name="txtInformation" Background="#FFF0F0F0" />
+            <TextBox Margin="15,23,15,15" x:Name="lbxMessage" Text=":AOUT:ITEM" Background="#FFF0F0F0" />
 
            
         </Grid>
@@ -60,7 +60,7 @@
 
                 <TextBlock Text="Message Window" FontSize="18"/>
 
-                <TextBlock Text="Label3" x:Name="txtError" FontSize="18" HorizontalAlignment="Center" Margin="0,12,0,0" Foreground="Red"/>
+                <TextBlock Text="" x:Name="lblError" FontSize="18" HorizontalAlignment="Center" Margin="0,12,0,0" Foreground="Red"/>
 
 
 

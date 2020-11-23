@@ -23,6 +23,9 @@ namespace WPF_GUI_Demo.Forms
     /// </summary>
     public partial class SocketClient : UserControl
     {
+        /// <summary>
+        ///以本机作测试   //  Test with this machine
+        /// </summary>
         private IPAddress serverIP = IPAddress.Parse("127.0.0.1");
         /// <summary>
         ///完整终端地址   //  Full terminal address
@@ -32,19 +35,66 @@ namespace WPF_GUI_Demo.Forms
         /// 连接套接字   //  Connect socket
         /// </summary>
         private Socket sock;
-       
+        Thread myThead = null;
+
 
         public SocketClient()
         {
             InitializeComponent();
+            btnClose.IsEnabled = false;
 
         }
 
-      
 
-        private void btnSend_Click(object sender, RoutedEventArgs e)
+
+        /// <summary>
+        /// 连接服务器端   //   Connect to the server
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConn_Click(object sender, EventArgs e)
         {
-            serverFullAddr = new IPEndPoint(serverIP, int.Parse(txtPort.Text));
+            serverIP = IPAddress.Parse(tbxIP.Text);
+            try
+            {
+                //设置IP和端口  //  Set IP and port
+                serverFullAddr = new IPEndPoint(serverIP, int.Parse(tbxPort.Text));
+                sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                //指定本地主机地址和端口号  //  Specify the local host address and port number
+                sock.Connect(serverFullAddr);
+                btnConn.IsEnabled = false;
+                lblError.Text = "The connection to the server is successful. . . .";  //  The connection to the server is successful. . . .
+                btnClose.IsEnabled = true;
+                sock.Close();
+
+            }
+            catch (Exception ee)
+            {
+                lblError.Text = "Connection failure. . . Please double check whether the server " + ee;  //  Connection failure. . . Please double check whether the server is turned on
+            }
+
+
+
+        }
+        /// <summary>
+        /// 断开连接  //  Disconnect
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            sock.Close();
+            btnConn.IsEnabled = true;
+        }
+        /// <summary>
+        /// 发送    //  send
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            //设置IP，端口  //  Set IP, port
+            serverFullAddr = new IPEndPoint(serverIP, int.Parse(tbxPort.Text));
             sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             //lbxMessage.Invoke(new SetTextCallback(SetText), "Successful start time:" + DateTime.Now, 1);
             //指定本地主机地址和端口号  //  Specify the local host address and port number
@@ -84,42 +134,31 @@ namespace WPF_GUI_Demo.Forms
             }
             catch (Exception ex)
             {
-                txtError.Text = "An error occurred, please contact the administrator" + ex;  //  
+                lblError.Text = "An error occurred, please contact the administrator" + ex;  //  
             }
             sock.Close();
         }
 
-        private void btnClean_Click(object sender, RoutedEventArgs e)
+        //清空消息   // Empty message
+        private void btnClean_Click(object sender, EventArgs e)
         {
-            txtInformation.Text = string.Empty;
+            lbxMessage.Text = "";
         }
 
-        private void BtnTestConnection_Click(object sender, RoutedEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            serverIP = IPAddress.Parse(txtServerIP.Text);
-            try
-            {
-                //设置IP和端口  //  Set IP and port
-                serverFullAddr = new IPEndPoint(serverIP, int.Parse(txtPort.Text));
-                sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                //指定本地主机地址和端口号  //  Specify the local host address and port number
-                sock.Connect(serverFullAddr);
-                BtnTestConnection.IsEnabled = false;
-                txtError.Text = "The connection to the server is successful. . . .";  //  The connection to the server is successful. . . .
-                BtnDisconnect.IsEnabled = true;
-                sock.Close();
 
-            }
-            catch (Exception ee)
-            {
-                txtError.Text = "Connection failure. . . Please double check whether the server " + ee;  //  Connection failure. . . Please double check whether the server is turned on
-            }
         }
 
-        private void BtnDisconnect_Click(object sender, RoutedEventArgs e)
-        {
-            sock.Close();
-            BtnTestConnection.IsEnabled = true;
-        }
+        //private void drpLow_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+
+        //    if (drpLow.Text == "--SELECT--")
+        //    {
+
+
+        //    }
+
+        //}
     }
 }
