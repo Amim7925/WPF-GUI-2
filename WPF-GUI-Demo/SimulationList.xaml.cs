@@ -22,7 +22,7 @@ namespace WPF_GUI_Demo
     public partial class SimulationList : UserControl
     {
         
-        public SimulationList(DivingCycleSegment obj)
+        public SimulationList(DrivingCycleSegment obj)
         {
             InitializeComponent();
             txtFileName.Text = obj.SegID;

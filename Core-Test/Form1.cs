@@ -46,7 +46,7 @@ namespace Core_Test
             Driving_Cycle_Segments dcms = new Driving_Cycle_Segments();
             try
             {
-                dcms.Insert(new DivingCycleSegment
+                dcms.Insert(new DrivingCycleSegment
                 {
                     SegID = "SEG2",
                     DcId = "DC1",

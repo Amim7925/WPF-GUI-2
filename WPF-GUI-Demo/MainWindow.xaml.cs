@@ -375,7 +375,7 @@ namespace WPF_GUI_Demo
 
 
 
-        public void AddListViewItems(List<DivingCycleSegment> theList)
+        public void AddListViewItems(List<DrivingCycleSegment> theList)
         {
 
             foreach(var item in theList)

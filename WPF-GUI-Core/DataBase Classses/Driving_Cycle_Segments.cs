@@ -13,9 +13,9 @@ namespace WPF_GUI_Core.DataBase_Classses
     {
         DBConnect db = new DBConnect();
 
-        public List<DivingCycleSegment> ListSegments(string DcId)
+        public List<DrivingCycleSegment> ListSegments(string DcId)
         {
-            List<DivingCycleSegment> list = new List<DivingCycleSegment>();
+            List<DrivingCycleSegment> list = new List<DrivingCycleSegment>();
             if (db.OpenConnection())
             {
                 var query = "SELECT driving_cycle_segments.* FROM driving_cycle_segments INNER JOIN tbldriving_cycle_master ON driving_cycle_segments.Dc_Id=@DcId GROUP BY Seg_Id";
@@ -30,7 +30,7 @@ namespace WPF_GUI_Core.DataBase_Classses
 
                     while (datareader.Read())
                     {
-                        var data = new DivingCycleSegment
+                        var data = new DrivingCycleSegment
                         {
                             SegID = datareader["Seg_Id"].ToString(),
                             AddedLoad = (int)(datareader["Added_Load"]),
@@ -61,7 +61,7 @@ namespace WPF_GUI_Core.DataBase_Classses
             }
         }
 
-        public void Insert(DivingCycleSegment argo)
+        public void Insert(DrivingCycleSegment argo)
         {
             if (db.OpenConnection())
             {

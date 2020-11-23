@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_GUI_Core.Property_Classes
 {
-    public class DivingCycleSegment
+    public class DrivingCycleSegment
     {
 
         public string SegID { get; set; }
