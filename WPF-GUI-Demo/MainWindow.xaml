@@ -125,7 +125,7 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                     <md:PackIcon Kind="Menu"  FontSize="20"  />
                 </Button>
 
-                <TextBlock x:Name="DigtalClock" Text="00 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,0,0" />
+                <TextBlock x:Name="DigtalClock" Text="00 : 00 : 00" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Margin="0,0,0,0" />
 
 
 

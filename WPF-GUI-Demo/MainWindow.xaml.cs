@@ -34,6 +34,9 @@ namespace WPF_GUI_Demo
         BackgroundWorker thread2 = new BackgroundWorker { WorkerReportsProgress = true };
         DispatcherTimer dt = new DispatcherTimer();
 
+        DispatcherTimer _timer = new DispatcherTimer();
+        TimeSpan _time;
+
         public MainWindow()
         {
 
@@ -47,12 +50,16 @@ namespace WPF_GUI_Demo
             thread2.RunWorkerCompleted += Thread2_RunWorkerCompleted;
             thread2.WorkerSupportsCancellation = true;
 
+            _timer.Tick += _timer_Tick;
+
             InitializeComponent();
             FillList();
-           
 
+        }
 
-            
+        private void _timer_Tick(object sender, EventArgs e)
+        {
+            MessageBox.Show("1");
         }
 
         private void Thread2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -134,7 +141,7 @@ namespace WPF_GUI_Demo
         {
             new PopupWindow(6).ShowDialog();
 
-            
+
         }
         private void SocketClient_Click(object sender, RoutedEventArgs e)
         {
@@ -153,11 +160,11 @@ namespace WPF_GUI_Demo
 
         private void btnMaximize_Click(object sender, RoutedEventArgs e)
         {
-            if (this.WindowState ==  System.Windows.WindowState.Maximized)
+            if (this.WindowState == System.Windows.WindowState.Maximized)
             {
-                
+
                 this.WindowState = System.Windows.WindowState.Normal;
-               
+
             }
             else
             {
@@ -180,7 +187,7 @@ namespace WPF_GUI_Demo
                 scrollBarGuages.Visibility = Visibility.Hidden;
                 lblGuages.Text = "Values :";
             }
-            if(tgbGuages.IsChecked == false)
+            if (tgbGuages.IsChecked == false)
             {
                 scrollBarValues.Visibility = Visibility.Hidden;
                 scrollBarGuages.Visibility = Visibility.Visible;
@@ -232,39 +239,55 @@ namespace WPF_GUI_Demo
             valueUthd1.Content = cardsvalue.Uthd1;
             valueUthd2.Content = cardsvalue.Uthd2;
             valueUthd3.Content = cardsvalue.Uthd3;
-            
-            
-            
-            
+
+
+
+
         }
 
         private void btnStartSimulation_Click(object sender, RoutedEventArgs e)
         {
             if (woker.IsBusy && thread2.IsBusy)
             {
+
                 thread2.CancelAsync();
                 woker.CancelAsync();
                 return;
             }
-          
-            dt.Interval = TimeSpan.FromMilliseconds(1);
-            dt.Tick += TickEvent;
+            SetTimer();
+            _timer.Start();
 
-            dt.Start();
+            //dt.Interval = TimeSpan.FromMilliseconds(1);
+            //dt.Tick += TickEvent;
+
+            //dt.Start();
             thread2.RunWorkerAsync();
             woker.RunWorkerAsync();
-           
+
 
         }
-       
-        private void TickEvent(object sender,EventArgs e)
+
+        private void TickEvent(object sender, EventArgs e)
         {
-            DigtalClock.Text = DateTime.Now.Hour.ToString("hh") + " : " + DateTime.Now.Minute.ToString("MM") + " : " + DateTime.Now.Second.ToString("SS");
+            //foreach (var item in RightListview.Items)
+            //{
+            //    var data = (SimulationList)item;
+            //    DigtalClock.Text = data.Run_Time.ToString();
+                
+            //    if (TimeSpan.TryParse() == TimeSpan.Zero)
+            //    {
+            //        dt.Stop();
+            //        return;
+            //    }
+            //    o.Add(TimeSpan.FromSeconds(-1));
+            //    DigtalClock.Text = o.ToString();
+            //}
+           
         }
 
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
-           
+
             int a = 0;
             while (true)
             {
@@ -278,7 +301,7 @@ namespace WPF_GUI_Demo
                 Thread.Sleep(300);
                 woker.ReportProgress(a);
             }
-           
+
         }
 
         private void worker_Progresschanged(object sender, ProgressChangedEventArgs e)
@@ -293,12 +316,12 @@ namespace WPF_GUI_Demo
         private void TestValue()
         {
             var random = new Random();
-            
-            
-           
+
+
+
 
             LineChart.FillChart(random.Next(1, 10), random.Next(1, 10), random.Next(1, 10), random.Next(1, 10));
-            
+
             Gauges values = new Gauges
             {
                 BGRpm = random.Next(1, 6000),
@@ -317,7 +340,7 @@ namespace WPF_GUI_Demo
 
         private void worker_DoWork2(object sender, DoWorkEventArgs e)
         {
-            
+
             int a = 0;
             while (true)
             {
@@ -341,39 +364,39 @@ namespace WPF_GUI_Demo
             counter++;
 
         }
-     
+
 
         private void TestValue2()
         {
             var random = new Random();
-            valueUrms1.Content = random.Next(1,20);
-            valueUrms2.Content = random.Next(1,20);
-            valueUrms3.Content = random.Next(1,20);
-            valueUdc4.Content =  random.Next(1,20);
-            valueIdc1.Content =  random.Next(1,20);
-            valueIdc2.Content =  random.Next(1,20);
-            valueIdc3.Content =  random.Next(1,20);
-            valueIdc4.Content =  random.Next(1,20);
-            valueA1.Content =    random.Next(1,20);
-            valueA2.Content =    random.Next(1,20);
-            valueA3.Content =    random.Next(1,20);
-            valuePm.Content =    random.Next(1,20);
-            valueCHA.Content =   random.Next(1,20);
-            valueCHB.Content =   random.Next(1,20);
-            valuef1.Content =    random.Next(1,20);
-            valueS1.Content =    random.Next(1,20);
-            valueS2.Content =    random.Next(1,20);
-            valueS3.Content =    random.Next(1,20);
-            valueS4.Content =    random.Next(1,20);
-            valueQ1.Content =    random.Next(1,20);
-            valueQ2.Content =    random.Next(1,20);
-            valueQ3.Content =    random.Next(1,20);
-            valueP1.Content =    random.Next(1,20);
-            valueP2.Content =    random.Next(1,20);
-            valueP3.Content =    random.Next(1,20);
-            valueP4.Content =    random.Next(1,20);
-            valueUthd1.Content = random.Next(1,20);
-            valueUthd2.Content = random.Next(1,20);
+            valueUrms1.Content = random.Next(1, 20);
+            valueUrms2.Content = random.Next(1, 20);
+            valueUrms3.Content = random.Next(1, 20);
+            valueUdc4.Content = random.Next(1, 20);
+            valueIdc1.Content = random.Next(1, 20);
+            valueIdc2.Content = random.Next(1, 20);
+            valueIdc3.Content = random.Next(1, 20);
+            valueIdc4.Content = random.Next(1, 20);
+            valueA1.Content = random.Next(1, 20);
+            valueA2.Content = random.Next(1, 20);
+            valueA3.Content = random.Next(1, 20);
+            valuePm.Content = random.Next(1, 20);
+            valueCHA.Content = random.Next(1, 20);
+            valueCHB.Content = random.Next(1, 20);
+            valuef1.Content = random.Next(1, 20);
+            valueS1.Content = random.Next(1, 20);
+            valueS2.Content = random.Next(1, 20);
+            valueS3.Content = random.Next(1, 20);
+            valueS4.Content = random.Next(1, 20);
+            valueQ1.Content = random.Next(1, 20);
+            valueQ2.Content = random.Next(1, 20);
+            valueQ3.Content = random.Next(1, 20);
+            valueP1.Content = random.Next(1, 20);
+            valueP2.Content = random.Next(1, 20);
+            valueP3.Content = random.Next(1, 20);
+            valueP4.Content = random.Next(1, 20);
+            valueUthd1.Content = random.Next(1, 20);
+            valueUthd2.Content = random.Next(1, 20);
             valueUthd3.Content = random.Next(1, 20);
 
         }
@@ -383,12 +406,9 @@ namespace WPF_GUI_Demo
         public void AddListViewItems(List<DrivingCycleSegment> theList)
         {
 
-            foreach(var item in theList)
+            foreach (var item in theList)
             {
                 //theList.Where(i=>i.I == )
-
-
-
                 RightListview.Items.Add(new SimulationList(item));
             }
         }
@@ -439,7 +459,7 @@ namespace WPF_GUI_Demo
         private void FillList()
         {
             list = dr.ListDcName();
-            
+
         }
         private void addItem(string text)
         {
@@ -476,7 +496,7 @@ namespace WPF_GUI_Demo
             // Add to the panel
             resultStack.Children.Add(block);
         }
-       
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (txtSearch.Text == string.Empty)
@@ -486,11 +506,11 @@ namespace WPF_GUI_Demo
             {
                 AddListViewItems(new Driving_Cycle_Segments().ListSegments(
 
-             list.FirstOrDefault(i => i.DCName == txtSearch.Text).DCID));
+               list.FirstOrDefault(i => i.DCName == txtSearch.Text).DCID));
 
                 btnStartSimulation.IsEnabled = true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -501,7 +521,26 @@ namespace WPF_GUI_Demo
         {
 
         }
+        
+        private void SetTimer()
+        {
+            foreach (var item in RightListview.Items)
+            {
+              
+                var data = (SimulationList)item;
+                _time = TimeSpan.FromSeconds(5) ;
 
-       
+                _timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+                {
+                    DigtalClock.Text = _time.ToString("c");
+                    if (_time == TimeSpan.Zero) _timer.Stop();
+                    _time = _time.Add(TimeSpan.FromSeconds(-1));
+                }, Application.Current.Dispatcher);
+            }
+           
+
+        }
+
+
     }
 }
