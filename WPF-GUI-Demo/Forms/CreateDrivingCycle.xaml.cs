@@ -28,15 +28,33 @@ namespace WPF_GUI_Demo.Forms
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             try
             {
-                listview.Items.Add(new DrivingCycle { Torque = Convert.ToDouble(txtTorque.Text), Gradiant = Convert.ToDouble(txtGradiant.Text), Rpm = Convert.ToDouble(txtRPM.Text), Load = txtLoad.Text, Time = timerpicker.Text });
+                listview.Items.Add(new DrivingCycle { AddedLoad = Convert.ToInt32(txtAddedload.Text), Gradiant = Convert.ToInt32(txtGradiant.Text), Rpm = Convert.ToInt32(txtRPM.Text), Load = Convert.ToInt32(txtLoad.Text), Time = timerpicker.SelectedTime.Value.TimeOfDay });
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+
+
+
+
+
+
+
+
+
+
+            Clear();
+        }
+
+        private void Clear()
+        {
+            
             foreach (var t in stpTextboxes1.Children)
             {
                 if (t.GetType() == typeof(TextBox))
@@ -49,5 +67,7 @@ namespace WPF_GUI_Demo.Forms
             }
             timerpicker.Text = string.Empty;
         }
+
+
     }
 }

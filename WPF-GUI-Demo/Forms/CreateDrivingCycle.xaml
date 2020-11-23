@@ -25,8 +25,8 @@
         </Grid.RowDefinitions>
         <Rectangle Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="10" Fill="White"/>
         <StackPanel Margin="20 20" Grid.Column="0" x:Name="stpTextboxes1">
-            <Label Content="Torque :"/>
-            <TextBox x:Name="txtTorque" Height="30" Margin="5 0 0 0" />
+            <Label Content="Added Load :"/>
+            <TextBox x:Name="txtAddedload" Height="30" Margin="5 0 0 0" />
             <Label  Margin="0 15 0 0 " Content="Rpm :"/>
             <TextBox x:Name="txtRPM" Height="30" Margin="5 0 0 0" />
             <Label Margin="0 15 0 0 " Content="Load  :"/>
@@ -38,12 +38,11 @@
 
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="20 20">
-            <Label  Content="Hour :"/>
-            <TextBox x:Name="txtMail" Height="30" Margin="5 0 0 0"/>
-            <Label Margin="0 15 0 0 "  Content="Minute :"/>
-            <TextBox x:Name="txtRole" Height="30" Margin="5 0 0 0"/>
-            <Label Margin="0 15 0 0 " Content="Second :"/>
-            <TextBox x:Name="txtSecond" Height="30" Margin="5 0 0 0"/>
+            <Label  Content="Dc ID :"/>
+            <TextBox x:Name="txtDcID" Height="30" Margin="5 0 0 0"/>
+            <Label Margin="0 15 0 0 "  Content="Seg Name :"/>
+            <TextBox x:Name="txtSegName" Height="30" Margin="5 0 0 0"/>
+            
             <materialDesign:TimePicker Margin="0 45 0 0 " x:Name="timerpicker"></materialDesign:TimePicker>
            
         </StackPanel>
@@ -55,7 +54,9 @@
                     <GridViewColumn Header="RPM"  DisplayMemberBinding="{Binding Rpm}"/>
                     <GridViewColumn Header="Load"  DisplayMemberBinding="{Binding Load}"/>
                         <GridViewColumn Header="Gradiant"  DisplayMemberBinding="{Binding Gradiant}"/>
-                    <GridViewColumn Header="Time"  DisplayMemberBinding="{Binding Time}"/>
+                        <GridViewColumn Header="Seg Name"  DisplayMemberBinding="{Binding SegName}"/>
+                        <GridViewColumn Header="Dc ID"  DisplayMemberBinding="{Binding DcID}"/>
+                        <GridViewColumn Header="Time"  DisplayMemberBinding="{Binding Time}"/>
                 </GridView>
             </ListView.View>
         </ListView>
