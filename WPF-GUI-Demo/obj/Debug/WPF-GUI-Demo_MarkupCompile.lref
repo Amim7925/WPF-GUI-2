@@ -1,19 +1,21 @@
-﻿F:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\obj\Debug\GeneratedInternalTypeHelper.g.cs
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\App.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Black Gauge\ArcGauge.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Forms\AboutUs.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Forms\CanbusConnection.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Forms\CreateDrivingCycle.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Forms\CreateUser.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Forms\TCPConnection.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Forms\UploadCSV.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Guages\RpmGauge.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Guages\TempGauge.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\Guages\TorqueGauge.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\LineChart.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\MainWindow.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\PopupWindow.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\SearchText.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\SimulationList.xaml;;
-FF:\repos\Windows Project\WPF Functionality\WPF-GUI-Demo\WindowLogin.xaml;;
+﻿C:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\App.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Black Gauge\ArcGauge.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\AboutUs.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\CanbusConnection.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\CreateDrivingCycle.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\CreateUser.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\SocketClient.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\TCPConnection.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Forms\UploadCSV.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Guages\RpmGauge.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Guages\TempGauge.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\Guages\TorqueGauge.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\LineChart.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\MainWindow.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\PopupWindow.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\SearchText.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\SimulationList.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\StopWatch.xaml;;
+FC:\Users\PRH\Source\Repos\WPF-GUI-2\WPF-GUI-Demo\WindowLogin.xaml;;
 

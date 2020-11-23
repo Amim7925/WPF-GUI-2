@@ -487,8 +487,8 @@ Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"  Foregroun
                         <Button  d:LayoutOverrides="Height" Margin="0,15" x:Name="SocketClient" Click="SocketClient_Click" Background="{x:Null}" BorderBrush="{x:Null}" >
                             <StackPanel Orientation="Horizontal" >
 
-                                <TextBlock Text="Socket Client" Foreground="White" Margin="0,0,-40,0" />
-                                <md:PackIcon Kind="PlugSocket" Margin="115,0,0,0" HorizontalAlignment="Left" Foreground="White" />
+                                <TextBlock Text="Socket Client" Foreground="White" Margin="0,0,-38,0" />
+                                <md:PackIcon Kind="PowerSocket" Margin="110,0,0,0" HorizontalAlignment="Left" Foreground="White" />
 
                             </StackPanel>
 
